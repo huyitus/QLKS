@@ -137,5 +137,38 @@ ALTER TABLE QLKS.CHITIETDATDV ADD FOREIGN KEY (MADV) REFERENCES QLKS.DICHVU (MAD
 ALTER TABLE QLKS.DKTOUR ADD FOREIGN KEY (MATOUR) REFERENCES QLKS.TOURDULICH (MATOUR); 
 ALTER TABLE QLKS.DOITAC ADD FOREIGN KEY (MATOUR) REFERENCES QLKS.TOURDULICH (MATOUR); 
 /
-INSERT INTO QLKS.NHANVIEN(tennv, diachi, sdt, chucvu) VALUES(N'Nguyen Thi Dung', N'Hung Vuong, Q1', '0788123000', N'Le tan');
-INSERT INTO QLKS.NHANVIEN(tennv, diachi, sdt, chucvu) VALUES(N'Le Van An', N'Quang Trung, Q2', '0988123001', N'NV Hanh ly');
+create sequence MANV_SEQ
+    start with 1
+    increment by 1
+    maxvalue 100
+    nocycle;
+
+create sequence MAKH_SEQ
+    start with 1
+    increment by 1
+    maxvalue 100
+    nocycle;
+    
+create sequence MADATPHONG_SEQ
+    start with 1
+    increment by 1
+    maxvalue 100
+    nocycle;
+    
+create sequence MAHOADON_SEQ
+    start with 1
+    increment by 1
+    maxvalue 100
+    nocycle;
+    
+
+
+create sequence MADKTOUR_SEQ
+    start with 1
+    increment by 1
+    maxvalue 100
+    nocycle;
+    
+INSERT INTO QLKS.NHANVIEN VALUES(MANV_SEQ.NEXTVAL,N'Nguyen Thi Dung', N'Hung Vuong, Q1', '0788123000', N'Le tan');
+
+SELECT*FROM QLKS.NHANVIEN;
