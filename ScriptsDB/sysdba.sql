@@ -160,8 +160,6 @@ create sequence MAHOADON_SEQ
     maxvalue 100
     nocycle;
     
-
-
 create sequence MADKTOUR_SEQ
     start with 1
     increment by 1
