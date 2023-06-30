@@ -22,43 +22,6 @@ namespace QLKS.DAL
             Cleaning = cleaning;
         }
 
-        public static List<RoomDAL> GetRooms()
-        {
-            string query = "SELECT * FROM QLKS.PHONG";
-
-            using (OracleConnection connection = SessionBAL.sConnection)
-            {
-                try
-                {
-                    connection.Open();
-
-                    var command = new OracleCommand(query, connection);
-                    var reader = command.ExecuteReader();
-
-                    List<RoomDAL> rooms = new List<RoomDAL>();
-
-                    while (reader.Read())
-                    {
-                        var id = reader.GetString(0);
-                        var typeName = reader.GetString(1);
-                        var status = reader.GetInt32(2);
-                        var cleaning = reader.GetString(3);
-
-                        var room = new RoomDAL(id, typeName, status, cleaning);
-                        rooms.Add(room);
-                    }
-
-                    reader.Close();
-
-                    return rooms;
-                }
-                catch (Exception)
-                {
-                    return null;
-                }
-            }
-        }
-
         public static List<RoomDAL> GetRooms(bool isEmpty, bool isClean)
         {
             string cond1 = isEmpty ? "TINHTRANG = 0" : "1 = 1";
