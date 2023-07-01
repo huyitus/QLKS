@@ -24,5 +24,7 @@ namespace QLKS.DAL
                 return null;
             }
         }
+
+        
     }
 }

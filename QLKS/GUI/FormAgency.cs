@@ -7,8 +7,8 @@ namespace QLKS.GUI
 {
     public partial class FormAgency : Form
     {
-        private const string CONFIRM_BOOKING_MESSAGE = "Xác nhận đặt phòng";
-        private const string CONFIRM_CAPTION = "Xác nhận";
+        private const string MESSAGE_CAPTION = "Thông báo";
+        private const string MESSAGE_NO_EMPTY = "Phòng này không còn trống!";
 
         private readonly FormLogin loginForm;
 
@@ -41,10 +41,15 @@ namespace QLKS.GUI
         private void ButtonOrder_Click(object sender, EventArgs e)
         {
             string roomId = dgvRooms.CurrentRow.Cells["ID"].Value.ToString();
-            string message = CONFIRM_BOOKING_MESSAGE + " " + roomId + "?";
-            if (MessageBox.Show(message, CONFIRM_CAPTION, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
 
+            if (RoomBAL.IsEmptyRoom(roomId))
+            {
+                Form bookingForm = new FormAgencyBooking(this, roomId);
+                bookingForm.Show();
+            }    
+            else
+            {
+                MessageBox.Show(MESSAGE_NO_EMPTY, MESSAGE_CAPTION, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
     }

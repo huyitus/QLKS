@@ -31,7 +31,7 @@ namespace QLKS.GUI
         {
             this.dgvRooms = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnOrder = new System.Windows.Forms.Button();
+            this.btnBooking = new System.Windows.Forms.Button();
             this.chkClean = new System.Windows.Forms.CheckBox();
             this.chkEmpty = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRooms)).BeginInit();
@@ -42,7 +42,9 @@ namespace QLKS.GUI
             this.dgvRooms.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvRooms.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvRooms.Location = new System.Drawing.Point(16, 40);
+            this.dgvRooms.MultiSelect = false;
             this.dgvRooms.Name = "dgvRooms";
+            this.dgvRooms.ReadOnly = true;
             this.dgvRooms.RowHeadersWidth = 51;
             this.dgvRooms.RowTemplate.Height = 24;
             this.dgvRooms.Size = new System.Drawing.Size(680, 200);
@@ -58,15 +60,15 @@ namespace QLKS.GUI
             this.label1.Text = "Tra cứu và đặt phòng";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // btnOrder
+            // btnBooking
             // 
-            this.btnOrder.Location = new System.Drawing.Point(584, 248);
-            this.btnOrder.Name = "btnOrder";
-            this.btnOrder.Size = new System.Drawing.Size(112, 40);
-            this.btnOrder.TabIndex = 4;
-            this.btnOrder.Text = "Đặt phòng";
-            this.btnOrder.UseVisualStyleBackColor = true;
-            this.btnOrder.Click += new System.EventHandler(this.ButtonOrder_Click);
+            this.btnBooking.Location = new System.Drawing.Point(584, 248);
+            this.btnBooking.Name = "btnBooking";
+            this.btnBooking.Size = new System.Drawing.Size(112, 40);
+            this.btnBooking.TabIndex = 4;
+            this.btnBooking.Text = "Đặt phòng";
+            this.btnBooking.UseVisualStyleBackColor = true;
+            this.btnBooking.Click += new System.EventHandler(this.ButtonOrder_Click);
             // 
             // chkClean
             // 
@@ -94,14 +96,16 @@ namespace QLKS.GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(714, 306);
+            this.ClientSize = new System.Drawing.Size(714, 303);
             this.Controls.Add(this.chkClean);
             this.Controls.Add(this.chkEmpty);
-            this.Controls.Add(this.btnOrder);
+            this.Controls.Add(this.btnBooking);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvRooms);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "FormAgency";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Giao diện cho đại lý";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormAgency_FormClosing);
             this.Load += new System.EventHandler(this.FormAgency_Load);
@@ -115,7 +119,7 @@ namespace QLKS.GUI
 
         private System.Windows.Forms.DataGridView dgvRooms;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnOrder;
+        private System.Windows.Forms.Button btnBooking;
         private System.Windows.Forms.CheckBox chkClean;
         private System.Windows.Forms.CheckBox chkEmpty;
     }

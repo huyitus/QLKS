@@ -90,6 +90,12 @@
     <Compile Include="GUI\FormAgency.Designer.cs">
       <DependentUpon>FormAgency.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\FormAgencyBooking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormAgencyBooking.Designer.cs">
+      <DependentUpon>FormAgencyBooking.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +106,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="GUI\FormAgency.resx">
       <DependentUpon>FormAgency.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormAgencyBooking.resx">
+      <DependentUpon>FormAgencyBooking.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>

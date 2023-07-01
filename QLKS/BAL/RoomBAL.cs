@@ -12,5 +12,10 @@ namespace QLKS.BAL
             List<RoomDAL> rooms = RoomDAL.GetRooms(isEmpty, isClean);
             dgvRooms.DataSource = rooms;
         }
+
+        public static bool IsEmptyRoom(string roomId)
+        {
+            return RoomDAL.IsEmptyRoom(roomId);
+        }
     }
 }

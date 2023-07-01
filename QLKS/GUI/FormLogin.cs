@@ -33,8 +33,8 @@ namespace QLKS.GUI
         {
             if (SessionBAL.IsAgencyUsername(username))
             {
-                Form form = new FormAgency(this);
-                form.Show();
+                Form agencyForm = new FormAgency(this);
+                agencyForm.Show();
             }
         }
 

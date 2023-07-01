@@ -1,9 +1,11 @@
 ﻿using QLKS.BAL;
 
 using System;
+using System.Data;
 using System.Collections.Generic;
 
 using Oracle.ManagedDataAccess.Client;
+using Oracle.ManagedDataAccess.Types;
 
 namespace QLKS.DAL
 {
@@ -45,6 +47,25 @@ namespace QLKS.DAL
             }
 
             return rooms;
+        }
+
+        public static bool IsEmptyRoom(string roomId)
+        {
+            bool isEmpty = false;
+
+            using (var command = SessionBAL.sConnection.CreateCommand())
+            {
+                command.CommandText = "BEGIN :result := QLKS.check_room_status(:roomId); END;";
+                command.Parameters.Add("result", OracleDbType.Boolean, ParameterDirection.ReturnValue);
+                command.Parameters.Add("roomId", OracleDbType.NVarchar2).Value = roomId;
+
+                command.ExecuteNonQuery();
+
+                OracleBoolean result = (OracleBoolean)command.Parameters["result"].Value;
+                isEmpty = result.Value;
+            }
+
+            return isEmpty;
         }
     }
 }
