@@ -43,5 +43,10 @@ namespace QLKS.GUI
             txtUsername.Clear();
             txtPassword.Clear();
         }
+
+        private void FormLogin_VisibleChanged(object sender, System.EventArgs e)
+        {
+            ClearInput();
+        }
     }
 }

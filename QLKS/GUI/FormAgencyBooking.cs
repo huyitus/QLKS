@@ -13,25 +13,25 @@ namespace QLKS.GUI
         private const string MESSAGE_SEND_REQUEST_SUCCESS = "Gửi yêu cầu thành công!";
         private const string MESSAGE_SEND_REQUEST_FAILED = "Gửi yêu cầu thất bại!";
 
-        private readonly FormAgency agencyFrom;
+        private readonly Form parent;
         private readonly string roomId;
 
         public FormAgencyBooking(FormAgency parent, string roomId)
         {
             InitializeComponent();
-            this.agencyFrom = parent;
+            this.parent = parent;
             this.roomId = roomId;
         }
 
         private void FormAgencyBooking_Load(object sender, System.EventArgs e)
         {
-            agencyFrom.Hide();
+            parent.Hide();
             txtRoomID.Text = roomId;
         }
 
         private void FormAgencyBooking_FormClosing(object sender, FormClosingEventArgs e)
         {
-            agencyFrom.Show();
+            parent.Show();
         }
 
         private void ButtonBooking_Click(object sender, System.EventArgs e)

@@ -107,6 +107,7 @@ namespace QLKS.GUI
             this.Name = "FormLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng nhập";
+            this.VisibleChanged += new System.EventHandler(this.FormLogin_VisibleChanged);
             this.ResumeLayout(false);
             this.PerformLayout();
 

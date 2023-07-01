@@ -10,25 +10,24 @@ namespace QLKS.GUI
         private const string MESSAGE_CAPTION = "Thông báo";
         private const string MESSAGE_NO_EMPTY = "Phòng này không còn trống!";
 
-        private readonly FormLogin loginForm;
+        private readonly Form parent;
 
-        public FormAgency(FormLogin parent)
+        public FormAgency(Form parent)
         {
             InitializeComponent();
-            this.loginForm = parent;
+            this.parent = parent;
         }
 
         private void FormAgency_Load(object sender, EventArgs e)
         {
-            loginForm.Hide();
+            parent.Hide();
             RoomBAL.LoadRoomsInto(dgvRooms, false, false);
         }
 
         private void FormAgency_FormClosing(object sender, FormClosingEventArgs e)
         {
             SessionBAL.Finish();
-            loginForm.ClearInput();
-            loginForm.Show();
+            parent.Show();
         }
 
         private void Filter_CheckedChanged(object sender, EventArgs e)
