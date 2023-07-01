@@ -10,18 +10,20 @@ namespace QLKS.DAL
     {
         public string ID { get; set; }
         public string CustomerID { get; set; }
-        public string RoomID { get; set; }
+        public string TypeName { get; set; }
+        public int Amount { get; set; }
 
-        public RequestBookingDAL(string id, string customerId, string roomId)
+        public RequestBookingDAL(string id, string customerId, string typeName, string amount)
         {
             ID = id;
             CustomerID = customerId;
-            RoomID = roomId;
+            TypeName = typeName;
+            Amount = amount == null ? 0 : int.Parse(amount);
         }
 
         public static bool Insert(RequestBookingDAL request)
         {
-            string query = string.Format("INSERT INTO QLKS.YEUCAUDP (MAKH, MAPHONG) VALUES ('{0}', '{1}')", request.CustomerID, request.RoomID);
+            string query = string.Format("INSERT INTO QLKS.YEUCAUDP(MAKH, TENLOAIPHONG, SOLUONG) VALUES('{0}', '{1}', {2})", request.CustomerID, request.TypeName, request.Amount);
             using (var command = new OracleCommand(query, SessionBAL.sConnection))
             {
                 try

@@ -21,7 +21,7 @@ namespace QLKS.GUI
         private void FormAgency_Load(object sender, EventArgs e)
         {
             parent.Hide();
-            RoomBAL.LoadRoomsInto(dgvRooms, false, false);
+            RoomBAL.LoadToAgency(dgvRooms, false, false);
         }
 
         private void FormAgency_FormClosing(object sender, FormClosingEventArgs e)
@@ -34,22 +34,15 @@ namespace QLKS.GUI
         {
             bool isEmpty = chkEmpty.Checked;
             bool isClean = chkClean.Checked;
-            RoomBAL.LoadRoomsInto(dgvRooms, isEmpty, isClean);
+            RoomBAL.LoadToAgency(dgvRooms, isEmpty, isClean);
         }
 
         private void ButtonOrder_Click(object sender, EventArgs e)
         {
-            string roomId = dgvRooms.CurrentRow.Cells["ID"].Value.ToString();
+            string typeName = dgvRooms.CurrentRow.Cells["TypeName"].Value.ToString();
 
-            if (RoomBAL.IsEmptyRoom(roomId))
-            {
-                Form bookingForm = new FormAgencyBooking(this, roomId);
-                bookingForm.Show();
-            }    
-            else
-            {
-                MessageBox.Show(MESSAGE_NO_EMPTY, MESSAGE_CAPTION, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
+            Form bookingForm = new FormAgencyBooking(this, typeName);
+            bookingForm.Show();
         }
     }
 }

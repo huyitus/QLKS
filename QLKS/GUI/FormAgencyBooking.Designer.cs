@@ -30,11 +30,14 @@ namespace QLKS.GUI
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.txtRoomID = new System.Windows.Forms.TextBox();
+            this.txtTypeName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtPhone = new System.Windows.Forms.TextBox();
             this.btnBooking = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtAmount = new System.Windows.Forms.NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAmount)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -42,22 +45,22 @@ namespace QLKS.GUI
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(16, 16);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 17);
+            this.label1.Size = new System.Drawing.Size(83, 17);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Mã phòng:";
+            this.label1.Text = "Loại phòng:";
             // 
-            // txtRoomID
+            // txtTypeName
             // 
-            this.txtRoomID.Location = new System.Drawing.Point(120, 16);
-            this.txtRoomID.Name = "txtRoomID";
-            this.txtRoomID.ReadOnly = true;
-            this.txtRoomID.Size = new System.Drawing.Size(248, 22);
-            this.txtRoomID.TabIndex = 1;
+            this.txtTypeName.Location = new System.Drawing.Point(120, 16);
+            this.txtTypeName.Name = "txtTypeName";
+            this.txtTypeName.ReadOnly = true;
+            this.txtTypeName.Size = new System.Drawing.Size(248, 22);
+            this.txtTypeName.TabIndex = 1;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(16, 48);
+            this.label2.Location = new System.Drawing.Point(16, 80);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(94, 17);
             this.label2.TabIndex = 2;
@@ -65,14 +68,14 @@ namespace QLKS.GUI
             // 
             // txtPhone
             // 
-            this.txtPhone.Location = new System.Drawing.Point(120, 48);
+            this.txtPhone.Location = new System.Drawing.Point(120, 80);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(248, 22);
             this.txtPhone.TabIndex = 3;
             // 
             // btnBooking
             // 
-            this.btnBooking.Location = new System.Drawing.Point(120, 80);
+            this.btnBooking.Location = new System.Drawing.Point(120, 112);
             this.btnBooking.Name = "btnBooking";
             this.btnBooking.Size = new System.Drawing.Size(112, 32);
             this.btnBooking.TabIndex = 4;
@@ -83,23 +86,51 @@ namespace QLKS.GUI
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(16, 128);
+            this.label3.Location = new System.Drawing.Point(16, 152);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(352, 56);
             this.label3.TabIndex = 5;
             this.label3.Text = "Hướng dẫn: Nhập số ĐT của khách hàng, nếu khách hàng tồn tại trong CSDL, thì khôn" +
     "g cần nhập liệu mới. Nếu không tồn tại chuyển qua bước tiếp theo.";
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(16, 48);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(68, 17);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Số lượng:";
+            // 
+            // txtAmount
+            // 
+            this.txtAmount.Location = new System.Drawing.Point(120, 48);
+            this.txtAmount.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.txtAmount.Name = "txtAmount";
+            this.txtAmount.Size = new System.Drawing.Size(248, 22);
+            this.txtAmount.TabIndex = 8;
+            this.txtAmount.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
             // FormAgencyBooking
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(385, 195);
+            this.ClientSize = new System.Drawing.Size(385, 218);
+            this.Controls.Add(this.txtAmount);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnBooking);
             this.Controls.Add(this.txtPhone);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtRoomID);
+            this.Controls.Add(this.txtTypeName);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
@@ -108,6 +139,7 @@ namespace QLKS.GUI
             this.Text = "Đặt phòng";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormAgencyBooking_FormClosing);
             this.Load += new System.EventHandler(this.FormAgencyBooking_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.txtAmount)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -116,10 +148,12 @@ namespace QLKS.GUI
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtRoomID;
+        private System.Windows.Forms.TextBox txtTypeName;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtPhone;
         private System.Windows.Forms.Button btnBooking;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.NumericUpDown txtAmount;
     }
 }

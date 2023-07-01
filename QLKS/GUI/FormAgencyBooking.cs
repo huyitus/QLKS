@@ -14,19 +14,19 @@ namespace QLKS.GUI
         private const string MESSAGE_SEND_REQUEST_FAILED = "Gửi yêu cầu thất bại!";
 
         private readonly Form parent;
-        private readonly string roomId;
+        private readonly string typeName;
 
-        public FormAgencyBooking(FormAgency parent, string roomId)
+        public FormAgencyBooking(FormAgency parent, string typeName)
         {
             InitializeComponent();
             this.parent = parent;
-            this.roomId = roomId;
+            this.typeName = typeName;
         }
 
         private void FormAgencyBooking_Load(object sender, System.EventArgs e)
         {
             parent.Hide();
-            txtRoomID.Text = roomId;
+            txtTypeName.Text = typeName;
         }
 
         private void FormAgencyBooking_FormClosing(object sender, FormClosingEventArgs e)
@@ -38,6 +38,7 @@ namespace QLKS.GUI
         {
             string phoneNumber = txtPhone.Text;
             string customerId = CustomerBAL.GetIdByPhoneNumber(phoneNumber);
+            string amount = txtAmount.Text;
 
             if (customerId == null)
             {
@@ -50,7 +51,7 @@ namespace QLKS.GUI
                 DialogResult result = MessageBox.Show(MESSAGE_CONFIRM, MESSAGE_CAPTION, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (result == DialogResult.Yes)
                 {
-                    if (RequestBookingBAL.SendRequest(customerId, roomId))
+                    if (RequestBookingBAL.SendRequest(customerId, typeName, amount))
                     {
                         MessageBox.Show(MESSAGE_SEND_REQUEST_SUCCESS, MESSAGE_CAPTION, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
