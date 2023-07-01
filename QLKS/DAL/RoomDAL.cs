@@ -1,11 +1,6 @@
-﻿using QLKS.BAL;
-
-using System;
-using System.Data;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 using Oracle.ManagedDataAccess.Client;
-using Oracle.ManagedDataAccess.Types;
 
 namespace QLKS.DAL
 {
@@ -16,19 +11,19 @@ namespace QLKS.DAL
         public int Status { get; set; }
         public string Cleaning { get; set; }
 
-        public RoomDAL(string id, string typeName, int status, string cleaning)
+        public RoomDAL(string id, string typeName, string status, string cleaning)
         {
             ID = id;
             TypeName = typeName;
-            Status = status;
+            Status = int.Parse(status);
             Cleaning = cleaning;
         }
 
-        public static List<RoomDAL> GetRooms(bool isEmpty, bool isClean)
+        public static List<RoomDAL> GetAll(bool isEmpty, bool isClean)
         {
             string cond1 = isEmpty ? "TINHTRANG = 0" : "1 = 1";
             string cond2 = isClean ? "TTDONDEP = 'Da don'" : "1 = 1";
-            string query = "SELECT * FROM QLKS.PHONG WHERE " + cond1 + " AND " + cond2;
+            string query = string.Format("SELECT * FROM QLKS.PHONG WHERE {0} AND {1}", cond1, cond2);
 
             List<RoomDAL> rooms = new List<RoomDAL>();
 
@@ -38,7 +33,7 @@ namespace QLKS.DAL
                 {
                     var id = reader.GetString(0);
                     var typeName = reader.GetString(1);
-                    var status = reader.GetInt32(2);
+                    var status = reader.GetString(2);
                     var cleaning = reader.GetString(3);
 
                     var room = new RoomDAL(id, typeName, status, cleaning);
@@ -49,23 +44,24 @@ namespace QLKS.DAL
             return rooms;
         }
 
-        public static bool IsEmptyRoom(string roomId)
+        public static RoomDAL GetByID(string roomId)
         {
-            bool isEmpty = false;
+            string query = string.Format("SELECT * FROM QLKS.PHONG WHERE MAPHONG = '{0}'", roomId);
 
-            using (var command = SessionBAL.sConnection.CreateCommand())
+            using (OracleDataReader reader = Utility.GetDataReader(query))
             {
-                command.CommandText = "BEGIN :result := QLKS.check_room_status(:roomId); END;";
-                command.Parameters.Add("result", OracleDbType.Boolean, ParameterDirection.ReturnValue);
-                command.Parameters.Add("roomId", OracleDbType.NVarchar2).Value = roomId;
+                while (reader != null && reader.Read())
+                {
+                    var id = reader.GetString(0);
+                    var typeName = reader.GetString(1);
+                    var status = reader.GetString(2);
+                    var cleaning = reader.GetString(3);
 
-                command.ExecuteNonQuery();
-
-                OracleBoolean result = (OracleBoolean)command.Parameters["result"].Value;
-                isEmpty = result.Value;
+                    return new RoomDAL(id, typeName, status, cleaning);
+                }
             }
 
-            return isEmpty;
+            return null;
         }
     }
 }
