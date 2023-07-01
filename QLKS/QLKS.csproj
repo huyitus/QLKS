@@ -80,14 +80,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BAL\CustomerBAL.cs" />
     <Compile Include="BAL\RequestBookingBAL.cs" />
-    <Compile Include="BAL\RoomBAL.cs" />
+    <Compile Include="BAL\RoomAgencyBAL.cs" />
     <Compile Include="BAL\SessionBAL.cs" />
-    <Compile Include="DAL\CustomerDAL.cs" />
     <Compile Include="DAL\RequestBookingDAL.cs" />
+    <Compile Include="DAL\RoomAgencyDAL.cs" />
     <Compile Include="DAL\Utility.cs" />
-    <Compile Include="DAL\RoomDAL.cs" />
     <Compile Include="GUI\FormAgency.cs">
       <SubType>Form</SubType>
     </Compile>

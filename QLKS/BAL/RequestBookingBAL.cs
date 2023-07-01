@@ -4,10 +4,9 @@ namespace QLKS.BAL
 {
     class RequestBookingBAL
     {
-        public static bool SendRequest(string customerId, string typeName, string amount)
+        public static bool SendRequest(string phoneNumber, string typeName, string amount)
         {
-            RequestBookingDAL request = new RequestBookingDAL(null, customerId, typeName, amount);
-            return RequestBookingDAL.Insert(request);
+            return RequestBookingDAL.Insert(phoneNumber, typeName, amount);
         }
     }
 }

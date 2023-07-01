@@ -21,7 +21,7 @@ namespace QLKS.GUI
         private void FormAgency_Load(object sender, EventArgs e)
         {
             parent.Hide();
-            RoomBAL.LoadToAgency(dgvRooms, false, false);
+            RoomAgencyBAL.LoadInto(dgvRooms, false, false);
         }
 
         private void FormAgency_FormClosing(object sender, FormClosingEventArgs e)
@@ -34,7 +34,7 @@ namespace QLKS.GUI
         {
             bool isEmpty = chkEmpty.Checked;
             bool isClean = chkClean.Checked;
-            RoomBAL.LoadToAgency(dgvRooms, isEmpty, isClean);
+            RoomAgencyBAL.LoadInto(dgvRooms, isEmpty, isClean);
         }
 
         private void ButtonOrder_Click(object sender, EventArgs e)

@@ -34,7 +34,6 @@ namespace QLKS.GUI
             this.label2 = new System.Windows.Forms.Label();
             this.txtPhone = new System.Windows.Forms.TextBox();
             this.btnBooking = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txtAmount = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.txtAmount)).BeginInit();
@@ -83,16 +82,6 @@ namespace QLKS.GUI
             this.btnBooking.UseVisualStyleBackColor = true;
             this.btnBooking.Click += new System.EventHandler(this.ButtonBooking_Click);
             // 
-            // label3
-            // 
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(16, 152);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(352, 56);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Hướng dẫn: Nhập số ĐT của khách hàng, nếu khách hàng tồn tại trong CSDL, thì khôn" +
-    "g cần nhập liệu mới. Nếu không tồn tại chuyển qua bước tiếp theo.";
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -123,10 +112,9 @@ namespace QLKS.GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(385, 218);
+            this.ClientSize = new System.Drawing.Size(385, 162);
             this.Controls.Add(this.txtAmount);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.btnBooking);
             this.Controls.Add(this.txtPhone);
             this.Controls.Add(this.label2);
@@ -152,7 +140,6 @@ namespace QLKS.GUI
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtPhone;
         private System.Windows.Forms.Button btnBooking;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.NumericUpDown txtAmount;
     }
