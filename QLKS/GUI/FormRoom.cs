@@ -10,20 +10,15 @@ using System.Windows.Forms;
 
 namespace QLKS.GUI
 {
-    public partial class FormReceptionist : Form
+    public partial class FormRoom : Form
     {
         private readonly Form parent;
-        public FormReceptionist(Form parent)
+        public FormRoom(Form parent)
         {
             InitializeComponent();
             this.parent = parent;
         }
 
-        private void btnTracuuKH_Click(object sender, EventArgs e)
-        {
-            Form ShowRoom = new FormRoom(this);
-            this.Hide();
-            ShowRoom.ShowDialog();
-        }
     }
+    
 }

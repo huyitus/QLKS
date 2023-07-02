@@ -47,6 +47,7 @@ namespace QLKS.GUI
             this.btnTracuuKH.TabIndex = 0;
             this.btnTracuuKH.Text = "Tra cứu khách hàng";
             this.btnTracuuKH.UseVisualStyleBackColor = true;
+            this.btnTracuuKH.Click += new System.EventHandler(this.btnTracuuKH_Click);
             // 
             // btnTracuuPhong
             // 

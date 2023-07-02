@@ -80,18 +80,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BAL\Receptionist.cs" />
     <Compile Include="BAL\RequestBookingBAL.cs" />
     <Compile Include="BAL\RoomAgencyBAL.cs" />
     <Compile Include="BAL\SessionBAL.cs" />
     <Compile Include="DAL\RequestBookingDAL.cs" />
     <Compile Include="DAL\RoomAgencyDAL.cs" />
     <Compile Include="DAL\Utility.cs" />
-    <Compile Include="GUI\FormReceptionist.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\FormReceptionist.Designer.cs">
-      <DependentUpon>FormReceptionist.cs</DependentUpon>
-    </Compile>
     <Compile Include="GUI\FormAgency.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,17 +105,32 @@
     <Compile Include="GUI\FormAgencyBooking.Designer.cs">
       <DependentUpon>FormAgencyBooking.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\FormDevideRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormDevideRoom.Designer.cs">
+      <DependentUpon>FormDevideRoom.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\FormReceptionist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormReceptionist.Designer.cs">
+      <DependentUpon>FormReceptionist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormRoom.Designer.cs">
+      <DependentUpon>FormRoom.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="GUI\FormReceptionist.resx">
-      <DependentUpon>FormReceptionist.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="GUI\FormAgency.resx">
       <DependentUpon>FormAgency.cs</DependentUpon>
     </EmbeddedResource>
@@ -130,8 +140,17 @@
     <EmbeddedResource Include="GUI\FormAgencyBooking.resx">
       <DependentUpon>FormAgencyBooking.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormDevideRoom.resx">
+      <DependentUpon>FormDevideRoom.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormReceptionist.resx">
+      <DependentUpon>FormReceptionist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormRoom.resx">
+      <DependentUpon>FormRoom.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

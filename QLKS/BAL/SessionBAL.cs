@@ -47,5 +47,9 @@ namespace QLKS.BAL
         {
             return username.Substring(0, 5) == "DAILY";
         }
+        public static bool IsReceptionistUsername(string username)
+        {
+            return username.Substring(0, 5) == "LETAN";
+        }
     }
 }

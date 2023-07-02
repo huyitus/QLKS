@@ -36,6 +36,12 @@ namespace QLKS.GUI
                 Form agencyForm = new FormAgency(this);
                 agencyForm.Show();
             }
+            else if(SessionBAL.IsReceptionistUsername(username))
+            {
+                Form receptionistForm = new FormReceptionist(this);
+                this.Hide();
+                receptionistForm.ShowDialog();
+            }
         }
 
         public void ClearInput()
