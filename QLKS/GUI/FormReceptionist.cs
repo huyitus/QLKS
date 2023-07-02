@@ -21,7 +21,9 @@ namespace QLKS.GUI
 
         private void btnTracuuKH_Click(object sender, EventArgs e)
         {
-
+            Form LT_Customer = new FormLT_Customer(this);
+            this.Hide();
+            LT_Customer.ShowDialog();
         }
 
         private void btnTracuuPhong_Click(object sender, EventArgs e)
@@ -30,7 +32,12 @@ namespace QLKS.GUI
             this.Hide();
             ShowRoom.ShowDialog();
         }
-
+        private void btnTracuuDV_Click(object sender, EventArgs e)
+        {
+            Form LT_Service = new FormLT_Service(this);
+            this.Hide();
+            LT_Service.ShowDialog();
+        }
         private void FormReceptionist_FormClosed(object sender, FormClosedEventArgs e)
         {
             parent.Show();
