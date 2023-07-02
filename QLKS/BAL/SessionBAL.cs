@@ -45,7 +45,31 @@ namespace QLKS.BAL
 
         public static bool IsAgencyUsername(string username)
         {
-            return username.Substring(0, 5) == "DAILY";
+            try
+            {
+                return username.Substring(0, 5) == "DAILY";
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
+        public static bool IsReceptionistUsername(string username)
+        {
+            try
+            {
+                return username.Substring(0, 5) == "LETAN";
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
+        public static bool IsAdminUsername(string username)
+        {
+            return username == "QLKS";
         }
     }
 }

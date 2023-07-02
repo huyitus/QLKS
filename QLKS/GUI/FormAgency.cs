@@ -47,5 +47,10 @@ namespace QLKS.GUI
 
             }
         }
+
+        private void dgvRooms_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
