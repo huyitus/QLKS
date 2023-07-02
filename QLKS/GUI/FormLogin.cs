@@ -42,6 +42,11 @@ namespace QLKS.GUI
                 this.Hide();
                 receptionistForm.ShowDialog();
             }
+            else
+            {
+                Form form = new FormAdmin(this);
+                form.Show();
+            }    
         }
 
         public void ClearInput()
