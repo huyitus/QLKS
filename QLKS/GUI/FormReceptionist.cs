@@ -21,9 +21,19 @@ namespace QLKS.GUI
 
         private void btnTracuuKH_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void btnTracuuPhong_Click(object sender, EventArgs e)
+        {
             Form ShowRoom = new FormRoom(this);
             this.Hide();
             ShowRoom.ShowDialog();
+        }
+
+        private void FormReceptionist_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            parent.Show();
         }
     }
 }

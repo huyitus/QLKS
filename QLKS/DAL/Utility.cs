@@ -20,7 +20,7 @@ namespace QLKS.DAL
                 return reader;
             }
             catch (Exception)
-            {
+            {                
                 return null;
             }
         }

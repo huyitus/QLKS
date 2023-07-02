@@ -39,8 +39,8 @@ namespace QLKS.GUI
             this.btnUpdate = new System.Windows.Forms.Button();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.dGV_DSPhong = new System.Windows.Forms.DataGridView();
             this.btnPhanPhong = new System.Windows.Forms.Button();
+            this.dGV_DSPhong = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGV_DSdatphong)).BeginInit();
             this.panel2.SuspendLayout();
@@ -79,6 +79,7 @@ namespace QLKS.GUI
             this.btnSearch.TabIndex = 3;
             this.btnSearch.Text = "Tra cứu";
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // tbTenKH
             // 
@@ -146,19 +147,9 @@ namespace QLKS.GUI
             this.label1.ForeColor = System.Drawing.Color.Green;
             this.label1.Location = new System.Drawing.Point(12, 11);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(234, 20);
+            this.label1.Size = new System.Drawing.Size(192, 20);
             this.label1.TabIndex = 5;
-            this.label1.Text = "DANH SÁCH ĐẶT PHÒNG";
-            // 
-            // dGV_DSPhong
-            // 
-            this.dGV_DSPhong.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dGV_DSPhong.Location = new System.Drawing.Point(2, 34);
-            this.dGV_DSPhong.Name = "dGV_DSPhong";
-            this.dGV_DSPhong.RowHeadersWidth = 51;
-            this.dGV_DSPhong.RowTemplate.Height = 24;
-            this.dGV_DSPhong.Size = new System.Drawing.Size(508, 226);
-            this.dGV_DSPhong.TabIndex = 0;
+            this.label1.Text = "DANH SÁCH PHÒNG";
             // 
             // btnPhanPhong
             // 
@@ -170,16 +161,28 @@ namespace QLKS.GUI
             this.btnPhanPhong.Text = "Phân Phòng";
             this.btnPhanPhong.UseVisualStyleBackColor = true;
             // 
+            // dGV_DSPhong
+            // 
+            this.dGV_DSPhong.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dGV_DSPhong.Location = new System.Drawing.Point(2, 34);
+            this.dGV_DSPhong.Name = "dGV_DSPhong";
+            this.dGV_DSPhong.RowHeadersWidth = 51;
+            this.dGV_DSPhong.RowTemplate.Height = 24;
+            this.dGV_DSPhong.Size = new System.Drawing.Size(508, 226);
+            this.dGV_DSPhong.TabIndex = 0;
+            // 
             // FormRoom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(837, 600);
+            this.ClientSize = new System.Drawing.Size(903, 600);
             this.Controls.Add(this.btnPhanPhong);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "FormRoom";
             this.Text = "FormRoom";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormRoom_FormClosed);
+            this.Load += new System.EventHandler(this.FormRoom_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGV_DSdatphong)).EndInit();
@@ -200,9 +203,9 @@ namespace QLKS.GUI
         private System.Windows.Forms.DataGridView dGV_DSdatphong;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dGV_DSPhong;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Button btnPhanPhong;
+        private System.Windows.Forms.DataGridView dGV_DSPhong;
     }
 }

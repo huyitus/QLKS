@@ -44,5 +44,6 @@ namespace QLKS.GUI
             Form bookingForm = new FormAgencyBooking(this, typeName);
             bookingForm.Show();
         }
+
     }
 }

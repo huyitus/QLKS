@@ -57,6 +57,7 @@ namespace QLKS.GUI
             this.btnTracuuPhong.TabIndex = 1;
             this.btnTracuuPhong.Text = "Tra cứu phòng";
             this.btnTracuuPhong.UseVisualStyleBackColor = true;
+            this.btnTracuuPhong.Click += new System.EventHandler(this.btnTracuuPhong_Click);
             // 
             // btnTracuuDV
             // 
@@ -127,6 +128,7 @@ namespace QLKS.GUI
             this.Controls.Add(this.btnTracuuKH);
             this.Name = "FormReceptionist";
             this.Text = "FormReceptionist";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormReceptionist_FormClosed);
             this.ResumeLayout(false);
 
         }

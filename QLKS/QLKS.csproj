@@ -85,6 +85,7 @@
     <Compile Include="BAL\NvBAL.cs" />
     <Compile Include="BAL\PnBAL.cs" />
     <Compile Include="BAL\Receptionist.cs" />
+    <Compile Include="BAL\ReceptionistRoomBAL.cs" />
     <Compile Include="BAL\RequestBookingBAL.cs" />
     <Compile Include="BAL\RoomAgencyBAL.cs" />
     <Compile Include="BAL\RoomBAL.cs" />
@@ -95,6 +96,7 @@
     <Compile Include="DAL\DvDAL.cs" />
     <Compile Include="DAL\NvDAL.cs" />
     <Compile Include="DAL\PnDAL.cs" />
+    <Compile Include="DAL\ReceptionistRoomDAL.cs" />
     <Compile Include="DAL\RequestBookingDAL.cs" />
     <Compile Include="DAL\RoomAgencyDAL.cs" />
     <Compile Include="DAL\RoomDAL.cs" />

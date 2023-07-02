@@ -1,4 +1,6 @@
-﻿using System;
+﻿using QLKS.BAL;
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,7 +20,21 @@ namespace QLKS.GUI
             InitializeComponent();
             this.parent = parent;
         }
+        private void FormRoom_Load(object sender, EventArgs e)
+        {
+            parent.Hide();
+            ReceptionistRoomBAL.LoadInfo(dGV_DSdatphong);
+        }
 
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FormRoom_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            parent.Show();
+        }
     }
     
 }
