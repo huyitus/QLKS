@@ -37,7 +37,7 @@ namespace QLKS.GUI
             RoomAgencyBAL.LoadInto(dgvRooms, isEmpty, isClean);
         }
 
-        private void ButtonOrder_Click(object sender, EventArgs e)
+        private void btnBooking_Click(object sender, EventArgs e)
         {
             string typeName = dgvRooms.CurrentRow.Cells["TypeName"].Value.ToString();
 

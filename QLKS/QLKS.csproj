@@ -88,15 +88,69 @@
     <Compile Include="BAL\ReceptionistRoomBAL.cs" />
     <Compile Include="BAL\RequestBookingBAL.cs" />
     <Compile Include="BAL\RoomAgencyBAL.cs" />
-    <Compile Include="BAL\CusBAL.cs" />
-    <Compile Include="BAL\DvBAL.cs" />
-    <Compile Include="BAL\NvBAL.cs" />
-    <Compile Include="BAL\PnBAL.cs" />
     <Compile Include="BAL\RoomBAL.cs" />
     <Compile Include="BAL\RuleBAL.cs" />
     <Compile Include="BAL\SessionBAL.cs" />
+    <Compile Include="BAL\TourBAL.cs" />
+    <Compile Include="DAL\CusDAL.cs" />
+    <Compile Include="DAL\DvDAL.cs" />
+    <Compile Include="DAL\NvDAL.cs" />
+    <Compile Include="DAL\PnDAL.cs" />
+    <Compile Include="DAL\ReceptionistRoomDAL.cs" />
+    <Compile Include="DAL\RequestBookingDAL.cs" />
+    <Compile Include="DAL\RoomAgencyDAL.cs" />
+    <Compile Include="DAL\RuleDAL.cs" />
+    <Compile Include="DAL\TourDAL.cs" />
     <Compile Include="DAL\Utility.cs" />
     <Compile Include="DAL\RoomDAL.cs" />
+    <Compile Include="GUI\FormAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormAdmin.Designer.cs">
+      <DependentUpon>FormAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormAdmin_DT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormAdmin_DT.Designer.cs">
+      <DependentUpon>FormAdmin_DT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormAdmin_DV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormAdmin_DV.Designer.cs">
+      <DependentUpon>FormAdmin_DV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormAdmin_HD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormAdmin_HD.Designer.cs">
+      <DependentUpon>FormAdmin_HD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormAdmin_KH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormAdmin_KH.Designer.cs">
+      <DependentUpon>FormAdmin_KH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormAdmin_NV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormAdmin_NV.Designer.cs">
+      <DependentUpon>FormAdmin_NV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormAdmin_QD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormAdmin_QD.Designer.cs">
+      <DependentUpon>FormAdmin_QD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormAdmin_Tour.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormAdmin_Tour.Designer.cs">
+      <DependentUpon>FormAdmin_Tour.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\FormAgency.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,6 +195,30 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\FormAdmin.resx">
+      <DependentUpon>FormAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormAdmin_DT.resx">
+      <DependentUpon>FormAdmin_DT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormAdmin_DV.resx">
+      <DependentUpon>FormAdmin_DV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormAdmin_HD.resx">
+      <DependentUpon>FormAdmin_HD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormAdmin_KH.resx">
+      <DependentUpon>FormAdmin_KH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormAdmin_NV.resx">
+      <DependentUpon>FormAdmin_NV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormAdmin_QD.resx">
+      <DependentUpon>FormAdmin_QD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormAdmin_Tour.resx">
+      <DependentUpon>FormAdmin_Tour.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\FormAgency.resx">
       <DependentUpon>FormAgency.cs</DependentUpon>
     </EmbeddedResource>

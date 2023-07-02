@@ -33,8 +33,7 @@ namespace QLKS.DAL
             public static List<ThongTinDatPhongDAL> LoadThongTinDatPhong()
             {
                 List<ThongTinDatPhongDAL> thongtindatphong = new List<ThongTinDatPhongDAL>();
-                //string query = "SELECT DP.MADATPHG, KH.TENKH, DP.TENLOAIPHONG, DP.NGAYDEN, DP.SODEMLUUTRU FROM QLKS.KHACHHANG KH, QLKS.DATPHONG DP WHERE KH.MAKH=DP.MAKH;";
-                string query = "SELECT * FROM QLKS.KHACHHANG;";
+                string query = "SELECT DP.MADATPHG, KH.TENKH, DP.TENLOAIPHONG, DP.NGAYDEN, DP.SODEMLUUTRU FROM QLKS.KHACHHANG KH, QLKS.DATPHONG DP WHERE KH.MAKH=DP.MAKH";
 
                 using (OracleDataReader reader = Utility.GetDataReader(query))
                 {
