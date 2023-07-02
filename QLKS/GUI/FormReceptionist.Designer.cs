@@ -67,6 +67,7 @@ namespace QLKS.GUI
             this.btnTracuuDV.TabIndex = 2;
             this.btnTracuuDV.Text = "Tra cứu dịch vụ";
             this.btnTracuuDV.UseVisualStyleBackColor = true;
+            this.btnTracuuDV.Click += new System.EventHandler(this.btnTracuuDV_Click);
             // 
             // btnTracuuTourDL
             // 
