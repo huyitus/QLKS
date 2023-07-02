@@ -97,21 +97,18 @@ namespace QLKS.GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(442, 211);
+            this.ClientSize = new System.Drawing.Size(393, 164);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.MaximizeBox = false;
             this.Name = "FormLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng nhập";
-            this.Load += new System.EventHandler(this.FormLogin_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

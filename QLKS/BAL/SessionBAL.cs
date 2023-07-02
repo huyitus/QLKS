@@ -54,7 +54,7 @@ namespace QLKS.BAL
                 return false;
             }
         }
-
+        
         public static bool IsReceptionistUsername(string username)
         {
             try

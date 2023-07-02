@@ -1,0 +1,38 @@
+ALTER SESSION SET "_ORACLE_SCRIPT" = TRUE;
+
+CREATE OR REPLACE FUNCTION QLKS.check_room_status(roomId IN NVARCHAR2) RETURN BOOLEAN
+IS
+    v_status NUMBER;
+BEGIN
+    SELECT TINHTRANG INTO v_status
+    FROM QLKS.PHONG
+    WHERE MAPHONG = roomId;
+    
+    IF v_status = 0 THEN
+        RETURN TRUE;
+    ELSE
+        RETURN FALSE;
+    END IF;
+EXCEPTION
+    WHEN NO_DATA_FOUND THEN
+        RETURN FALSE;
+END;
+/
+
+CREATE OR REPLACE FUNCTION QLKS.get_customer_id_by_phone(phone IN VARCHAR) RETURN NVARCHAR2
+IS
+    v_id NVARCHAR2(10);
+BEGIN
+    SELECT MAKH INTO v_id
+    FROM QLKS.KHACHHANG
+    WHERE sdt = phone;
+    
+    return v_id;
+EXCEPTION
+    WHEN NO_DATA_FOUND THEN
+        RETURN NULL;
+END;
+/
+
+GRANT EXECUTE ON QLKS.check_room_status TO daily1;
+GRANT EXECUTE ON QLKS.get_customer_id_by_phone TO daily1;

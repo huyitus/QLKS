@@ -46,7 +46,7 @@ namespace QLKS.GUI
             {
                 Form form = new FormAdmin(this);
                 form.Show();
-            }
+            }    
         }
 
         public void ClearInput()

@@ -7,45 +7,42 @@ namespace QLKS.GUI
 {
     public partial class FormAgency : Form
     {
-        private const string CONFIRM_BOOKING_MESSAGE = "Xác nhận đặt phòng";
-        private const string CONFIRM_CAPTION = "Xác nhận";
+        private const string MESSAGE_CAPTION = "Thông báo";
+        private const string MESSAGE_NO_EMPTY = "Phòng này không còn trống!";
 
-        private readonly FormLogin loginForm;
+        private readonly Form parent;
 
-        public FormAgency(FormLogin parent)
+        public FormAgency(Form parent)
         {
             InitializeComponent();
-            this.loginForm = parent;
+            this.parent = parent;
         }
 
         private void FormAgency_Load(object sender, EventArgs e)
         {
-            loginForm.Hide();
-            RoomBAL.LoadRoomsInto(dgvRooms, false, false);
+            parent.Hide();
+            RoomAgencyBAL.LoadInto(dgvRooms, false, false);
         }
 
         private void FormAgency_FormClosing(object sender, FormClosingEventArgs e)
         {
             SessionBAL.Finish();
-            loginForm.ClearInput();
-            loginForm.Show();
+            parent.Show();
         }
 
         private void Filter_CheckedChanged(object sender, EventArgs e)
         {
             bool isEmpty = chkEmpty.Checked;
             bool isClean = chkClean.Checked;
-            RoomBAL.LoadRoomsInto(dgvRooms, isEmpty, isClean);
+            RoomAgencyBAL.LoadInto(dgvRooms, isEmpty, isClean);
         }
 
         private void ButtonOrder_Click(object sender, EventArgs e)
         {
-            string roomId = dgvRooms.CurrentRow.Cells["ID"].Value.ToString();
-            string message = CONFIRM_BOOKING_MESSAGE + " " + roomId + "?";
-            if (MessageBox.Show(message, CONFIRM_CAPTION, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
+            string typeName = dgvRooms.CurrentRow.Cells["TypeName"].Value.ToString();
 
-            }
+            Form bookingForm = new FormAgencyBooking(this, typeName);
+            bookingForm.Show();
         }
 
         private void dgvRooms_CellContentClick(object sender, DataGridViewCellEventArgs e)
