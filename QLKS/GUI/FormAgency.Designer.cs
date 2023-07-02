@@ -34,12 +34,14 @@ namespace QLKS.GUI
             this.btnBooking = new System.Windows.Forms.Button();
             this.chkClean = new System.Windows.Forms.CheckBox();
             this.chkEmpty = new System.Windows.Forms.CheckBox();
+            this.panellabel = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRooms)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvRooms
             // 
             this.dgvRooms.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvRooms.BackgroundColor = System.Drawing.Color.White;
             this.dgvRooms.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvRooms.Location = new System.Drawing.Point(16, 48);
             this.dgvRooms.MultiSelect = false;
@@ -47,35 +49,36 @@ namespace QLKS.GUI
             this.dgvRooms.ReadOnly = true;
             this.dgvRooms.RowHeadersWidth = 51;
             this.dgvRooms.RowTemplate.Height = 24;
-            this.dgvRooms.Size = new System.Drawing.Size(680, 200);
+            this.dgvRooms.Size = new System.Drawing.Size(765, 210);
             this.dgvRooms.TabIndex = 0;
+            this.dgvRooms.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRooms_CellContentClick);
             // 
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(16, 16);
+            this.label1.Location = new System.Drawing.Point(16, 8);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(680, 24);
+            this.label1.Size = new System.Drawing.Size(606, 40);
             this.label1.TabIndex = 1;
             this.label1.Text = "Tra cứu và đặt phòng";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // btnBooking
             // 
-            this.btnBooking.Location = new System.Drawing.Point(576, 256);
-            this.btnBooking.Name = "btnBooking";
-            this.btnBooking.Size = new System.Drawing.Size(120, 40);
-            this.btnBooking.TabIndex = 4;
-            this.btnBooking.Text = "Gửi yêu cầu";
-            this.btnBooking.UseVisualStyleBackColor = true;
-            this.btnBooking.Click += new System.EventHandler(this.ButtonOrder_Click);
+            this.btnOrder.Location = new System.Drawing.Point(584, 248);
+            this.btnOrder.Name = "btnOrder";
+            this.btnOrder.Size = new System.Drawing.Size(112, 40);
+            this.btnOrder.TabIndex = 4;
+            this.btnOrder.Text = "Đặt phòng";
+            this.btnOrder.UseVisualStyleBackColor = true;
+            this.btnOrder.Click += new System.EventHandler(this.ButtonOrder_Click);
             // 
             // chkClean
             // 
             this.chkClean.AutoSize = true;
-            this.chkClean.Location = new System.Drawing.Point(16, 280);
+            this.chkClean.Location = new System.Drawing.Point(16, 272);
             this.chkClean.Name = "chkClean";
-            this.chkClean.Size = new System.Drawing.Size(119, 21);
+            this.chkClean.Size = new System.Drawing.Size(134, 24);
             this.chkClean.TabIndex = 14;
             this.chkClean.Text = "Phòng đã dọn";
             this.chkClean.UseVisualStyleBackColor = true;
@@ -84,25 +87,32 @@ namespace QLKS.GUI
             // chkEmpty
             // 
             this.chkEmpty.AutoSize = true;
-            this.chkEmpty.Location = new System.Drawing.Point(16, 256);
+            this.chkEmpty.Location = new System.Drawing.Point(16, 248);
             this.chkEmpty.Name = "chkEmpty";
-            this.chkEmpty.Size = new System.Drawing.Size(135, 21);
+            this.chkEmpty.Size = new System.Drawing.Size(152, 24);
             this.chkEmpty.TabIndex = 13;
             this.chkEmpty.Text = "Phòng còn trống";
             this.chkEmpty.UseVisualStyleBackColor = true;
             this.chkEmpty.CheckedChanged += new System.EventHandler(this.Filter_CheckedChanged);
             // 
+            // panellabel
+            // 
+            this.panellabel.BackColor = System.Drawing.Color.DarkCyan;
+            this.panellabel.Location = new System.Drawing.Point(1, 1);
+            this.panellabel.Name = "panellabel";
+            this.panellabel.Size = new System.Drawing.Size(806, 67);
+            this.panellabel.TabIndex = 20;
+            // 
             // FormAgency
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(714, 314);
+            this.ClientSize = new System.Drawing.Size(714, 306);
             this.Controls.Add(this.chkClean);
             this.Controls.Add(this.chkEmpty);
             this.Controls.Add(this.btnBooking);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvRooms);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "FormAgency";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -122,5 +132,6 @@ namespace QLKS.GUI
         private System.Windows.Forms.Button btnBooking;
         private System.Windows.Forms.CheckBox chkClean;
         private System.Windows.Forms.CheckBox chkEmpty;
+        private System.Windows.Forms.Panel panellabel;
     }
 }
