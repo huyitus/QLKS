@@ -66,6 +66,7 @@
             this.dgv_hd.RowHeadersVisible = false;
             this.dgv_hd.RowHeadersWidth = 62;
             this.dgv_hd.RowTemplate.Height = 28;
+            this.dgv_hd.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_hd.Size = new System.Drawing.Size(757, 266);
             this.dgv_hd.TabIndex = 23;
             // 
