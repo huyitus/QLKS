@@ -20,6 +20,12 @@ namespace QLKS.GUI
         public FormAdmin_DV()
         {
             InitializeComponent();
+            if (SessionBAL.getUserRole == "LETAN")
+            {
+                butt_Fix.Visible = false;
+                butt_Del.Visible = false;
+                butt_Add.Visible = false;
+            }
         }
 
         private void lab_QD_Click(object sender, EventArgs e)

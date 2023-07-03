@@ -8,68 +8,62 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
 
 namespace QLKS.GUI
 {
-    public partial class FormLT_Customer : Form
+    public partial class FormDKTour : Form
     {
         private const string MESSAGE_CAPTION = "Thông báo";
-        private const string MESSAGE_CONFIRM = "Bạn có chắc chắn muốn xóa khách hàng này?";
+        private const string MESSAGE_CONFIRM = "Bạn có chắc chắn muốn xóa dòng đăng ký này?";
         private const string MESSAGE_SEND_REQUEST_SUCCESS = "Xóa thành công!";
         private const string MESSAGE_SEND_REQUEST_FAILED = "Xóa thất bại!";
-
-        private readonly Form parent;
-        public FormLT_Customer(Form parent)
+        public FormDKTour()
         {
             InitializeComponent();
-            this.parent = parent;
+        }
+        private void FormDKTour_Load(object sender, EventArgs e)
+        {
+            DKTourBAL.LoadDKTourInto(dtg_DKTour);
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            FormAddCustomer f = new FormAddCustomer(this);
+            FormAddDKTour adddktour = new FormAddDKTour();
             this.Hide();
-            f.ShowDialog();
+            adddktour.ShowDialog();
             this.Show();
         }
 
-        private void FormLT_Customer_Form_Closed(object sender, FormClosedEventArgs e)
+        private void button4_Click(object sender, EventArgs e)
         {
-            parent.Show();
+            DKTourBAL.LoadDKTourInto(dtg_DKTour);
         }
 
-        private void FormLT_Customer_Load(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
-            CusBAL.LoadCusInto(dataKH);
-        }
-
-        private void sua_Click(object sender, EventArgs e)
-        {
-            string makh = dataKH.CurrentRow.Cells["MAKH"].Value.ToString();
-            if (makh != null)
-            {
-                Form form = new FormLT_editCus(this, makh);
-                form.Show();
-            }
-        }
-
-        private void xoa_Click(object sender, EventArgs e)
-        {
-            string makh = dataKH.CurrentRow.Cells["MAKH"].Value.ToString();
-
+            string madktour = dtg_DKTour.CurrentRow.Cells["MaDKTour"].Value.ToString();
             DialogResult result = MessageBox.Show(MESSAGE_CONFIRM, MESSAGE_CAPTION, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
-                if (CusBAL.SendRequestDelKH(makh))
+                if (DKTourBAL.SendRequestDelDKTour(madktour))
                 {
                     MessageBox.Show(MESSAGE_SEND_REQUEST_SUCCESS, MESSAGE_CAPTION, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Close();
+                    //this.Close();
                 }
                 else
                 {
                     MessageBox.Show(MESSAGE_SEND_REQUEST_FAILED, MESSAGE_CAPTION, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            string id = dtg_DKTour.CurrentRow.Cells["MaDKTour"].Value.ToString();
+            if (id != null)
+            {
+                Form form = new FormEditDKTour(this, id);
+                form.Show();
             }
         }
     }

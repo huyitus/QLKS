@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QLKS.BAL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,11 @@ namespace QLKS.GUI
         public FormAdmin_HD()
         {
             InitializeComponent();
+        }
+
+        private void FormAdmin_HD_Load(object sender, EventArgs e)
+        {
+            BillBAL.LoadBillInto(dgv_hd);
         }
     }
 }

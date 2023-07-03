@@ -9,6 +9,8 @@ namespace QLKS.BAL
     {
         public static OracleConnection sConnection;
 
+        public static String getUserRole = "";
+
         public static bool Begin(string username, string password)
         {
             string connectionString = string.Format(ConfigurationManager.ConnectionStrings["QLKS"].ConnectionString,
@@ -70,6 +72,29 @@ namespace QLKS.BAL
         public static bool IsAdminUsername(string username)
         {
             return username == "QLKS";
+        }
+
+        public static string GetRole(string username)
+        {
+            if (IsReceptionistUsername(username))
+            {
+                return "LETAN";
+            }
+            else
+            {
+                if (IsAgencyUsername(username))
+                {
+                    return "DAILY";
+                }
+                else
+                {
+                    if (IsAdminUsername(username))
+                    {
+                        return "QLKS";
+                    }
+                }
+            }
+            return "ANONYMOUS";
         }
     }
 }

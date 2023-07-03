@@ -31,6 +31,7 @@ namespace QLKS.GUI
 
         private void OpenFormFor(string username)
         {
+            SessionBAL.getUserRole = SessionBAL.GetRole(username);
             if (SessionBAL.IsAgencyUsername(username))
             {
                 Form agencyForm = new FormAgency(this);

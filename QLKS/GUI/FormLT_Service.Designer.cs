@@ -35,11 +35,15 @@
             // 
             // dataDV
             // 
+            this.dataDV.BackgroundColor = System.Drawing.Color.White;
             this.dataDV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataDV.Location = new System.Drawing.Point(61, 76);
             this.dataDV.Name = "dataDV";
+            this.dataDV.ReadOnly = true;
+            this.dataDV.RowHeadersVisible = false;
             this.dataDV.RowHeadersWidth = 51;
             this.dataDV.RowTemplate.Height = 24;
+            this.dataDV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataDV.Size = new System.Drawing.Size(486, 213);
             this.dataDV.TabIndex = 0;
             // 
