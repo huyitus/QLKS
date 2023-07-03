@@ -77,6 +77,7 @@ namespace QLKS.GUI
             this.btnTracuuTourDL.TabIndex = 3;
             this.btnTracuuTourDL.Text = "Tra cứu Tour du lịch";
             this.btnTracuuTourDL.UseVisualStyleBackColor = true;
+            this.btnTracuuTourDL.Click += new System.EventHandler(this.btnTracuuTourDL_Click);
             // 
             // btnQLPhong
             // 
@@ -95,6 +96,7 @@ namespace QLKS.GUI
             this.btnHoaDon.TabIndex = 5;
             this.btnHoaDon.Text = "Hóa đơn";
             this.btnHoaDon.UseVisualStyleBackColor = true;
+            this.btnHoaDon.Click += new System.EventHandler(this.btnHoaDon_Click);
             // 
             // btnQuiDinh
             // 
@@ -104,6 +106,7 @@ namespace QLKS.GUI
             this.btnQuiDinh.TabIndex = 6;
             this.btnQuiDinh.Text = "Qui định";
             this.btnQuiDinh.UseVisualStyleBackColor = true;
+            this.btnQuiDinh.Click += new System.EventHandler(this.btnQuiDinh_Click);
             // 
             // btnYCDaiLy
             // 

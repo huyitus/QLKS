@@ -20,6 +20,12 @@ namespace QLKS.GUI
         public FormAdmin_QD()
         {
             InitializeComponent();
+            if (SessionBAL.getUserRole == "LETAN")
+            {
+                butt_Fix.Visible = false;
+                butt_Del.Visible = false;
+                butt_Add.Visible = false;
+            }
         }
 
         private void dtg_QD_CellContentClick(object sender, DataGridViewCellEventArgs e)

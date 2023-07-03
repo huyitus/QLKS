@@ -11,51 +11,44 @@ using System.Windows.Forms;
 
 namespace QLKS.GUI
 {
-    public partial class FormAdmin_DV : Form
+    public partial class FormDKTour : Form
     {
         private const string MESSAGE_CAPTION = "Thông báo";
-        private const string MESSAGE_CONFIRM = "Bạn có chắc chắn muốn xóa dịch vụ này?";
+        private const string MESSAGE_CONFIRM = "Bạn có chắc chắn muốn xóa dòng đăng ký này?";
         private const string MESSAGE_SEND_REQUEST_SUCCESS = "Xóa thành công!";
         private const string MESSAGE_SEND_REQUEST_FAILED = "Xóa thất bại!";
-        public FormAdmin_DV()
+        public FormDKTour()
         {
             InitializeComponent();
-            if (SessionBAL.getUserRole == "LETAN")
-            {
-                butt_Fix.Visible = false;
-                butt_Del.Visible = false;
-                butt_Add.Visible = false;
-            }
+        }
+        private void FormDKTour_Load(object sender, EventArgs e)
+        {
+            DKTourBAL.LoadDKTourInto(dtg_DKTour);
         }
 
-        private void lab_QD_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void FormAdmin_DV_Load(object sender, EventArgs e)
-        {
-            DvBAL.LoadDVInto(dtg_DV);
-        }
-
-        private void butt_Add_Click(object sender, EventArgs e)
-        {
-            FormAdmin_AddDV f = new FormAdmin_AddDV();
+            FormAddDKTour adddktour = new FormAddDKTour();
             this.Hide();
-            f.ShowDialog();
+            adddktour.ShowDialog();
             this.Show();
         }
 
-        private void butt_Del_Click(object sender, EventArgs e)
+        private void button4_Click(object sender, EventArgs e)
         {
-            string madv = dtg_DV.CurrentRow.Cells["MaDV"].Value.ToString();
+            DKTourBAL.LoadDKTourInto(dtg_DKTour);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string madktour = dtg_DKTour.CurrentRow.Cells["MaDKTour"].Value.ToString();
             DialogResult result = MessageBox.Show(MESSAGE_CONFIRM, MESSAGE_CAPTION, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
-                if (DvBAL.SendRequestDel(madv))
+                if (DKTourBAL.SendRequestDelDKTour(madktour))
                 {
                     MessageBox.Show(MESSAGE_SEND_REQUEST_SUCCESS, MESSAGE_CAPTION, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Close();
+                    //this.Close();
                 }
                 else
                 {
@@ -64,19 +57,14 @@ namespace QLKS.GUI
             }
         }
 
-        private void butt_Fix_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
-            string id = dtg_DV.CurrentRow.Cells["MaDV"].Value.ToString();
+            string id = dtg_DKTour.CurrentRow.Cells["MaDKTour"].Value.ToString();
             if (id != null)
             {
-                Form form = new FormAdminEditDV(this, id);
+                Form form = new FormEditDKTour(this, id);
                 form.Show();
             }
-        }
-
-        private void butt_Re_Click(object sender, EventArgs e)
-        {
-            DvBAL.LoadDVInto(dtg_DV);
         }
     }
 }
