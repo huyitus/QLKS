@@ -17,6 +17,10 @@ namespace QLKS.GUI
         public FormAdmin_Tour()
         {
             InitializeComponent();
+            if (SessionBAL.getUserRole == "QLKS")
+            {
+                butt_dktour.Visible = false;
+            }
         }
 
         private void FormAdmin_Tour_Load(object sender, EventArgs e)
