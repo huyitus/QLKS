@@ -72,6 +72,40 @@ namespace QLKS.DAL
                 }
             }
         }
+        public static DvDAL GetDV(string id)
+        {
+            string query = "SELECT * FROM QLKS.DICHVU WHERE MADV='" + id + "'";
 
+            using (OracleDataReader reader = Utility.GetDataReader(query))
+            {
+                if (reader != null && reader.Read())
+                {
+                    var madv = reader.GetString(0);
+                    var name = reader.GetString(1);
+                    var gia = reader.GetInt32(2);
+
+                    var dv = new DvDAL(madv, name, gia);
+                    return dv;
+                }
+            }
+
+            return null;
+        }
+        public static bool Update(string id, string name, string gia)
+        {
+            string query = string.Format("UPDATE QLKS.DICHVU SET TENDV='{0}', GIA='{1}' WHERE MADV='{2}'", name, gia, id);
+            using (var command = new OracleCommand(query, SessionBAL.sConnection))
+            {
+                try
+                {
+                    command.ExecuteNonQuery();
+                    return true;
+                }
+                catch (Exception)
+                {
+                    return false;
+                }
+            }
+        }
     }
 }

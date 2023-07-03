@@ -177,6 +177,7 @@
             this.Name = "FormAdmin_AddPartner";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thêm đối tác";
+            this.Load += new System.EventHandler(this.FormAdmin_AddPartner_Load);
             this.panellabel.ResumeLayout(false);
             this.panellabel.PerformLayout();
             this.ResumeLayout(false);

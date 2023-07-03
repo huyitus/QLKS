@@ -34,6 +34,7 @@
             this.butt_Add = new System.Windows.Forms.Button();
             this.butt_Del = new System.Windows.Forms.Button();
             this.butt_Fix = new System.Windows.Forms.Button();
+            this.butt_Re = new System.Windows.Forms.Button();
             this.panellabel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_DV)).BeginInit();
             this.SuspendLayout();
@@ -105,6 +106,18 @@
             this.butt_Fix.TabIndex = 25;
             this.butt_Fix.Text = "Sửa";
             this.butt_Fix.UseVisualStyleBackColor = false;
+            this.butt_Fix.Click += new System.EventHandler(this.butt_Fix_Click);
+            // 
+            // butt_Re
+            // 
+            this.butt_Re.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.butt_Re.Location = new System.Drawing.Point(33, 363);
+            this.butt_Re.Name = "butt_Re";
+            this.butt_Re.Size = new System.Drawing.Size(116, 34);
+            this.butt_Re.TabIndex = 26;
+            this.butt_Re.Text = "Làm mới";
+            this.butt_Re.UseVisualStyleBackColor = false;
+            this.butt_Re.Click += new System.EventHandler(this.butt_Re_Click);
             // 
             // FormAdmin_DV
             // 
@@ -112,6 +125,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(803, 409);
+            this.Controls.Add(this.butt_Re);
             this.Controls.Add(this.butt_Fix);
             this.Controls.Add(this.butt_Del);
             this.Controls.Add(this.butt_Add);
@@ -137,5 +151,6 @@
         private System.Windows.Forms.Button butt_Add;
         private System.Windows.Forms.Button butt_Del;
         private System.Windows.Forms.Button butt_Fix;
+        private System.Windows.Forms.Button butt_Re;
     }
 }

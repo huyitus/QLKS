@@ -70,5 +70,39 @@ namespace QLKS.DAL
                 }
             }
         }
+        public static RuleDAL GetRule(string id)
+        {
+            string query = "SELECT * FROM QLKS.QUYDINH WHERE MAQD='" + id + "'";
+
+            using (OracleDataReader reader = Utility.GetDataReader(query))
+            {
+                if (reader != null && reader.Read())
+                {
+                    var maqd = reader.GetString(0);
+                    var nd = reader.GetString(1);
+
+                    var qd = new RuleDAL(maqd,nd);
+                    return qd;
+                }
+            }
+
+            return null;
+        }
+        public static bool Update(string id, string nd)
+        {
+            string query = string.Format("UPDATE QLKS.QUYDINH SET NOIDUNG='{0}' WHERE MAQD='{1}'", nd, id);
+            using (var command = new OracleCommand(query, SessionBAL.sConnection))
+            {
+                try
+                {
+                    command.ExecuteNonQuery();
+                    return true;
+                }
+                catch (Exception)
+                {
+                    return false;
+                }
+            }
+        }
     }
 }

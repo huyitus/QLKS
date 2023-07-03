@@ -57,5 +57,20 @@ namespace QLKS.GUI
                 }
             }
         }
+
+        private void butt_Fix_Click(object sender, EventArgs e)
+        {
+            string id = dtg_QD.CurrentRow.Cells["MaQD"].Value.ToString();
+            if (id != null)
+            {
+                Form form = new FormAdminEditRule(this, id);
+                form.Show();
+            }
+        }
+
+        private void butt_Re_Click(object sender, EventArgs e)
+        {
+            RuleBAL.LoadRuleInto(dtg_QD);
+        }
     }
 }

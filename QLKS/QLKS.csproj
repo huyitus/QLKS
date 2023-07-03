@@ -109,11 +109,29 @@
     <Compile Include="GUI\FormAdmin.Designer.cs">
       <DependentUpon>FormAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\FormAdminEditDT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormAdminEditDT.Designer.cs">
+      <DependentUpon>FormAdminEditDT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormAdminEditDV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormAdminEditDV.Designer.cs">
+      <DependentUpon>FormAdminEditDV.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\FormAdminEditEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\FormAdminEditEmployee.Designer.cs">
       <DependentUpon>FormAdminEditEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormAdminEditRule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormAdminEditRule.Designer.cs">
+      <DependentUpon>FormAdminEditRule.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\FormAdmin_AddDV.cs">
       <SubType>Form</SubType>
@@ -246,8 +264,17 @@
     <EmbeddedResource Include="GUI\FormAdmin.resx">
       <DependentUpon>FormAdmin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormAdminEditDT.resx">
+      <DependentUpon>FormAdminEditDT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormAdminEditDV.resx">
+      <DependentUpon>FormAdminEditDV.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\FormAdminEditEmployee.resx">
       <DependentUpon>FormAdminEditEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormAdminEditRule.resx">
+      <DependentUpon>FormAdminEditRule.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FormAdmin_AddDV.resx">
       <DependentUpon>FormAdmin_AddDV.cs</DependentUpon>

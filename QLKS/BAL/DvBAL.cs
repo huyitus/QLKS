@@ -20,5 +20,13 @@ namespace QLKS.BAL
         {
             return DvDAL.Del(madv);
         }
+        public static DvDAL GetDV(string id)
+        {
+            return DvDAL.GetDV(id);
+        }
+        public static bool Update(string id, string name, string gia)
+        {
+            return DvDAL.Update(id, name, gia);
+        }
     }
 }
