@@ -176,7 +176,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FormAdmin_AddPartner";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormAdmin_AddPartner";
+            this.Text = "Thêm đối tác";
             this.panellabel.ResumeLayout(false);
             this.panellabel.PerformLayout();
             this.ResumeLayout(false);

@@ -45,89 +45,95 @@ namespace QLKS.GUI
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(16, 16);
+            this.label1.Location = new System.Drawing.Point(18, 20);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(97, 17);
+            this.label1.Size = new System.Drawing.Size(107, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã nhân viên:";
             // 
             // txtId
             // 
-            this.txtId.Location = new System.Drawing.Point(136, 16);
+            this.txtId.Location = new System.Drawing.Point(153, 20);
+            this.txtId.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtId.Name = "txtId";
             this.txtId.ReadOnly = true;
-            this.txtId.Size = new System.Drawing.Size(112, 22);
+            this.txtId.Size = new System.Drawing.Size(126, 26);
             this.txtId.TabIndex = 1;
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(136, 48);
+            this.txtName.Location = new System.Drawing.Point(153, 60);
+            this.txtName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(232, 22);
+            this.txtName.Size = new System.Drawing.Size(260, 26);
             this.txtName.TabIndex = 3;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(16, 48);
+            this.label2.Location = new System.Drawing.Point(18, 60);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(54, 17);
+            this.label2.Size = new System.Drawing.Size(61, 20);
             this.label2.TabIndex = 2;
             this.label2.Text = "Họ tên:";
             // 
             // txtAddress
             // 
-            this.txtAddress.Location = new System.Drawing.Point(136, 80);
+            this.txtAddress.Location = new System.Drawing.Point(153, 100);
+            this.txtAddress.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(232, 22);
+            this.txtAddress.Size = new System.Drawing.Size(260, 26);
             this.txtAddress.TabIndex = 5;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(16, 80);
+            this.label3.Location = new System.Drawing.Point(18, 100);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(55, 17);
+            this.label3.Size = new System.Drawing.Size(61, 20);
             this.label3.TabIndex = 4;
             this.label3.Text = "Địa chỉ:";
             // 
             // txtPhone
             // 
-            this.txtPhone.Location = new System.Drawing.Point(136, 112);
+            this.txtPhone.Location = new System.Drawing.Point(153, 140);
+            this.txtPhone.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(176, 22);
+            this.txtPhone.Size = new System.Drawing.Size(198, 26);
             this.txtPhone.TabIndex = 7;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(16, 112);
+            this.label4.Location = new System.Drawing.Point(18, 140);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(76, 17);
+            this.label4.Size = new System.Drawing.Size(85, 20);
             this.label4.TabIndex = 6;
             this.label4.Text = "Điện thoại:";
             // 
             // txtPosition
             // 
-            this.txtPosition.Location = new System.Drawing.Point(136, 144);
+            this.txtPosition.Location = new System.Drawing.Point(153, 180);
+            this.txtPosition.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPosition.Name = "txtPosition";
-            this.txtPosition.Size = new System.Drawing.Size(176, 22);
+            this.txtPosition.Size = new System.Drawing.Size(198, 26);
             this.txtPosition.TabIndex = 9;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(16, 144);
+            this.label5.Location = new System.Drawing.Point(18, 180);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(59, 17);
+            this.label5.Size = new System.Drawing.Size(66, 20);
             this.label5.TabIndex = 8;
             this.label5.Text = "Chức vụ";
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(136, 176);
+            this.btnUpdate.Location = new System.Drawing.Point(153, 220);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(96, 32);
+            this.btnUpdate.Size = new System.Drawing.Size(108, 40);
             this.btnUpdate.TabIndex = 10;
             this.btnUpdate.Text = "Cập nhật";
             this.btnUpdate.UseVisualStyleBackColor = true;
@@ -135,9 +141,9 @@ namespace QLKS.GUI
             // 
             // FormAdminEditEmployee
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(389, 226);
+            this.ClientSize = new System.Drawing.Size(438, 282);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.txtPosition);
             this.Controls.Add(this.label5);
@@ -149,8 +155,11 @@ namespace QLKS.GUI
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
             this.Name = "FormAdminEditEmployee";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sửa nhân viên";
             this.Load += new System.EventHandler(this.FormAdminEditEmployee_Load);
             this.ResumeLayout(false);

@@ -80,7 +80,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FormAdmin_Tour";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormAdmin_Tour";
+            this.Text = "Thông tin tour du lịch";
             this.Load += new System.EventHandler(this.FormAdmin_Tour_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtg_Tour)).EndInit();
             this.ResumeLayout(false);

@@ -156,7 +156,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FormAdmin_AddNV";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormAdmin_AddNV";
+            this.Text = "Thêm nhân viên";
             this.panellabel.ResumeLayout(false);
             this.panellabel.PerformLayout();
             this.ResumeLayout(false);

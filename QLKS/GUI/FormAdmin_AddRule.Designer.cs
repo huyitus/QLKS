@@ -96,7 +96,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FormAdmin_AddRule";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormAdmin_AddRule";
+            this.Text = "Thêm quy định";
             this.panellabel.ResumeLayout(false);
             this.panellabel.PerformLayout();
             this.ResumeLayout(false);

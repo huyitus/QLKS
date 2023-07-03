@@ -46,6 +46,7 @@
             this.panellabel.Name = "panellabel";
             this.panellabel.Size = new System.Drawing.Size(416, 67);
             this.panellabel.TabIndex = 21;
+            this.panellabel.UseWaitCursor = true;
             // 
             // label1
             // 
@@ -57,6 +58,7 @@
             this.label1.Size = new System.Drawing.Size(245, 26);
             this.label1.TabIndex = 21;
             this.label1.Text = "Nhập thông tin dịch vụ";
+            this.label1.UseWaitCursor = true;
             // 
             // label2
             // 
@@ -66,6 +68,7 @@
             this.label2.Size = new System.Drawing.Size(93, 20);
             this.label2.TabIndex = 22;
             this.label2.Text = "Tên dịch vụ:";
+            this.label2.UseWaitCursor = true;
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label4
@@ -76,6 +79,7 @@
             this.label4.Size = new System.Drawing.Size(68, 20);
             this.label4.TabIndex = 24;
             this.label4.Text = "Giá tiền:";
+            this.label4.UseWaitCursor = true;
             // 
             // txtTenDV
             // 
@@ -83,6 +87,7 @@
             this.txtTenDV.Name = "txtTenDV";
             this.txtTenDV.Size = new System.Drawing.Size(261, 26);
             this.txtTenDV.TabIndex = 29;
+            this.txtTenDV.UseWaitCursor = true;
             // 
             // txtGiaDV
             // 
@@ -90,6 +95,7 @@
             this.txtGiaDV.Name = "txtGiaDV";
             this.txtGiaDV.Size = new System.Drawing.Size(261, 26);
             this.txtGiaDV.TabIndex = 30;
+            this.txtGiaDV.UseWaitCursor = true;
             // 
             // butt_confirm
             // 
@@ -100,6 +106,7 @@
             this.butt_confirm.TabIndex = 34;
             this.butt_confirm.Text = "Xác nhận";
             this.butt_confirm.UseVisualStyleBackColor = false;
+            this.butt_confirm.UseWaitCursor = true;
             this.butt_confirm.Click += new System.EventHandler(this.butt_confirm_Click);
             // 
             // FormAdmin_AddDV
@@ -117,7 +124,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FormAdmin_AddDV";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormAdmin_AddDV";
+            this.Text = "Thêm dịch vụ";
             this.panellabel.ResumeLayout(false);
             this.panellabel.PerformLayout();
             this.ResumeLayout(false);
