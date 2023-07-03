@@ -43,6 +43,7 @@ namespace QLKS.GUI
             this.label1 = new System.Windows.Forms.Label();
             this.dGV_DSPhong = new System.Windows.Forms.DataGridView();
             this.btnPhanPhong = new System.Windows.Forms.Button();
+            this.btnDatPhong = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGV_DSdatphong)).BeginInit();
             this.panel2.SuspendLayout();
@@ -191,18 +192,29 @@ namespace QLKS.GUI
             // btnPhanPhong
             // 
             this.btnPhanPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPhanPhong.Location = new System.Drawing.Point(492, 545);
+            this.btnPhanPhong.Location = new System.Drawing.Point(358, 545);
             this.btnPhanPhong.Name = "btnPhanPhong";
             this.btnPhanPhong.Size = new System.Drawing.Size(174, 43);
             this.btnPhanPhong.TabIndex = 2;
             this.btnPhanPhong.Text = "Phân Phòng";
             this.btnPhanPhong.UseVisualStyleBackColor = true;
             // 
+            // btnDatPhong
+            // 
+            this.btnDatPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDatPhong.Location = new System.Drawing.Point(603, 545);
+            this.btnDatPhong.Name = "btnDatPhong";
+            this.btnDatPhong.Size = new System.Drawing.Size(174, 43);
+            this.btnDatPhong.TabIndex = 3;
+            this.btnDatPhong.Text = "Đặt Phòng";
+            this.btnDatPhong.UseVisualStyleBackColor = true;
+            // 
             // FormRoom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1146, 600);
+            this.Controls.Add(this.btnDatPhong);
             this.Controls.Add(this.btnPhanPhong);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -236,5 +248,6 @@ namespace QLKS.GUI
         private System.Windows.Forms.DataGridView dGV_DSPhong;
         private System.Windows.Forms.CheckBox cBPhongCDD;
         private System.Windows.Forms.Button btnReload;
+        private System.Windows.Forms.Button btnDatPhong;
     }
 }
