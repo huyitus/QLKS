@@ -59,5 +59,15 @@ namespace QLKS.GUI
                 }
             }
         }
+
+        private void butt_Fix_Click(object sender, EventArgs e)
+        {
+            string id = dgv_NV.CurrentRow.Cells["MaNV"].Value.ToString();
+            if (id != null)
+            {
+                Form form = new FormAdminEditEmployee(this, id);
+                form.Show();
+            }
+        }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using QLKS.DAL;
+using QLKS.GUI;
 
 using System.Collections.Generic;
 using System.Windows.Forms;
@@ -11,6 +12,16 @@ namespace QLKS.BAL
         {
             List<NvDAL> nvv = NvDAL.GetNV();
             dgv_NV.DataSource = nvv;
+        }
+
+        public static NvDAL GetNV(string id)
+        {
+            return NvDAL.GetNV(id);
+        }
+
+        public static bool Update(string id, string name, string addr, string sdt, string pos)
+        {
+            return NvDAL.Update(id, name, addr, sdt, pos);
         }
         public static bool SendRequestAddNV(string name, string dc, string sdt, string cv)
         {
