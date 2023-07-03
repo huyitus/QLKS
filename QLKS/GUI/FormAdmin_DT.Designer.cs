@@ -65,8 +65,11 @@
             this.dgv_DT.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_DT.Location = new System.Drawing.Point(33, 88);
             this.dgv_DT.Name = "dgv_DT";
+            this.dgv_DT.RowHeadersVisible = false;
             this.dgv_DT.RowHeadersWidth = 62;
             this.dgv_DT.RowTemplate.Height = 28;
+            this.dgv_DT.RowTemplate.ReadOnly = true;
+            this.dgv_DT.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_DT.Size = new System.Drawing.Size(729, 226);
             this.dgv_DT.TabIndex = 20;
             // 
@@ -79,6 +82,7 @@
             this.butt_Add.TabIndex = 21;
             this.butt_Add.Text = "Thêm";
             this.butt_Add.UseVisualStyleBackColor = false;
+            this.butt_Add.Click += new System.EventHandler(this.butt_Add_Click);
             // 
             // butt_Del
             // 
@@ -89,6 +93,7 @@
             this.butt_Del.TabIndex = 22;
             this.butt_Del.Text = "Xóa";
             this.butt_Del.UseVisualStyleBackColor = false;
+            this.butt_Del.Click += new System.EventHandler(this.butt_Del_Click);
             // 
             // butt_Fix
             // 

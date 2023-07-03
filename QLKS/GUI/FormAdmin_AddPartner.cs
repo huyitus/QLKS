@@ -11,42 +11,34 @@ using System.Windows.Forms;
 
 namespace QLKS.GUI
 {
-    public partial class FormAdmin_DV : Form
+    public partial class FormAdmin_AddPartner : Form
     {
         private const string MESSAGE_CAPTION = "Thông báo";
-        private const string MESSAGE_CONFIRM = "Bạn có chắc chắn muốn xóa dịch vụ này?";
-        private const string MESSAGE_SEND_REQUEST_SUCCESS = "Xóa thành công!";
-        private const string MESSAGE_SEND_REQUEST_FAILED = "Xóa thất bại!";
-        public FormAdmin_DV()
+        private const string MESSAGE_CONFIRM = "Xác nhận gửi yêu cầu thêm đối tác?";
+        private const string MESSAGE_SEND_REQUEST_SUCCESS = "Gửi yêu cầu thành công!";
+        private const string MESSAGE_SEND_REQUEST_FAILED = "Gửi yêu cầu thất bại!";
+        public FormAdmin_AddPartner()
         {
             InitializeComponent();
         }
 
-        private void lab_QD_Click(object sender, EventArgs e)
+        private void label2_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void FormAdmin_DV_Load(object sender, EventArgs e)
+        private void butt_confirm_Click(object sender, EventArgs e)
         {
-            DvBAL.LoadDVInto(dtg_DV);
-        }
+            string name = txtTenDT.Text;
+            string mt = txtMatour.Text;
+            string dc = txtDc.Text;
+            string sdt = txtSDT.Text;
+            string mail = txtMail.Text;
 
-        private void butt_Add_Click(object sender, EventArgs e)
-        {
-            FormAdmin_AddDV f = new FormAdmin_AddDV();
-            this.Hide();
-            f.ShowDialog();
-            this.Show();
-        }
-
-        private void butt_Del_Click(object sender, EventArgs e)
-        {
-            string madv = dtg_DV.CurrentRow.Cells["MaDV"].Value.ToString();
             DialogResult result = MessageBox.Show(MESSAGE_CONFIRM, MESSAGE_CAPTION, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
-                if (DvBAL.SendRequestDel(madv))
+                if (PnBAL.SendRequestAddPartner(name, mt, dc, sdt, mail))
                 {
                     MessageBox.Show(MESSAGE_SEND_REQUEST_SUCCESS, MESSAGE_CAPTION, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Close();
@@ -56,6 +48,10 @@ namespace QLKS.GUI
                     MessageBox.Show(MESSAGE_SEND_REQUEST_FAILED, MESSAGE_CAPTION, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+        }
+        private void label3_Click(object sender, EventArgs e)
+        {
+           
         }
     }
 }

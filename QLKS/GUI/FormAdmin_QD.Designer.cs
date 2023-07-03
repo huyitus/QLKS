@@ -65,8 +65,11 @@
             this.dtg_QD.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtg_QD.Location = new System.Drawing.Point(33, 88);
             this.dtg_QD.Name = "dtg_QD";
+            this.dtg_QD.ReadOnly = true;
+            this.dtg_QD.RowHeadersVisible = false;
             this.dtg_QD.RowHeadersWidth = 62;
             this.dtg_QD.RowTemplate.Height = 28;
+            this.dtg_QD.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtg_QD.Size = new System.Drawing.Size(743, 255);
             this.dtg_QD.TabIndex = 21;
             this.dtg_QD.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtg_QD_CellContentClick);
@@ -90,6 +93,7 @@
             this.butt_Del.TabIndex = 23;
             this.butt_Del.Text = "Xóa";
             this.butt_Del.UseVisualStyleBackColor = false;
+            this.butt_Del.Click += new System.EventHandler(this.butt_Del_Click);
             // 
             // butt_Add
             // 
@@ -100,6 +104,7 @@
             this.butt_Add.TabIndex = 24;
             this.butt_Add.Text = "Thêm";
             this.butt_Add.UseVisualStyleBackColor = false;
+            this.butt_Add.Click += new System.EventHandler(this.butt_Add_Click);
             // 
             // FormAdmin_QD
             // 

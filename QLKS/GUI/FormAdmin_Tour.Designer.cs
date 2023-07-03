@@ -52,8 +52,11 @@
             this.dtg_Tour.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtg_Tour.Location = new System.Drawing.Point(33, 88);
             this.dtg_Tour.Name = "dtg_Tour";
+            this.dtg_Tour.ReadOnly = true;
+            this.dtg_Tour.RowHeadersVisible = false;
             this.dtg_Tour.RowHeadersWidth = 62;
             this.dtg_Tour.RowTemplate.Height = 28;
+            this.dtg_Tour.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtg_Tour.Size = new System.Drawing.Size(743, 255);
             this.dtg_Tour.TabIndex = 1;
             // 
@@ -77,7 +80,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FormAdmin_Tour";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormAdmin_Tour";
+            this.Text = "Thông tin tour du lịch";
             this.Load += new System.EventHandler(this.FormAdmin_Tour_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtg_Tour)).EndInit();
             this.ResumeLayout(false);

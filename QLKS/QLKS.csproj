@@ -109,6 +109,36 @@
     <Compile Include="GUI\FormAdmin.Designer.cs">
       <DependentUpon>FormAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\FormAdminEditEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormAdminEditEmployee.Designer.cs">
+      <DependentUpon>FormAdminEditEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormAdmin_AddDV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormAdmin_AddDV.Designer.cs">
+      <DependentUpon>FormAdmin_AddDV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormAdmin_AddNV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormAdmin_AddNV.Designer.cs">
+      <DependentUpon>FormAdmin_AddNV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormAdmin_AddPartner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormAdmin_AddPartner.Designer.cs">
+      <DependentUpon>FormAdmin_AddPartner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormAdmin_AddRule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormAdmin_AddRule.Designer.cs">
+      <DependentUpon>FormAdmin_AddRule.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\FormAdmin_DT.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -192,6 +222,18 @@
     </Compile>
     <Compile Include="GUI\FormOrderRoom.Designer.cs">
       <DependentUpon>FormOrderRoom.cs</DependentUpon>
+
+    <Compile Include="GUI\FormLT_Customer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormLT_Customer.Designer.cs">
+      <DependentUpon>FormLT_Customer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormLT_Service.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormLT_Service.Designer.cs">
+      <DependentUpon>FormLT_Service.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\FormReceptionist.cs">
       <SubType>Form</SubType>
@@ -215,6 +257,21 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="GUI\FormAdmin.resx">
       <DependentUpon>FormAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormAdminEditEmployee.resx">
+      <DependentUpon>FormAdminEditEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormAdmin_AddDV.resx">
+      <DependentUpon>FormAdmin_AddDV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormAdmin_AddNV.resx">
+      <DependentUpon>FormAdmin_AddNV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormAdmin_AddPartner.resx">
+      <DependentUpon>FormAdmin_AddPartner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormAdmin_AddRule.resx">
+      <DependentUpon>FormAdmin_AddRule.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FormAdmin_DT.resx">
       <DependentUpon>FormAdmin_DT.cs</DependentUpon>
@@ -254,6 +311,11 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FormOrderRoom.resx">
       <DependentUpon>FormOrderRoom.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\FormLT_Customer.resx">
+      <DependentUpon>FormLT_Customer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormLT_Service.resx">
+      <DependentUpon>FormLT_Service.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FormReceptionist.resx">
       <DependentUpon>FormReceptionist.cs</DependentUpon>
