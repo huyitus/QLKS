@@ -222,7 +222,7 @@
     </Compile>
     <Compile Include="GUI\FormOrderRoom.Designer.cs">
       <DependentUpon>FormOrderRoom.cs</DependentUpon>
-
+    </Compile>
     <Compile Include="GUI\FormLT_Customer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -311,6 +311,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FormOrderRoom.resx">
       <DependentUpon>FormOrderRoom.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\FormLT_Customer.resx">
       <DependentUpon>FormLT_Customer.cs</DependentUpon>
     </EmbeddedResource>
