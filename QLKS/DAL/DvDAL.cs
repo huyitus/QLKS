@@ -40,5 +40,38 @@ namespace QLKS.DAL
 
             return dvs;
         }
+        public static bool Insert(string name, string gia)
+        {
+            string query = string.Format("INSERT INTO QLKS.DICHVU VALUES(' ','{0}', '{1}')", name, gia);
+            using (var command = new OracleCommand(query, SessionBAL.sConnection))
+            {
+                try
+                {
+                    command.ExecuteNonQuery();
+                    return true;
+                }
+                catch (Exception)
+                {
+                    return false;
+                }
+            }
+        }
+        public static bool Del(string madv)
+        {
+            string query = string.Format("DELETE FROM QLKS.DICHVU WHERE MADV='{0}'", madv);
+            using (var command = new OracleCommand(query, SessionBAL.sConnection))
+            {
+                try
+                {
+                    command.ExecuteNonQuery();
+                    return true;
+                }
+                catch (Exception)
+                {
+                    return false;
+                }
+            }
+        }
+
     }
 }

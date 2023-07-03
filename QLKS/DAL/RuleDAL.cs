@@ -38,5 +38,37 @@ namespace QLKS.DAL
 
             return rules;
         }
+        public static bool Insert(string nd)
+        {
+            string query = string.Format("INSERT INTO QLKS.QUYDINH VALUES(' ','{0}')", nd);
+            using (var command = new OracleCommand(query, SessionBAL.sConnection))
+            {
+                try
+                {
+                    command.ExecuteNonQuery();
+                    return true;
+                }
+                catch (Exception)
+                {
+                    return false;
+                }
+            }
+        }
+        public static bool Del(string maqd)
+        {
+            string query = string.Format("DELETE FROM QLKS.QUYDINH WHERE MAQD='{0}'", maqd);
+            using (var command = new OracleCommand(query, SessionBAL.sConnection))
+            {
+                try
+                {
+                    command.ExecuteNonQuery();
+                    return true;
+                }
+                catch (Exception)
+                {
+                    return false;
+                }
+            }
+        }
     }
 }

@@ -12,43 +12,30 @@ using System.Xml.Linq;
 
 namespace QLKS.GUI
 {
-    public partial class FormAdmin_NV : Form
+    public partial class FormAdmin_AddRule : Form
     {
         private const string MESSAGE_CAPTION = "Thông báo";
-        private const string MESSAGE_CONFIRM = "Bạn có chắc chắn muốn xóa nhân viên này?";
-        private const string MESSAGE_SEND_REQUEST_SUCCESS = "Xóa thành công!";
-        private const string MESSAGE_SEND_REQUEST_FAILED = "Xóa thất bại!";
-        public FormAdmin_NV()
+        private const string MESSAGE_CONFIRM = "Xác nhận gửi yêu cầu thêm quy định?";
+        private const string MESSAGE_SEND_REQUEST_SUCCESS = "Gửi yêu cầu thành công!";
+        private const string MESSAGE_SEND_REQUEST_FAILED = "Gửi yêu cầu thất bại!";
+        public FormAdmin_AddRule()
         {
             InitializeComponent();
         }
 
-        private void FormAdmin_NV_Load(object sender, EventArgs e)
-        {
-            NvBAL.LoadNVInto(dgv_NV);
-        }
-
-        private void FormAdmin_NV_FormClosing(object sender, FormClosingEventArgs e) 
+        private void txtMaDV_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void butt_Add_Click(object sender, EventArgs e)
+        private void butt_confirm_Click(object sender, EventArgs e)
         {
-            FormAdmin_AddNV f = new FormAdmin_AddNV();
-            this.Hide();
-            f.ShowDialog();
-            this.Show();
-        }
-
-        private void butt_Del_Click(object sender, EventArgs e)
-        {
-            string manv = dgv_NV.CurrentRow.Cells["MaNV"].Value.ToString();
+            string nd = txtND.Text;
 
             DialogResult result = MessageBox.Show(MESSAGE_CONFIRM, MESSAGE_CAPTION, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
-                if (NvBAL.SendRequestDelNV(manv))
+                if (RuleBAL.SendRequestAddRule(nd))
                 {
                     MessageBox.Show(MESSAGE_SEND_REQUEST_SUCCESS, MESSAGE_CAPTION, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Close();

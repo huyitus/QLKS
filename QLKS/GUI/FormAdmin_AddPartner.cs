@@ -8,47 +8,37 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Xml.Linq;
 
 namespace QLKS.GUI
 {
-    public partial class FormAdmin_NV : Form
+    public partial class FormAdmin_AddPartner : Form
     {
         private const string MESSAGE_CAPTION = "Thông báo";
-        private const string MESSAGE_CONFIRM = "Bạn có chắc chắn muốn xóa nhân viên này?";
-        private const string MESSAGE_SEND_REQUEST_SUCCESS = "Xóa thành công!";
-        private const string MESSAGE_SEND_REQUEST_FAILED = "Xóa thất bại!";
-        public FormAdmin_NV()
+        private const string MESSAGE_CONFIRM = "Xác nhận gửi yêu cầu thêm đối tác?";
+        private const string MESSAGE_SEND_REQUEST_SUCCESS = "Gửi yêu cầu thành công!";
+        private const string MESSAGE_SEND_REQUEST_FAILED = "Gửi yêu cầu thất bại!";
+        public FormAdmin_AddPartner()
         {
             InitializeComponent();
         }
 
-        private void FormAdmin_NV_Load(object sender, EventArgs e)
-        {
-            NvBAL.LoadNVInto(dgv_NV);
-        }
-
-        private void FormAdmin_NV_FormClosing(object sender, FormClosingEventArgs e) 
+        private void label2_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void butt_Add_Click(object sender, EventArgs e)
+        private void butt_confirm_Click(object sender, EventArgs e)
         {
-            FormAdmin_AddNV f = new FormAdmin_AddNV();
-            this.Hide();
-            f.ShowDialog();
-            this.Show();
-        }
-
-        private void butt_Del_Click(object sender, EventArgs e)
-        {
-            string manv = dgv_NV.CurrentRow.Cells["MaNV"].Value.ToString();
+            string name = txtTenDT.Text;
+            string mt = txtMatour.Text;
+            string dc = txtDc.Text;
+            string sdt = txtSDT.Text;
+            string mail = txtMail.Text;
 
             DialogResult result = MessageBox.Show(MESSAGE_CONFIRM, MESSAGE_CAPTION, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
-                if (NvBAL.SendRequestDelNV(manv))
+                if (PnBAL.SendRequestAddPartner(name, mt, dc, sdt, mail))
                 {
                     MessageBox.Show(MESSAGE_SEND_REQUEST_SUCCESS, MESSAGE_CAPTION, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Close();
@@ -58,6 +48,10 @@ namespace QLKS.GUI
                     MessageBox.Show(MESSAGE_SEND_REQUEST_FAILED, MESSAGE_CAPTION, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+        }
+        private void label3_Click(object sender, EventArgs e)
+        {
+           
         }
     }
 }

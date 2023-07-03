@@ -52,8 +52,11 @@
             this.dvgCus.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dvgCus.Location = new System.Drawing.Point(29, 80);
             this.dvgCus.Name = "dvgCus";
+            this.dvgCus.ReadOnly = true;
+            this.dvgCus.RowHeadersVisible = false;
             this.dvgCus.RowHeadersWidth = 62;
             this.dvgCus.RowTemplate.Height = 28;
+            this.dvgCus.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dvgCus.Size = new System.Drawing.Size(740, 280);
             this.dvgCus.TabIndex = 1;
             // 
