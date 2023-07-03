@@ -40,12 +40,15 @@ namespace QLKS.GUI
             this.txtPosition = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.btnUpdate = new System.Windows.Forms.Button();
+            this.panellabel = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.panellabel.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(18, 20);
+            this.label1.Location = new System.Drawing.Point(18, 79);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(107, 20);
             this.label1.TabIndex = 0;
@@ -53,7 +56,7 @@ namespace QLKS.GUI
             // 
             // txtId
             // 
-            this.txtId.Location = new System.Drawing.Point(153, 20);
+            this.txtId.Location = new System.Drawing.Point(153, 79);
             this.txtId.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtId.Name = "txtId";
             this.txtId.ReadOnly = true;
@@ -62,7 +65,7 @@ namespace QLKS.GUI
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(153, 60);
+            this.txtName.Location = new System.Drawing.Point(153, 119);
             this.txtName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(260, 26);
@@ -71,7 +74,7 @@ namespace QLKS.GUI
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(18, 60);
+            this.label2.Location = new System.Drawing.Point(18, 119);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(61, 20);
             this.label2.TabIndex = 2;
@@ -79,7 +82,7 @@ namespace QLKS.GUI
             // 
             // txtAddress
             // 
-            this.txtAddress.Location = new System.Drawing.Point(153, 100);
+            this.txtAddress.Location = new System.Drawing.Point(153, 159);
             this.txtAddress.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(260, 26);
@@ -88,7 +91,7 @@ namespace QLKS.GUI
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(18, 100);
+            this.label3.Location = new System.Drawing.Point(18, 159);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(61, 20);
             this.label3.TabIndex = 4;
@@ -96,7 +99,7 @@ namespace QLKS.GUI
             // 
             // txtPhone
             // 
-            this.txtPhone.Location = new System.Drawing.Point(153, 140);
+            this.txtPhone.Location = new System.Drawing.Point(153, 199);
             this.txtPhone.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(198, 26);
@@ -105,7 +108,7 @@ namespace QLKS.GUI
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(18, 140);
+            this.label4.Location = new System.Drawing.Point(18, 199);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(85, 20);
             this.label4.TabIndex = 6;
@@ -113,7 +116,7 @@ namespace QLKS.GUI
             // 
             // txtPosition
             // 
-            this.txtPosition.Location = new System.Drawing.Point(153, 180);
+            this.txtPosition.Location = new System.Drawing.Point(153, 239);
             this.txtPosition.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPosition.Name = "txtPosition";
             this.txtPosition.Size = new System.Drawing.Size(198, 26);
@@ -122,7 +125,7 @@ namespace QLKS.GUI
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(18, 180);
+            this.label5.Location = new System.Drawing.Point(18, 239);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(66, 20);
             this.label5.TabIndex = 8;
@@ -130,7 +133,7 @@ namespace QLKS.GUI
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(153, 220);
+            this.btnUpdate.Location = new System.Drawing.Point(153, 279);
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(108, 40);
@@ -139,11 +142,33 @@ namespace QLKS.GUI
             this.btnUpdate.UseVisualStyleBackColor = true;
             this.btnUpdate.Click += new System.EventHandler(this.BtnUpdate_Click);
             // 
+            // panellabel
+            // 
+            this.panellabel.BackColor = System.Drawing.Color.DarkCyan;
+            this.panellabel.Controls.Add(this.label6);
+            this.panellabel.Location = new System.Drawing.Point(1, 0);
+            this.panellabel.Name = "panellabel";
+            this.panellabel.Size = new System.Drawing.Size(439, 67);
+            this.panellabel.TabIndex = 22;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(106, 20);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(254, 26);
+            this.label6.TabIndex = 21;
+            this.label6.Text = "Sửa thông tin nhân viên";
+            // 
             // FormAdminEditEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(438, 282);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(438, 341);
+            this.Controls.Add(this.panellabel);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.txtPosition);
             this.Controls.Add(this.label5);
@@ -162,6 +187,8 @@ namespace QLKS.GUI
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sửa nhân viên";
             this.Load += new System.EventHandler(this.FormAdminEditEmployee_Load);
+            this.panellabel.ResumeLayout(false);
+            this.panellabel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -180,5 +207,7 @@ namespace QLKS.GUI
         private System.Windows.Forms.TextBox txtPosition;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Panel panellabel;
+        private System.Windows.Forms.Label label6;
     }
 }

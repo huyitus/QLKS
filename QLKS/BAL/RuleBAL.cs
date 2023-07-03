@@ -20,6 +20,14 @@ namespace QLKS.BAL
         {
             return RuleDAL.Del(maqd);
         }
+        public static RuleDAL GetRule(string id)
+        {
+            return RuleDAL.GetRule(id);
+        }
+        public static bool Update(string id, string nd)
+        {
+            return RuleDAL.Update(id, nd);
+        }
     }
 
 }

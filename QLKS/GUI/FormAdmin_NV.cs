@@ -69,5 +69,10 @@ namespace QLKS.GUI
                 form.Show();
             }
         }
+
+        private void butt_Re_Click(object sender, EventArgs e)
+        {
+            NvBAL.LoadNVInto(dgv_NV);
+        }
     }
 }

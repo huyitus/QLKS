@@ -53,5 +53,10 @@ namespace QLKS.GUI
         {
            
         }
+
+        private void FormAdmin_AddPartner_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

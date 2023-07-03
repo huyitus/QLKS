@@ -52,5 +52,20 @@ namespace QLKS.GUI
                 }
             }
         }
+
+        private void butt_Fix_Click(object sender, EventArgs e)
+        {
+            string id = dgv_DT.CurrentRow.Cells["MaDT"].Value.ToString();
+            if (id != null)
+            {
+                Form form = new FormAdminEditDT(this, id);
+                form.Show();
+            }
+        }
+
+        private void butt_Re_Click(object sender, EventArgs e)
+        {
+            PnBAL.LoadPartnerInto(dgv_DT);
+        }
     }
 }

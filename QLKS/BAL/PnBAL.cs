@@ -20,5 +20,13 @@ namespace QLKS.BAL
         {
             return PnDAL.Del(madt);
         }
+        public static PnDAL GetDT(string id)
+        {
+            return PnDAL.GetDT(id);
+        }
+        public static bool Update(string id, string name, string mt, string dc, string sdt, string mail)
+        {
+            return PnDAL.Update(id, name, mt,dc, sdt,mail);
+        }
     }
 }
