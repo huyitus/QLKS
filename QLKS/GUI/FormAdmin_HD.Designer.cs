@@ -30,7 +30,9 @@
         {
             this.panellabel = new System.Windows.Forms.Panel();
             this.lab_HD = new System.Windows.Forms.Label();
+            this.dgv_hd = new System.Windows.Forms.DataGridView();
             this.panellabel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_hd)).BeginInit();
             this.SuspendLayout();
             // 
             // panellabel
@@ -54,19 +56,35 @@
             this.lab_HD.TabIndex = 1;
             this.lab_HD.Text = "HÓA ĐƠN";
             // 
+            // dgv_hd
+            // 
+            this.dgv_hd.BackgroundColor = System.Drawing.Color.White;
+            this.dgv_hd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_hd.Location = new System.Drawing.Point(23, 88);
+            this.dgv_hd.Name = "dgv_hd";
+            this.dgv_hd.ReadOnly = true;
+            this.dgv_hd.RowHeadersVisible = false;
+            this.dgv_hd.RowHeadersWidth = 62;
+            this.dgv_hd.RowTemplate.Height = 28;
+            this.dgv_hd.Size = new System.Drawing.Size(757, 266);
+            this.dgv_hd.TabIndex = 23;
+            // 
             // FormAdmin_HD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(803, 384);
+            this.Controls.Add(this.dgv_hd);
             this.Controls.Add(this.panellabel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FormAdmin_HD";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hóa đơn";
+            this.Load += new System.EventHandler(this.FormAdmin_HD_Load);
             this.panellabel.ResumeLayout(false);
             this.panellabel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_hd)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -75,5 +93,6 @@
 
         private System.Windows.Forms.Panel panellabel;
         private System.Windows.Forms.Label lab_HD;
+        private System.Windows.Forms.DataGridView dgv_hd;
     }
 }
