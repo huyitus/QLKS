@@ -16,5 +16,10 @@ namespace QLKS.GUI
         {
             InitializeComponent();
         }
+
+        private void butt_Fix_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

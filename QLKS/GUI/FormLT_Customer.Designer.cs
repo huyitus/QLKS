@@ -38,11 +38,15 @@
             // 
             // dataKH
             // 
+            this.dataKH.BackgroundColor = System.Drawing.Color.White;
             this.dataKH.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataKH.Location = new System.Drawing.Point(23, 124);
             this.dataKH.Name = "dataKH";
+            this.dataKH.ReadOnly = true;
+            this.dataKH.RowHeadersVisible = false;
             this.dataKH.RowHeadersWidth = 51;
             this.dataKH.RowTemplate.Height = 24;
+            this.dataKH.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataKH.Size = new System.Drawing.Size(753, 295);
             this.dataKH.TabIndex = 0;
             // 
@@ -74,6 +78,7 @@
             this.sua.TabIndex = 3;
             this.sua.Text = "Sửa";
             this.sua.UseVisualStyleBackColor = true;
+            this.sua.Click += new System.EventHandler(this.sua_Click);
             // 
             // xoa
             // 
@@ -83,6 +88,7 @@
             this.xoa.TabIndex = 4;
             this.xoa.Text = "Xóa";
             this.xoa.UseVisualStyleBackColor = true;
+            this.xoa.Click += new System.EventHandler(this.xoa_Click);
             // 
             // FormLT_Customer
             // 

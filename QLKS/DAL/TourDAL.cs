@@ -14,12 +14,14 @@ namespace QLKS.DAL
         public string MaTour { get; set; }
         public string TenTour { get; set; }
         public string DiaDiem { get; set; }
+        public int Gia { get; set; }
         public DateTime ThoiGian { get; set; }
-        public TourDAL(string matour, string name, string place, DateTime tgian)
+        public TourDAL(string matour, string name, string place,int gia, DateTime tgian)
         {
             MaTour = matour;
             TenTour = name;
             DiaDiem = place;
+            Gia = gia;
             ThoiGian = tgian;
         }
         public static List<TourDAL> GetTour()
@@ -35,9 +37,10 @@ namespace QLKS.DAL
                     var mat = reader.GetString(0);
                     var name = reader.GetString(1);
                     var place = reader.GetString(2);
+                    var gia = reader.GetInt32(3);
                     var tgian = reader.GetDateTime(4);
 
-                    var tour = new TourDAL(mat, name, place, tgian);
+                    var tour = new TourDAL(mat, name, place,gia, tgian);
                     tours.Add(tour);
                 }
             }

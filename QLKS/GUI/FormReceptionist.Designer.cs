@@ -113,6 +113,7 @@ namespace QLKS.GUI
             this.btnYCDaiLy.TabIndex = 7;
             this.btnYCDaiLy.Text = "Yêu cầu từ đại lý";
             this.btnYCDaiLy.UseVisualStyleBackColor = true;
+            this.btnYCDaiLy.Click += new System.EventHandler(this.btnYCDaiLy_Click);
             // 
             // FormReceptionist
             // 

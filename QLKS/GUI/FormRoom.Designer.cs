@@ -30,17 +30,20 @@ namespace QLKS.GUI
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnReload = new System.Windows.Forms.Button();
             this.labelDSDatPhong = new System.Windows.Forms.Label();
             this.btnSearch = new System.Windows.Forms.Button();
             this.tbTenKH = new System.Windows.Forms.TextBox();
             this.label_TenKH = new System.Windows.Forms.Label();
             this.dGV_DSdatphong = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.cBPhongCDD = new System.Windows.Forms.CheckBox();
             this.btnUpdate = new System.Windows.Forms.Button();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.cBPhongTrong = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnPhanPhong = new System.Windows.Forms.Button();
             this.dGV_DSPhong = new System.Windows.Forms.DataGridView();
+            this.btnPhanPhong = new System.Windows.Forms.Button();
+            this.btnDatPhong = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGV_DSdatphong)).BeginInit();
             this.panel2.SuspendLayout();
@@ -49,6 +52,7 @@ namespace QLKS.GUI
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnReload);
             this.panel1.Controls.Add(this.labelDSDatPhong);
             this.panel1.Controls.Add(this.btnSearch);
             this.panel1.Controls.Add(this.tbTenKH);
@@ -56,8 +60,19 @@ namespace QLKS.GUI
             this.panel1.Controls.Add(this.dGV_DSdatphong);
             this.panel1.Location = new System.Drawing.Point(0, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(836, 267);
+            this.panel1.Size = new System.Drawing.Size(1130, 267);
             this.panel1.TabIndex = 0;
+            // 
+            // btnReload
+            // 
+            this.btnReload.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReload.Location = new System.Drawing.Point(859, 185);
+            this.btnReload.Name = "btnReload";
+            this.btnReload.Size = new System.Drawing.Size(155, 37);
+            this.btnReload.TabIndex = 5;
+            this.btnReload.Text = "Xem Toàn bộ";
+            this.btnReload.UseVisualStyleBackColor = true;
+            this.btnReload.Click += new System.EventHandler(this.btnReload_Click);
             // 
             // labelDSDatPhong
             // 
@@ -73,7 +88,7 @@ namespace QLKS.GUI
             // btnSearch
             // 
             this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.Location = new System.Drawing.Point(598, 153);
+            this.btnSearch.Location = new System.Drawing.Point(870, 115);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(132, 37);
             this.btnSearch.TabIndex = 3;
@@ -84,7 +99,7 @@ namespace QLKS.GUI
             // tbTenKH
             // 
             this.tbTenKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbTenKH.Location = new System.Drawing.Point(643, 112);
+            this.tbTenKH.Location = new System.Drawing.Point(911, 62);
             this.tbTenKH.Name = "tbTenKH";
             this.tbTenKH.Size = new System.Drawing.Size(193, 27);
             this.tbTenKH.TabIndex = 2;
@@ -93,7 +108,7 @@ namespace QLKS.GUI
             // 
             this.label_TenKH.AutoSize = true;
             this.label_TenKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_TenKH.Location = new System.Drawing.Point(513, 116);
+            this.label_TenKH.Location = new System.Drawing.Point(767, 66);
             this.label_TenKH.Name = "label_TenKH";
             this.label_TenKH.Size = new System.Drawing.Size(117, 18);
             this.label_TenKH.TabIndex = 1;
@@ -106,39 +121,52 @@ namespace QLKS.GUI
             this.dGV_DSdatphong.Name = "dGV_DSdatphong";
             this.dGV_DSdatphong.RowHeadersWidth = 51;
             this.dGV_DSdatphong.RowTemplate.Height = 24;
-            this.dGV_DSdatphong.Size = new System.Drawing.Size(508, 227);
+            this.dGV_DSdatphong.Size = new System.Drawing.Size(739, 227);
             this.dGV_DSdatphong.TabIndex = 0;
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.cBPhongCDD);
             this.panel2.Controls.Add(this.btnUpdate);
-            this.panel2.Controls.Add(this.checkBox1);
+            this.panel2.Controls.Add(this.cBPhongTrong);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.dGV_DSPhong);
             this.panel2.Location = new System.Drawing.Point(0, 275);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(836, 261);
+            this.panel2.Size = new System.Drawing.Size(1130, 261);
             this.panel2.TabIndex = 1;
+            // 
+            // cBPhongCDD
+            // 
+            this.cBPhongCDD.AutoSize = true;
+            this.cBPhongCDD.Location = new System.Drawing.Point(776, 227);
+            this.cBPhongCDD.Name = "cBPhongCDD";
+            this.cBPhongCDD.Size = new System.Drawing.Size(182, 21);
+            this.cBPhongCDD.TabIndex = 8;
+            this.cBPhongCDD.Text = "Phòng đã chưa dọn dẹp";
+            this.cBPhongCDD.UseVisualStyleBackColor = true;
+            this.cBPhongCDD.CheckedChanged += new System.EventHandler(this.Filter_CheckedChanged);
             // 
             // btnUpdate
             // 
             this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdate.Location = new System.Drawing.Point(614, 120);
+            this.btnUpdate.Location = new System.Drawing.Point(870, 109);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(116, 38);
             this.btnUpdate.TabIndex = 7;
             this.btnUpdate.Text = "Cập nhật ";
             this.btnUpdate.UseVisualStyleBackColor = true;
             // 
-            // checkBox1
+            // cBPhongTrong
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(516, 237);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(108, 21);
-            this.checkBox1.TabIndex = 6;
-            this.checkBox1.Text = "Phòng trống";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.cBPhongTrong.AutoSize = true;
+            this.cBPhongTrong.Location = new System.Drawing.Point(776, 200);
+            this.cBPhongTrong.Name = "cBPhongTrong";
+            this.cBPhongTrong.Size = new System.Drawing.Size(108, 21);
+            this.cBPhongTrong.TabIndex = 6;
+            this.cBPhongTrong.Text = "Phòng trống";
+            this.cBPhongTrong.UseVisualStyleBackColor = true;
+            this.cBPhongTrong.CheckedChanged += new System.EventHandler(this.Filter_CheckedChanged);
             // 
             // label1
             // 
@@ -151,16 +179,6 @@ namespace QLKS.GUI
             this.label1.TabIndex = 5;
             this.label1.Text = "DANH SÁCH PHÒNG";
             // 
-            // btnPhanPhong
-            // 
-            this.btnPhanPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPhanPhong.Location = new System.Drawing.Point(337, 545);
-            this.btnPhanPhong.Name = "btnPhanPhong";
-            this.btnPhanPhong.Size = new System.Drawing.Size(174, 43);
-            this.btnPhanPhong.TabIndex = 2;
-            this.btnPhanPhong.Text = "Phân Phòng";
-            this.btnPhanPhong.UseVisualStyleBackColor = true;
-            // 
             // dGV_DSPhong
             // 
             this.dGV_DSPhong.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -168,14 +186,35 @@ namespace QLKS.GUI
             this.dGV_DSPhong.Name = "dGV_DSPhong";
             this.dGV_DSPhong.RowHeadersWidth = 51;
             this.dGV_DSPhong.RowTemplate.Height = 24;
-            this.dGV_DSPhong.Size = new System.Drawing.Size(508, 226);
+            this.dGV_DSPhong.Size = new System.Drawing.Size(740, 226);
             this.dGV_DSPhong.TabIndex = 0;
+            // 
+            // btnPhanPhong
+            // 
+            this.btnPhanPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPhanPhong.Location = new System.Drawing.Point(358, 545);
+            this.btnPhanPhong.Name = "btnPhanPhong";
+            this.btnPhanPhong.Size = new System.Drawing.Size(174, 43);
+            this.btnPhanPhong.TabIndex = 2;
+            this.btnPhanPhong.Text = "Phân Phòng";
+            this.btnPhanPhong.UseVisualStyleBackColor = true;
+            // 
+            // btnDatPhong
+            // 
+            this.btnDatPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDatPhong.Location = new System.Drawing.Point(603, 545);
+            this.btnDatPhong.Name = "btnDatPhong";
+            this.btnDatPhong.Size = new System.Drawing.Size(174, 43);
+            this.btnDatPhong.TabIndex = 3;
+            this.btnDatPhong.Text = "Đặt Phòng";
+            this.btnDatPhong.UseVisualStyleBackColor = true;
             // 
             // FormRoom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(903, 600);
+            this.ClientSize = new System.Drawing.Size(1146, 600);
+            this.Controls.Add(this.btnDatPhong);
             this.Controls.Add(this.btnPhanPhong);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -204,8 +243,11 @@ namespace QLKS.GUI
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnUpdate;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox cBPhongTrong;
         private System.Windows.Forms.Button btnPhanPhong;
         private System.Windows.Forms.DataGridView dGV_DSPhong;
+        private System.Windows.Forms.CheckBox cBPhongCDD;
+        private System.Windows.Forms.Button btnReload;
+        private System.Windows.Forms.Button btnDatPhong;
     }
 }

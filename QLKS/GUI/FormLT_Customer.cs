@@ -14,6 +14,11 @@ namespace QLKS.GUI
 {
     public partial class FormLT_Customer : Form
     {
+        private const string MESSAGE_CAPTION = "Thông báo";
+        private const string MESSAGE_CONFIRM = "Bạn có chắc chắn muốn xóa khách hàng này?";
+        private const string MESSAGE_SEND_REQUEST_SUCCESS = "Xóa thành công!";
+        private const string MESSAGE_SEND_REQUEST_FAILED = "Xóa thất bại!";
+
         private readonly Form parent;
         public FormLT_Customer(Form parent)
         {
@@ -23,9 +28,10 @@ namespace QLKS.GUI
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form LT_InsertCus = new FormAddCustomer(this);
+            FormAddCustomer f = new FormAddCustomer(this);
             this.Hide();
-            LT_InsertCus.ShowDialog();
+            f.ShowDialog();
+            this.Show();
         }
 
         private void FormLT_Customer_Form_Closed(object sender, FormClosedEventArgs e)
@@ -36,6 +42,35 @@ namespace QLKS.GUI
         private void FormLT_Customer_Load(object sender, EventArgs e)
         {
             CusBAL.LoadCusInto(dataKH);
+        }
+
+        private void sua_Click(object sender, EventArgs e)
+        {
+            string makh = dataKH.CurrentRow.Cells["MAKH"].Value.ToString();
+            if (makh != null)
+            {
+                Form form = new FormLT_editCus(this, makh);
+                form.Show();
+            }
+        }
+
+        private void xoa_Click(object sender, EventArgs e)
+        {
+            string makh = dataKH.CurrentRow.Cells["MAKH"].Value.ToString();
+
+            DialogResult result = MessageBox.Show(MESSAGE_CONFIRM, MESSAGE_CAPTION, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                if (CusBAL.SendRequestDelKH(makh))
+                {
+                    MessageBox.Show(MESSAGE_SEND_REQUEST_SUCCESS, MESSAGE_CAPTION, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show(MESSAGE_SEND_REQUEST_FAILED, MESSAGE_CAPTION, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
     }
 }

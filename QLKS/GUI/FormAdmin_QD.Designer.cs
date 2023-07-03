@@ -34,6 +34,7 @@
             this.butt_Fix = new System.Windows.Forms.Button();
             this.butt_Del = new System.Windows.Forms.Button();
             this.butt_Add = new System.Windows.Forms.Button();
+            this.butt_Re = new System.Windows.Forms.Button();
             this.panellabel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_QD)).BeginInit();
             this.SuspendLayout();
@@ -65,8 +66,11 @@
             this.dtg_QD.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtg_QD.Location = new System.Drawing.Point(33, 88);
             this.dtg_QD.Name = "dtg_QD";
+            this.dtg_QD.ReadOnly = true;
+            this.dtg_QD.RowHeadersVisible = false;
             this.dtg_QD.RowHeadersWidth = 62;
             this.dtg_QD.RowTemplate.Height = 28;
+            this.dtg_QD.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtg_QD.Size = new System.Drawing.Size(743, 255);
             this.dtg_QD.TabIndex = 21;
             this.dtg_QD.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtg_QD_CellContentClick);
@@ -80,6 +84,7 @@
             this.butt_Fix.TabIndex = 22;
             this.butt_Fix.Text = "Sửa";
             this.butt_Fix.UseVisualStyleBackColor = false;
+            this.butt_Fix.Click += new System.EventHandler(this.butt_Fix_Click);
             // 
             // butt_Del
             // 
@@ -90,6 +95,7 @@
             this.butt_Del.TabIndex = 23;
             this.butt_Del.Text = "Xóa";
             this.butt_Del.UseVisualStyleBackColor = false;
+            this.butt_Del.Click += new System.EventHandler(this.butt_Del_Click);
             // 
             // butt_Add
             // 
@@ -100,6 +106,18 @@
             this.butt_Add.TabIndex = 24;
             this.butt_Add.Text = "Thêm";
             this.butt_Add.UseVisualStyleBackColor = false;
+            this.butt_Add.Click += new System.EventHandler(this.butt_Add_Click);
+            // 
+            // butt_Re
+            // 
+            this.butt_Re.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.butt_Re.Location = new System.Drawing.Point(33, 359);
+            this.butt_Re.Name = "butt_Re";
+            this.butt_Re.Size = new System.Drawing.Size(116, 34);
+            this.butt_Re.TabIndex = 25;
+            this.butt_Re.Text = "Làm mới";
+            this.butt_Re.UseVisualStyleBackColor = false;
+            this.butt_Re.Click += new System.EventHandler(this.butt_Re_Click);
             // 
             // FormAdmin_QD
             // 
@@ -107,6 +125,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(803, 405);
+            this.Controls.Add(this.butt_Re);
             this.Controls.Add(this.butt_Add);
             this.Controls.Add(this.butt_Del);
             this.Controls.Add(this.butt_Fix);
@@ -132,5 +151,6 @@
         private System.Windows.Forms.Button butt_Fix;
         private System.Windows.Forms.Button butt_Del;
         private System.Windows.Forms.Button butt_Add;
+        private System.Windows.Forms.Button butt_Re;
     }
 }
