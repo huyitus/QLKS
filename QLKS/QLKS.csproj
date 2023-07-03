@@ -241,6 +241,12 @@
     <Compile Include="GUI\FormReceptionist.Designer.cs">
       <DependentUpon>FormReceptionist.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\FormReceptionistViewRequest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormReceptionistViewRequest.Designer.cs">
+      <DependentUpon>FormReceptionistViewRequest.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\FormRoom.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -320,6 +326,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FormReceptionist.resx">
       <DependentUpon>FormReceptionist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormReceptionistViewRequest.resx">
+      <DependentUpon>FormReceptionistViewRequest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FormRoom.resx">
       <DependentUpon>FormRoom.cs</DependentUpon>

@@ -46,5 +46,28 @@ namespace QLKS.DAL
 
             return rooms;
         }
+
+        public static List<RoomDAL> GetEmpty(string typeName_)
+        {
+            string query = "SELECT * FROM QLKS.PHONG WHERE TINHTRANG=0 AND TENLOAIPHONG='" + typeName_ + "'";
+
+            List<RoomDAL> rooms = new List<RoomDAL>();
+
+            using (OracleDataReader reader = Utility.GetDataReader(query))
+            {
+                while (reader != null && reader.Read())
+                {
+                    var id = reader.GetString(0);
+                    var typeName = reader.GetString(1);
+                    var status = reader.GetInt32(2);
+                    var cleaning = reader.GetString(3);
+
+                    var room = new RoomDAL(id, typeName, status, cleaning);
+                    rooms.Add(room);
+                }
+            }
+
+            return rooms;
+        }
     }
 }

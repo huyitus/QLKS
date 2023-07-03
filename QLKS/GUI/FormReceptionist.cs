@@ -42,5 +42,11 @@ namespace QLKS.GUI
         {
             parent.Show();
         }
+
+        private void btnYCDaiLy_Click(object sender, EventArgs e)
+        {
+            Form form = new FormReceptionistViewRequest();
+            form.Show();
+        }
     }
 }

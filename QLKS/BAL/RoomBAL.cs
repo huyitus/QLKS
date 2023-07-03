@@ -12,5 +12,11 @@ namespace QLKS.BAL
             List<RoomDAL> rooms = RoomDAL.GetRooms(isEmpty, isClean);
             dgvRooms.DataSource = rooms;
         }
+
+        public static void LoadEmptyInto(DataGridView dgvRooms, string typeName)
+        {
+            List<RoomDAL> rooms = RoomDAL.GetEmpty(typeName);
+            dgvRooms.DataSource = rooms;
+        }
     }
 }
