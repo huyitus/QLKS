@@ -80,6 +80,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BAL\BillBAL.cs" />
     <Compile Include="BAL\CusBAL.cs" />
     <Compile Include="BAL\DvBAL.cs" />
     <Compile Include="BAL\NvBAL.cs" />
@@ -92,6 +93,7 @@
     <Compile Include="BAL\RuleBAL.cs" />
     <Compile Include="BAL\SessionBAL.cs" />
     <Compile Include="BAL\TourBAL.cs" />
+    <Compile Include="DAL\BillDAL.cs" />
     <Compile Include="DAL\CusDAL.cs" />
     <Compile Include="DAL\DvDAL.cs" />
     <Compile Include="DAL\NvDAL.cs" />

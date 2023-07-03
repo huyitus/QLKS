@@ -40,7 +40,7 @@ namespace QLKS.DAL
                     var ngaylap = reader.GetDateTime(3);
                     var sum = reader.GetInt32(4);
 
-                    var bill = new BillDAL(mahd, manv,mdp,ngaylap,sum);
+                    var bill = new BillDAL(mahd, manv, mdp, ngaylap, sum);
                     bills.Add(bill);
                 }
             }
