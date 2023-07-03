@@ -44,9 +44,9 @@
             this.lb_NV.BackColor = System.Drawing.Color.DarkCyan;
             this.lb_NV.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_NV.ForeColor = System.Drawing.Color.White;
-            this.lb_NV.Location = new System.Drawing.Point(228, 19);
+            this.lb_NV.Location = new System.Drawing.Point(203, 15);
             this.lb_NV.Name = "lb_NV";
-            this.lb_NV.Size = new System.Drawing.Size(336, 32);
+            this.lb_NV.Size = new System.Drawing.Size(288, 26);
             this.lb_NV.TabIndex = 0;
             this.lb_NV.Text = "THÔNG TIN NHÂN VIÊN";
             // 
@@ -54,19 +54,21 @@
             // 
             this.dgv_NV.BackgroundColor = System.Drawing.Color.White;
             this.dgv_NV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_NV.Location = new System.Drawing.Point(35, 86);
+            this.dgv_NV.Location = new System.Drawing.Point(31, 69);
+            this.dgv_NV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgv_NV.Name = "dgv_NV";
             this.dgv_NV.RowHeadersWidth = 62;
             this.dgv_NV.RowTemplate.Height = 28;
-            this.dgv_NV.Size = new System.Drawing.Size(729, 226);
+            this.dgv_NV.Size = new System.Drawing.Size(648, 181);
             this.dgv_NV.TabIndex = 1;
             // 
             // butt_Add
             // 
             this.butt_Add.BackColor = System.Drawing.Color.DarkTurquoise;
-            this.butt_Add.Location = new System.Drawing.Point(673, 329);
+            this.butt_Add.Location = new System.Drawing.Point(598, 263);
+            this.butt_Add.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.butt_Add.Name = "butt_Add";
-            this.butt_Add.Size = new System.Drawing.Size(91, 34);
+            this.butt_Add.Size = new System.Drawing.Size(81, 27);
             this.butt_Add.TabIndex = 2;
             this.butt_Add.Text = "Thêm";
             this.butt_Add.UseVisualStyleBackColor = false;
@@ -74,9 +76,10 @@
             // butt_Del
             // 
             this.butt_Del.BackColor = System.Drawing.Color.LightCoral;
-            this.butt_Del.Location = new System.Drawing.Point(566, 329);
+            this.butt_Del.Location = new System.Drawing.Point(503, 263);
+            this.butt_Del.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.butt_Del.Name = "butt_Del";
-            this.butt_Del.Size = new System.Drawing.Size(90, 34);
+            this.butt_Del.Size = new System.Drawing.Size(80, 27);
             this.butt_Del.TabIndex = 3;
             this.butt_Del.Text = "Xóa";
             this.butt_Del.UseVisualStyleBackColor = false;
@@ -84,34 +87,38 @@
             // butt_Fix
             // 
             this.butt_Fix.BackColor = System.Drawing.Color.Moccasin;
-            this.butt_Fix.Location = new System.Drawing.Point(461, 329);
+            this.butt_Fix.Location = new System.Drawing.Point(410, 263);
+            this.butt_Fix.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.butt_Fix.Name = "butt_Fix";
-            this.butt_Fix.Size = new System.Drawing.Size(90, 34);
+            this.butt_Fix.Size = new System.Drawing.Size(80, 27);
             this.butt_Fix.TabIndex = 4;
             this.butt_Fix.Text = "Sửa";
             this.butt_Fix.UseVisualStyleBackColor = false;
+            this.butt_Fix.Click += new System.EventHandler(this.butt_Fix_Click);
             // 
             // panellabel
             // 
             this.panellabel.BackColor = System.Drawing.Color.DarkCyan;
             this.panellabel.Controls.Add(this.lb_NV);
             this.panellabel.Location = new System.Drawing.Point(2, 1);
+            this.panellabel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panellabel.Name = "panellabel";
-            this.panellabel.Size = new System.Drawing.Size(806, 67);
+            this.panellabel.Size = new System.Drawing.Size(716, 54);
             this.panellabel.TabIndex = 18;
             // 
             // FormAdmin_NV
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(803, 384);
+            this.ClientSize = new System.Drawing.Size(714, 307);
             this.Controls.Add(this.butt_Fix);
             this.Controls.Add(this.butt_Del);
             this.Controls.Add(this.butt_Add);
             this.Controls.Add(this.dgv_NV);
             this.Controls.Add(this.panellabel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormAdmin_NV";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thông tin Nhân viên";
