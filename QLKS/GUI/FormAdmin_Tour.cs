@@ -23,5 +23,13 @@ namespace QLKS.GUI
         {
             TourBAL.LoadTourInto(dtg_Tour);
         }
+
+        private void butt_dktour_Click(object sender, EventArgs e)
+        {
+            FormDKTour ShowDKTour = new FormDKTour();
+            //this.Hide();
+            ShowDKTour.ShowDialog();
+            this.Show();
+        }
     }
 }

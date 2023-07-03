@@ -25,6 +25,7 @@ namespace QLKS.GUI
                 butt_Fix.Visible = false;
                 butt_Del.Visible = false;
                 butt_Add.Visible = false;
+                butt_Re.Visible = false;
             }
         }
 
