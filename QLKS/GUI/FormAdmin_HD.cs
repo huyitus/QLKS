@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QLKS.BAL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,9 +18,9 @@ namespace QLKS.GUI
             InitializeComponent();
         }
 
-        private void butt_Fix_Click(object sender, EventArgs e)
+        private void FormAdmin_HD_Load(object sender, EventArgs e)
         {
-
+            BillBAL.LoadBillInto(dgv_hd);
         }
     }
 }

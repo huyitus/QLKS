@@ -30,9 +30,9 @@
         {
             this.panellabel = new System.Windows.Forms.Panel();
             this.lab_HD = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.dgv_hd = new System.Windows.Forms.DataGridView();
             this.panellabel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_hd)).BeginInit();
             this.SuspendLayout();
             // 
             // panellabel
@@ -58,6 +58,7 @@
             this.lab_HD.TabIndex = 1;
             this.lab_HD.Text = "HÓA ĐƠN";
             // 
+<<<<<<< HEAD
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Moccasin;
@@ -77,23 +78,45 @@
             this.button2.TabIndex = 24;
             this.button2.Text = "Thêm";
             this.button2.UseVisualStyleBackColor = false;
+=======
+            // dgv_hd
+            // 
+            this.dgv_hd.BackgroundColor = System.Drawing.Color.White;
+            this.dgv_hd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_hd.Location = new System.Drawing.Point(23, 88);
+            this.dgv_hd.Name = "dgv_hd";
+            this.dgv_hd.ReadOnly = true;
+            this.dgv_hd.RowHeadersVisible = false;
+            this.dgv_hd.RowHeadersWidth = 62;
+            this.dgv_hd.RowTemplate.Height = 28;
+            this.dgv_hd.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv_hd.Size = new System.Drawing.Size(757, 266);
+            this.dgv_hd.TabIndex = 23;
+>>>>>>> 9291b7b29c4547b64245f3ad614726e1ec2b39d0
             // 
             // FormAdmin_HD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+<<<<<<< HEAD
             this.ClientSize = new System.Drawing.Size(535, 250);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
+=======
+            this.ClientSize = new System.Drawing.Size(803, 384);
+            this.Controls.Add(this.dgv_hd);
+>>>>>>> 9291b7b29c4547b64245f3ad614726e1ec2b39d0
             this.Controls.Add(this.panellabel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormAdmin_HD";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hóa đơn";
+            this.Load += new System.EventHandler(this.FormAdmin_HD_Load);
             this.panellabel.ResumeLayout(false);
             this.panellabel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_hd)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -102,7 +125,11 @@
 
         private System.Windows.Forms.Panel panellabel;
         private System.Windows.Forms.Label lab_HD;
+<<<<<<< HEAD
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+=======
+        private System.Windows.Forms.DataGridView dgv_hd;
+>>>>>>> 9291b7b29c4547b64245f3ad614726e1ec2b39d0
     }
 }

@@ -124,7 +124,7 @@ namespace QLKS.GUI
             this.MaximizeBox = false;
             this.Name = "FormAgencyBooking";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Đặt phòng";
+            this.Text = "Gửi yêu cầu đặt phòng";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormAgencyBooking_FormClosing);
             this.Load += new System.EventHandler(this.FormAgencyBooking_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtAmount)).EndInit();

@@ -48,5 +48,29 @@ namespace QLKS.GUI
             Form form = new FormReceptionistViewRequest();
             form.Show();
         }
+
+        private void btnQuiDinh_Click(object sender, EventArgs e)
+        {
+            Form ShowQuiDinh = new FormAdmin_QD();
+            this.Hide();
+            ShowQuiDinh.ShowDialog();
+            this.Show();
+        }
+
+        private void btnTracuuTourDL_Click(object sender, EventArgs e)
+        {
+            FormAdmin_Tour ShowTour = new FormAdmin_Tour();
+            this.Hide();
+            ShowTour.ShowDialog();
+            this.Show();
+        }
+
+        private void btnHoaDon_Click(object sender, EventArgs e)
+        {
+            FormAdmin_HD ShowHoadon = new FormAdmin_HD();
+            this.Hide();
+            ShowHoadon.ShowDialog();
+            this.Show();
+        }
     }
 }
