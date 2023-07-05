@@ -58,27 +58,6 @@
             this.lab_HD.TabIndex = 1;
             this.lab_HD.Text = "HÓA ĐƠN";
             // 
-<<<<<<< HEAD
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Moccasin;
-            this.button1.Location = new System.Drawing.Point(356, 215);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 23;
-            this.button1.Text = "Xuất";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.DarkTurquoise;
-            this.button2.Location = new System.Drawing.Point(448, 215);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 24;
-            this.button2.Text = "Thêm";
-            this.button2.UseVisualStyleBackColor = false;
-=======
             // dgv_hd
             // 
             this.dgv_hd.BackgroundColor = System.Drawing.Color.White;
@@ -92,21 +71,14 @@
             this.dgv_hd.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_hd.Size = new System.Drawing.Size(757, 266);
             this.dgv_hd.TabIndex = 23;
->>>>>>> 9291b7b29c4547b64245f3ad614726e1ec2b39d0
             // 
             // FormAdmin_HD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-<<<<<<< HEAD
-            this.ClientSize = new System.Drawing.Size(535, 250);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-=======
             this.ClientSize = new System.Drawing.Size(803, 384);
             this.Controls.Add(this.dgv_hd);
->>>>>>> 9291b7b29c4547b64245f3ad614726e1ec2b39d0
             this.Controls.Add(this.panellabel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -125,11 +97,6 @@
 
         private System.Windows.Forms.Panel panellabel;
         private System.Windows.Forms.Label lab_HD;
-<<<<<<< HEAD
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-=======
         private System.Windows.Forms.DataGridView dgv_hd;
->>>>>>> 9291b7b29c4547b64245f3ad614726e1ec2b39d0
     }
 }
