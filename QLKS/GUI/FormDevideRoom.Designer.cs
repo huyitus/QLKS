@@ -93,7 +93,9 @@ namespace QLKS.GUI
             this.Controls.Add(this.labelMaPhong);
             this.Controls.Add(this.label_MADP);
             this.Name = "FormDevideRoom";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormDevideRoom";
+            this.Load += new System.EventHandler(this.FormDevideRoom_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

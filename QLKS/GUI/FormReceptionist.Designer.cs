@@ -87,6 +87,7 @@ namespace QLKS.GUI
             this.btnQLPhong.TabIndex = 4;
             this.btnQLPhong.Text = "Quản lý phòng";
             this.btnQLPhong.UseVisualStyleBackColor = true;
+            this.btnQLPhong.Click += new System.EventHandler(this.btnQLPhong_Click);
             // 
             // btnHoaDon
             // 
@@ -132,6 +133,7 @@ namespace QLKS.GUI
             this.Controls.Add(this.btnTracuuPhong);
             this.Controls.Add(this.btnTracuuKH);
             this.Name = "FormReceptionist";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormReceptionist";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormReceptionist_FormClosed);
             this.ResumeLayout(false);

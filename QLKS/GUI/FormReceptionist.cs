@@ -28,7 +28,7 @@ namespace QLKS.GUI
 
         private void btnTracuuPhong_Click(object sender, EventArgs e)
         {
-            Form ShowRoom = new FormRoom(this);
+            Form ShowRoom = new FormReceptionistViewRoom(this);
             this.Hide();
             ShowRoom.ShowDialog();
         }
@@ -71,6 +71,13 @@ namespace QLKS.GUI
             this.Hide();
             ShowHoadon.ShowDialog();
             this.Show();
+        }
+
+        private void btnQLPhong_Click(object sender, EventArgs e)
+        {
+            Form RecepManageRoom = new FormRecepManageRoom(this);
+            this.Hide();
+            RecepManageRoom.ShowDialog();
         }
     }
 }

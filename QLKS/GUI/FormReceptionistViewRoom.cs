@@ -5,12 +5,12 @@ using System.Windows.Forms;
 
 namespace QLKS.GUI
 {
-    public partial class FormRoom : Form
+    public partial class FormReceptionistViewRoom : Form
     {
         private readonly Form parent;
 
         public static string khachhang;
-        public FormRoom(Form parent)
+        public FormReceptionistViewRoom(Form parent)
         {
             InitializeComponent();
             this.parent = parent;
@@ -42,6 +42,27 @@ namespace QLKS.GUI
         private void btnReload_Click(object sender, EventArgs e)
         {
             ReceptionistRoomBAL.ReLoadInfo(dGV_DSdatphong);
+        }
+
+        private void btnPhanPhong_Click(object sender, EventArgs e)
+        {
+            Form DividedRoom = new FormDevideRoom(this);
+            DividedRoom.Show();
+
+        }
+
+        private void btnDatPhong_Click(object sender, EventArgs e)
+        {
+            Form RecepSelectOrder = new FormRecepSelectedOrder(this);
+            this.Hide();
+            RecepSelectOrder.ShowDialog();
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            Form RecepUpdateRoom = new FormRecepUpdateRoom(this);
+            //this.Hide();
+            RecepUpdateRoom.ShowDialog();
         }
     }
     

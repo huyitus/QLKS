@@ -1,7 +1,7 @@
 ﻿
 namespace QLKS.GUI
 {
-    partial class FormRoom
+    partial class FormReceptionistViewRoom
     {
         /// <summary>
         /// Required designer variable.
@@ -60,13 +60,13 @@ namespace QLKS.GUI
             this.panel1.Controls.Add(this.dGV_DSdatphong);
             this.panel1.Location = new System.Drawing.Point(0, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1130, 267);
+            this.panel1.Size = new System.Drawing.Size(1072, 267);
             this.panel1.TabIndex = 0;
             // 
             // btnReload
             // 
             this.btnReload.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReload.Location = new System.Drawing.Point(859, 185);
+            this.btnReload.Location = new System.Drawing.Point(788, 185);
             this.btnReload.Name = "btnReload";
             this.btnReload.Size = new System.Drawing.Size(155, 37);
             this.btnReload.TabIndex = 5;
@@ -88,7 +88,7 @@ namespace QLKS.GUI
             // btnSearch
             // 
             this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.Location = new System.Drawing.Point(870, 115);
+            this.btnSearch.Location = new System.Drawing.Point(788, 120);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(132, 37);
             this.btnSearch.TabIndex = 3;
@@ -99,7 +99,7 @@ namespace QLKS.GUI
             // tbTenKH
             // 
             this.tbTenKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbTenKH.Location = new System.Drawing.Point(911, 62);
+            this.tbTenKH.Location = new System.Drawing.Point(832, 62);
             this.tbTenKH.Name = "tbTenKH";
             this.tbTenKH.Size = new System.Drawing.Size(193, 27);
             this.tbTenKH.TabIndex = 2;
@@ -108,7 +108,7 @@ namespace QLKS.GUI
             // 
             this.label_TenKH.AutoSize = true;
             this.label_TenKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_TenKH.Location = new System.Drawing.Point(767, 66);
+            this.label_TenKH.Location = new System.Drawing.Point(700, 66);
             this.label_TenKH.Name = "label_TenKH";
             this.label_TenKH.Size = new System.Drawing.Size(117, 18);
             this.label_TenKH.TabIndex = 1;
@@ -116,12 +116,16 @@ namespace QLKS.GUI
             // 
             // dGV_DSdatphong
             // 
+            this.dGV_DSdatphong.BackgroundColor = System.Drawing.Color.White;
             this.dGV_DSdatphong.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dGV_DSdatphong.Location = new System.Drawing.Point(3, 39);
             this.dGV_DSdatphong.Name = "dGV_DSdatphong";
+            this.dGV_DSdatphong.ReadOnly = true;
+            this.dGV_DSdatphong.RowHeadersVisible = false;
             this.dGV_DSdatphong.RowHeadersWidth = 51;
             this.dGV_DSdatphong.RowTemplate.Height = 24;
-            this.dGV_DSdatphong.Size = new System.Drawing.Size(739, 227);
+            this.dGV_DSdatphong.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dGV_DSdatphong.Size = new System.Drawing.Size(673, 227);
             this.dGV_DSdatphong.TabIndex = 0;
             // 
             // panel2
@@ -133,13 +137,13 @@ namespace QLKS.GUI
             this.panel2.Controls.Add(this.dGV_DSPhong);
             this.panel2.Location = new System.Drawing.Point(0, 275);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1130, 261);
+            this.panel2.Size = new System.Drawing.Size(1072, 261);
             this.panel2.TabIndex = 1;
             // 
             // cBPhongCDD
             // 
             this.cBPhongCDD.AutoSize = true;
-            this.cBPhongCDD.Location = new System.Drawing.Point(776, 227);
+            this.cBPhongCDD.Location = new System.Drawing.Point(702, 227);
             this.cBPhongCDD.Name = "cBPhongCDD";
             this.cBPhongCDD.Size = new System.Drawing.Size(182, 21);
             this.cBPhongCDD.TabIndex = 8;
@@ -150,17 +154,18 @@ namespace QLKS.GUI
             // btnUpdate
             // 
             this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdate.Location = new System.Drawing.Point(870, 109);
+            this.btnUpdate.Location = new System.Drawing.Point(788, 116);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(116, 38);
             this.btnUpdate.TabIndex = 7;
             this.btnUpdate.Text = "Cập nhật ";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // cBPhongTrong
             // 
             this.cBPhongTrong.AutoSize = true;
-            this.cBPhongTrong.Location = new System.Drawing.Point(776, 200);
+            this.cBPhongTrong.Location = new System.Drawing.Point(703, 200);
             this.cBPhongTrong.Name = "cBPhongTrong";
             this.cBPhongTrong.Size = new System.Drawing.Size(108, 21);
             this.cBPhongTrong.TabIndex = 6;
@@ -181,44 +186,51 @@ namespace QLKS.GUI
             // 
             // dGV_DSPhong
             // 
+            this.dGV_DSPhong.BackgroundColor = System.Drawing.Color.White;
             this.dGV_DSPhong.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dGV_DSPhong.Location = new System.Drawing.Point(2, 34);
             this.dGV_DSPhong.Name = "dGV_DSPhong";
+            this.dGV_DSPhong.ReadOnly = true;
+            this.dGV_DSPhong.RowHeadersVisible = false;
             this.dGV_DSPhong.RowHeadersWidth = 51;
             this.dGV_DSPhong.RowTemplate.Height = 24;
-            this.dGV_DSPhong.Size = new System.Drawing.Size(740, 226);
+            this.dGV_DSPhong.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dGV_DSPhong.Size = new System.Drawing.Size(674, 226);
             this.dGV_DSPhong.TabIndex = 0;
             // 
             // btnPhanPhong
             // 
             this.btnPhanPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPhanPhong.Location = new System.Drawing.Point(358, 545);
+            this.btnPhanPhong.Location = new System.Drawing.Point(321, 545);
             this.btnPhanPhong.Name = "btnPhanPhong";
             this.btnPhanPhong.Size = new System.Drawing.Size(174, 43);
             this.btnPhanPhong.TabIndex = 2;
             this.btnPhanPhong.Text = "Phân Phòng";
             this.btnPhanPhong.UseVisualStyleBackColor = true;
+            this.btnPhanPhong.Click += new System.EventHandler(this.btnPhanPhong_Click);
             // 
             // btnDatPhong
             // 
             this.btnDatPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDatPhong.Location = new System.Drawing.Point(603, 545);
+            this.btnDatPhong.Location = new System.Drawing.Point(553, 545);
             this.btnDatPhong.Name = "btnDatPhong";
             this.btnDatPhong.Size = new System.Drawing.Size(174, 43);
             this.btnDatPhong.TabIndex = 3;
             this.btnDatPhong.Text = "Đặt Phòng";
             this.btnDatPhong.UseVisualStyleBackColor = true;
+            this.btnDatPhong.Click += new System.EventHandler(this.btnDatPhong_Click);
             // 
-            // FormRoom
+            // FormReceptionistViewRoom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1146, 600);
+            this.ClientSize = new System.Drawing.Size(1078, 600);
             this.Controls.Add(this.btnDatPhong);
             this.Controls.Add(this.btnPhanPhong);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Name = "FormRoom";
+            this.Name = "FormReceptionistViewRoom";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormRoom";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormRoom_FormClosed);
             this.Load += new System.EventHandler(this.FormRoom_Load);
