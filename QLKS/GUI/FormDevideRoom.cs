@@ -17,7 +17,6 @@ namespace QLKS.GUI
         {
             string maDP = tbMaDP.Text;
             string maPhong = tbMaPhong.Text;
-            //ReceptionistDividedRoomBAL.Insert(maDP, maPhong);
             if (ReceptionistDividedRoomBAL.Thuchienphanphong(maDP, maPhong))
             {
                 MessageBox.Show("Cập nhật thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -27,6 +26,8 @@ namespace QLKS.GUI
             {
                 MessageBox.Show("Cập nhật thất bại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+            //MessageBox.Show(ReceptionistDividedRoomBAL.Thuchienphanphong(maDP, maPhong), "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

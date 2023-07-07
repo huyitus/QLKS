@@ -9,7 +9,7 @@ namespace QLKS.BAL
     {
         public static void LoadMaPhong(ComboBox cbMaPhong)
         {
-            List<RecepUpdateRoomDAL> maphong = RecepUpdateRoomDAL.loadMaPhong();
+            List<RecepUpdateRoomDAL> maphong = RecepUpdateRoomDAL.loadMaPhongConTrong();
             for(int i = 0;i<maphong.Count;++i)
             {
                 cbMaPhong.Items.Add(maphong[i].MaPhong);
