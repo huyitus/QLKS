@@ -38,7 +38,7 @@ namespace QLKS.DAL
                 }
             }
             return quanlyphong;
-          
+
         }
 
         public static List<ReceptionistManageRoomDAL> Search(string maphong)
