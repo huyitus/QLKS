@@ -136,8 +136,11 @@ namespace QLKS.GUI
             this.dgvDVPhg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDVPhg.Location = new System.Drawing.Point(484, 458);
             this.dgvDVPhg.Name = "dgvDVPhg";
+            this.dgvDVPhg.ReadOnly = true;
+            this.dgvDVPhg.RowHeadersVisible = false;
             this.dgvDVPhg.RowHeadersWidth = 51;
             this.dgvDVPhg.RowTemplate.Height = 24;
+            this.dgvDVPhg.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDVPhg.Size = new System.Drawing.Size(295, 168);
             this.dgvDVPhg.TabIndex = 8;
             // 
@@ -172,6 +175,7 @@ namespace QLKS.GUI
             this.btnThem.TabIndex = 11;
             this.btnThem.Text = ">";
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnXoa
             // 
@@ -182,6 +186,7 @@ namespace QLKS.GUI
             this.btnXoa.TabIndex = 12;
             this.btnXoa.Text = "<";
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // FormRecepManageRoom
             // 

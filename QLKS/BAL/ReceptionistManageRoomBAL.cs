@@ -10,20 +10,27 @@ namespace QLKS.BAL
 {
     class ReceptionistManageRoomBAL
     {
-        public static void LoadInfo(DataGridView dgv_phong)
+        public static void LoadInfo(DataGridView dgv_phong, DataGridView dgv_dvp)
         {
-            List<ReceptionistManageRoomDAL> thongtinphong = ReceptionistManageRoomDAL.LoadThongTinPhong();
+            List<ReceptionistManageRoomDAL.QuanLyPhongDAL> thongtinphong = ReceptionistManageRoomDAL.QuanLyPhongDAL.LoadThongTinPhong();
             dgv_phong.DataSource = thongtinphong;
+            List<ReceptionistManageRoomDAL.DV_PhongDAL> dv_phong = ReceptionistManageRoomDAL.DV_PhongDAL.LoadDV_Phong();
+            dgv_dvp.DataSource = dv_phong;
         }
-        public static void SearchInfo(DataGridView dgvThongTinPhong, string maphong)
+        public static void SearchInfo(DataGridView dgvThongTinPhong, DataGridView dgv_DVP, string maphong)
         {
-            List<ReceptionistManageRoomDAL> thongtinphong = ReceptionistManageRoomDAL.Search(maphong);
+            List<ReceptionistManageRoomDAL.QuanLyPhongDAL> thongtinphong = ReceptionistManageRoomDAL.QuanLyPhongDAL.Search(maphong);
             dgvThongTinPhong.DataSource = thongtinphong;
+            List<ReceptionistManageRoomDAL.DV_PhongDAL> dv_phong = ReceptionistManageRoomDAL.DV_PhongDAL.Search(maphong);
+            dgv_DVP.DataSource = dv_phong;
         }
-        public static void ReLoadInfo(DataGridView dgvThongTinPhong)
+        public static bool SendRequestDelDV(string id)
         {
-            List<ReceptionistManageRoomDAL> thongtinphong = ReceptionistManageRoomDAL.LoadThongTinPhong();
-            dgvThongTinPhong.DataSource = thongtinphong;
+            return ReceptionistManageRoomDAL.DV_PhongDAL.Del(id);
+        }
+        public static bool AddServiceToRoom(string maphong, string madv, string sl)
+        {
+            return ReceptionistManageRoomDAL.DV_PhongDAL.Insert(maphong, madv, sl);
         }
     }
 }
