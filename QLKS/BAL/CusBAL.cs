@@ -16,17 +16,17 @@ namespace QLKS.BAL
         {
             return CusDAL.Insert(name, dc, sdt, email, fax, group, amount);
         }
-        public static CusDAL GetCus(string tenkh)
+        public static CusDAL GetCus(string id)
         {
-            return CusDAL.GetCus(tenkh);
+            return CusDAL.GetCus(id);
         }
         public static bool Update(string id, string name, string sdt, string dc, string email, string fax, string group, string amount)
         {
-            return CusDAL.Update(id, name, dc, sdt, email, fax, group, amount);
+            return CusDAL.Update(id, name, sdt, dc, email, fax, group, amount);
         }
-        public static bool SendRequestDelKH(string tenkh)
+        public static bool SendRequestDelKH(string id)
         {
-            return CusDAL.Del(tenkh);
+            return CusDAL.Del(id);
         }
     }
 }

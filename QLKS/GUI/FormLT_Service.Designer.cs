@@ -65,6 +65,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataDV);
             this.Name = "FormLT_Service";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormLT_Service";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormLT_Service_FormClosed);
             this.Load += new System.EventHandler(this.FormLT_Service_Load);

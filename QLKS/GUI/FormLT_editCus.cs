@@ -32,8 +32,8 @@ namespace QLKS.GUI
                 txtmakh.Text = id;
                 txttenkh.Text = cus.TenKH;
                 txtsdt.Text = cus.SDT;
-                txtdc.Text = cus.DiaChi;
-                txtemail.Text = cus.Email;
+                txtemail.Text = cus.DiaChi;
+                txtdc.Text = cus.Email;
                 txtfax.Text = cus.Fax;
                 txtgr.Text = cus.Doan;
                 txtsl.Text = cus.SL;
@@ -44,8 +44,8 @@ namespace QLKS.GUI
         {
             string name = txttenkh.Text;
             string sdt = txtsdt.Text;
-            string dc = txtdc.Text;
-            string email = txtemail.Text;
+            string dc = txtemail.Text;
+            string email = txtdc.Text;
             string fax = txtfax.Text;
             string doan = txtgr.Text;
             string sl = txtsl.Text;

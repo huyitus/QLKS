@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QLKS.BAL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,6 +14,7 @@ namespace QLKS.GUI
     public partial class FormRecepManageRoom : Form
     {
         private readonly Form parent;
+        public static string phong;
         public FormRecepManageRoom(Form parent)
         {
             InitializeComponent();
@@ -21,12 +23,19 @@ namespace QLKS.GUI
 
         private void FormRecepManageRoom_Load(object sender, EventArgs e)
         {
-
+            ReceptionistManageRoomBAL.LoadInfo(dgv_phong);
+            DvBAL.LoadDVInto(dgvDichVu);
         }
 
         private void FormRecepManageRoom_FormClosed(object sender, FormClosedEventArgs e)
         {
             parent.Show();
+        }
+
+        private void btnTraCuu_Click(object sender, EventArgs e)
+        {
+            phong = txtmaphong.Text;
+            ReceptionistManageRoomBAL.SearchInfo(dgv_phong, phong);
         }
     }
 }
