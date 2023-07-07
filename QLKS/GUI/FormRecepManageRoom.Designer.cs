@@ -31,20 +31,20 @@ namespace QLKS.GUI
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtmaphong = new System.Windows.Forms.TextBox();
             this.btnTraCuu = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.dgvThongTinPhong = new System.Windows.Forms.DataGridView();
+            this.dgv_phong = new System.Windows.Forms.DataGridView();
             this.label4 = new System.Windows.Forms.Label();
             this.dgvDichVu = new System.Windows.Forms.DataGridView();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dgvDVPhg = new System.Windows.Forms.DataGridView();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.btnThem = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvThongTinPhong)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_phong)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDichVu)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDVPhg)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -68,13 +68,13 @@ namespace QLKS.GUI
             this.label2.TabIndex = 1;
             this.label2.Text = "Chọn mã phòng";
             // 
-            // textBox1
+            // txtmaphong
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(48, 108);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(180, 27);
-            this.textBox1.TabIndex = 2;
+            this.txtmaphong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtmaphong.Location = new System.Drawing.Point(48, 108);
+            this.txtmaphong.Name = "txtmaphong";
+            this.txtmaphong.Size = new System.Drawing.Size(180, 27);
+            this.txtmaphong.TabIndex = 2;
             // 
             // btnTraCuu
             // 
@@ -85,6 +85,7 @@ namespace QLKS.GUI
             this.btnTraCuu.TabIndex = 3;
             this.btnTraCuu.Text = "Tra cứu";
             this.btnTraCuu.UseVisualStyleBackColor = true;
+            this.btnTraCuu.Click += new System.EventHandler(this.btnTraCuu_Click);
             // 
             // label3
             // 
@@ -96,15 +97,17 @@ namespace QLKS.GUI
             this.label3.TabIndex = 4;
             this.label3.Text = "Thông tin phòng";
             // 
-            // dgvThongTinPhong
+            // dgv_phong
             // 
-            this.dgvThongTinPhong.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvThongTinPhong.Location = new System.Drawing.Point(48, 186);
-            this.dgvThongTinPhong.Name = "dgvThongTinPhong";
-            this.dgvThongTinPhong.RowHeadersWidth = 51;
-            this.dgvThongTinPhong.RowTemplate.Height = 24;
-            this.dgvThongTinPhong.Size = new System.Drawing.Size(731, 180);
-            this.dgvThongTinPhong.TabIndex = 5;
+            this.dgv_phong.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_phong.Location = new System.Drawing.Point(48, 186);
+            this.dgv_phong.Name = "dgv_phong";
+            this.dgv_phong.ReadOnly = true;
+            this.dgv_phong.RowHeadersVisible = false;
+            this.dgv_phong.RowHeadersWidth = 51;
+            this.dgv_phong.RowTemplate.Height = 24;
+            this.dgv_phong.Size = new System.Drawing.Size(731, 180);
+            this.dgv_phong.TabIndex = 5;
             // 
             // label4
             // 
@@ -121,20 +124,22 @@ namespace QLKS.GUI
             this.dgvDichVu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDichVu.Location = new System.Drawing.Point(48, 458);
             this.dgvDichVu.Name = "dgvDichVu";
+            this.dgvDichVu.ReadOnly = true;
+            this.dgvDichVu.RowHeadersVisible = false;
             this.dgvDichVu.RowHeadersWidth = 51;
             this.dgvDichVu.RowTemplate.Height = 24;
             this.dgvDichVu.Size = new System.Drawing.Size(307, 166);
             this.dgvDichVu.TabIndex = 7;
             // 
-            // dataGridView2
+            // dgvDVPhg
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(484, 458);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(295, 168);
-            this.dataGridView2.TabIndex = 8;
+            this.dgvDVPhg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDVPhg.Location = new System.Drawing.Point(484, 458);
+            this.dgvDVPhg.Name = "dgvDVPhg";
+            this.dgvDVPhg.RowHeadersWidth = 51;
+            this.dgvDVPhg.RowTemplate.Height = 24;
+            this.dgvDVPhg.Size = new System.Drawing.Size(295, 168);
+            this.dgvDVPhg.TabIndex = 8;
             // 
             // label5
             // 
@@ -187,22 +192,23 @@ namespace QLKS.GUI
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.dataGridView2);
+            this.Controls.Add(this.dgvDVPhg);
             this.Controls.Add(this.dgvDichVu);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.dgvThongTinPhong);
+            this.Controls.Add(this.dgv_phong);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnTraCuu);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtmaphong);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "FormRecepManageRoom";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormRecepManageRoom";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormRecepManageRoom_FormClosed);
             this.Load += new System.EventHandler(this.FormRecepManageRoom_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvThongTinPhong)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_phong)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDichVu)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDVPhg)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -212,13 +218,13 @@ namespace QLKS.GUI
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtmaphong;
         private System.Windows.Forms.Button btnTraCuu;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DataGridView dgvThongTinPhong;
+        private System.Windows.Forms.DataGridView dgv_phong;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView dgvDichVu;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dgvDVPhg;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnThem;

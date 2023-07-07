@@ -135,5 +135,11 @@ namespace QLKS.DAL
                 }
             }
         }
+        public static string Execute_pr_CheckMaTour(string matour)
+        {
+            string query = "begin QLKS.pr_CheckMaTour('" + matour + "'); end;";
+            string kq = Utility.ExecuteScalar(query).ToString();
+            return kq;
+        }
     }
 }

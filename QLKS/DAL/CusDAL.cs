@@ -53,9 +53,9 @@ namespace QLKS.DAL
             return cuss;
         }
 
-        public static CusDAL GetCus(string tenkh)
+        public static CusDAL GetCus(string id)
         {
-            string query = "SELECT * FROM QLKS.KHACHHANG WHERE TENKH='" + tenkh + "'";
+            string query = "SELECT * FROM QLKS.KHACHHANG WHERE MAKH='" + id + "'";
 
             using (OracleDataReader reader = Utility.GetDataReader(query))
             {
@@ -78,7 +78,7 @@ namespace QLKS.DAL
 
         public static bool Update(string id, string ten, string sdt, string addr, string email, string fax, string doan, string sl)
         {
-            string query = string.Format("UPDATE QLKS.KHACHHANG SET TENKH='{0}', SDT='{1}', DIACHI='{2}', EMAIL='{3}', SOFAX='{4}', TENDOAN='{5}', SOLUONGNGUOI='{6}' WHERE MAKH='{7}'", ten, sdt, addr, email, doan, sl, id);
+            string query = string.Format("UPDATE QLKS.KHACHHANG SET TENKH='{0}', SDT='{1}', DIACHI='{2}', EMAIL='{3}', SOFAX='{4}', TENDOAN='{5}', SOLUONGNGUOI='{6}' WHERE MAKH='{7}'", ten, sdt, addr, email, fax, doan, sl, id);
             using (var command = new OracleCommand(query, SessionBAL.sConnection))
             {
                 try
@@ -92,9 +92,9 @@ namespace QLKS.DAL
                 }
             }
         }
-        public static bool Del(string tenkh)
+        public static bool Del(string id)
         {
-            string query = string.Format("DELETE FROM QLKS.KHACHHANG WHERE TENKH='{0}'", tenkh);
+            string query = string.Format("DELETE FROM QLKS.KHACHHANG WHERE MAKH='{0}'", id);
             using (var command = new OracleCommand(query, SessionBAL.sConnection))
             {
                 try
@@ -110,7 +110,7 @@ namespace QLKS.DAL
         }
         public static bool Insert(string name, string sdt, string dc, string email, string fax, string group, string amount)
         {
-            string query = string.Format("INSERT INTO QLKS.KHACHHANG VALUES(' ','{0}', '{1}', '{2}','{3}', '{4}', '{5}', '{7}')", name, sdt, dc, email, fax, group, amount);
+            string query = string.Format("INSERT INTO QLKS.KHACHHANG VALUES(' ','{0}', '{1}', '{2}','{3}', '{4}', '{5}', '{6}')", name, sdt, dc, email, fax, group, amount);
             using (var command = new OracleCommand(query, SessionBAL.sConnection))
             {
                 try

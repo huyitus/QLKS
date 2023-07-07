@@ -24,5 +24,14 @@ namespace QLKS.DAL
                 return null;
             }
         }
+        public static object ExecuteScalar(string query)
+        {
+            object result = null;
+
+            OracleCommand command = new OracleCommand(query, SessionBAL.sConnection);
+            result = command.ExecuteScalar();
+
+            return result;
+        }
     }
 }

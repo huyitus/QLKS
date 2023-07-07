@@ -46,7 +46,8 @@ namespace QLKS.GUI
 
         private void sua_Click(object sender, EventArgs e)
         {
-            string makh = dataKH.CurrentRow.Cells["MAKH"].Value.ToString();
+            string makh = dataKH.CurrentRow.Cells["MaKH"].Value.ToString();
+
             if (makh != null)
             {
                 Form form = new FormLT_editCus(this, makh);
@@ -56,7 +57,7 @@ namespace QLKS.GUI
 
         private void xoa_Click(object sender, EventArgs e)
         {
-            string makh = dataKH.CurrentRow.Cells["MAKH"].Value.ToString();
+            string makh = dataKH.CurrentRow.Cells["MaKH"].Value.ToString();
 
             DialogResult result = MessageBox.Show(MESSAGE_CONFIRM, MESSAGE_CAPTION, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
@@ -71,6 +72,11 @@ namespace QLKS.GUI
                     MessageBox.Show(MESSAGE_SEND_REQUEST_FAILED, MESSAGE_CAPTION, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            CusBAL.LoadCusInto(dataKH);
         }
     }
 }

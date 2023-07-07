@@ -39,28 +39,34 @@ namespace QLKS.GUI
             }
             else
             {
-                if (nhucaudb == "")
+                if(DKTourBAL.CheckMaTour(matour).ToString()=="0")
                 {
-                    nhucaudb = "No";
-                }   
-                DateTime date = Convert.ToDateTime (dateTimePicker1.Value);
-                int songuoitg = Int32.Parse(textBox4.Text);
-
-                DialogResult result = MessageBox.Show(MESSAGE_CONFIRM, MESSAGE_CAPTION, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (result == DialogResult.Yes)
-                {
-                    if (DKTourBAL.SendRequestAddDKTour(matour,tenkh,sdt,songuoitg,hinhthuc,date,nhucaudb))
-                    {
-                        MessageBox.Show(MESSAGE_SEND_REQUEST_SUCCESS, MESSAGE_CAPTION, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        this.Close();
-                    }
-                    else
-                    {
-                        MessageBox.Show(MESSAGE_SEND_REQUEST_FAILED, MESSAGE_CAPTION, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
+                    MessageBox.Show("Mã tour này không tồn tại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                this.Hide();
+                else
+                {
+                    if (nhucaudb == "")
+                    {
+                        nhucaudb = "No";
+                    }
+                    DateTime date = Convert.ToDateTime(dateTimePicker1.Value);
+                    int songuoitg = Int32.Parse(textBox4.Text);
 
+                    DialogResult result = MessageBox.Show(MESSAGE_CONFIRM, MESSAGE_CAPTION, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (result == DialogResult.Yes)
+                    {
+                        if (DKTourBAL.SendRequestAddDKTour(matour, tenkh, sdt, songuoitg, hinhthuc, date, nhucaudb))
+                        {
+                            MessageBox.Show(MESSAGE_SEND_REQUEST_SUCCESS, MESSAGE_CAPTION, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            this.Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show(MESSAGE_SEND_REQUEST_FAILED, MESSAGE_CAPTION, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                    this.Hide();
+                }
             }
         }
     }
