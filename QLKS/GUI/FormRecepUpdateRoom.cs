@@ -7,9 +7,9 @@ namespace QLKS.GUI
 {
     public partial class FormRecepUpdateRoom : Form
     {
-        private readonly Form parent;
+        private FormReceptionistViewRoom parent;
 
-        public FormRecepUpdateRoom(Form parent)
+        public FormRecepUpdateRoom(FormReceptionistViewRoom parent)
         {
             InitializeComponent();
             this.parent = parent;
@@ -35,6 +35,7 @@ namespace QLKS.GUI
             if (RecepUpdateRoomBAL.Update(maPhong, TTDonDep))
             {
                 MessageBox.Show("Cập nhật thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                parent.UpdateTinhTrangPhong();
             }
             else
             {

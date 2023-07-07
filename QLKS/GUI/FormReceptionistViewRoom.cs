@@ -61,8 +61,14 @@ namespace QLKS.GUI
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             Form RecepUpdateRoom = new FormRecepUpdateRoom(this);
-            //this.Hide();
             RecepUpdateRoom.ShowDialog();
+        }
+
+        public void UpdateTinhTrangPhong()
+        {
+            bool isEmpty = cBPhongTrong.Checked;
+            bool isClean = cBPhongCDD.Checked;
+            ReceptionistRoomBAL.LoadInfo(dGV_DSdatphong, dGV_DSPhong, isEmpty, isClean);
         }
     }
     
