@@ -74,6 +74,18 @@ namespace QLKS.DAL
             string kq = Utility.ExecuteScalar(query).ToString();
             return kq;
         }
+        public static string Execute_pr_CheckNhanVien(string manhanvien)
+        {
+            string query = "begin QLKS.pr_CheckNhanVien('" + manhanvien + "'); end;";
+            string kq = Utility.ExecuteScalar(query).ToString();
+            return kq;
+        }
+        public static string Execute_pr_CheckMaPhong(string maphong)
+        {
+            string query = "begin QLKS.pr_CheckMaPhong('" + maphong + "'); end;";
+            string kq = Utility.ExecuteScalar(query).ToString();
+            return kq;
+        }
         public static string SelectMaDatPhong (string maphong)
         {
             string query = "SELECT * FROM QLKS.CHITIETPHONGDAT WHERE MAPHG='" + maphong + "'";

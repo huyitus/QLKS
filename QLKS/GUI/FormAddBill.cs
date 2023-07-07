@@ -26,11 +26,18 @@ namespace QLKS.GUI
         {
             if (textBox1.Text != "")
             {
-                dateTimePicker1.Visible = true;
-                textBox3.Visible = true;
-                textBox4.Visible = true;
-                textBox4.Text = BillBAL.TinhTienHoaDon(textBox1.Text);
-                textBox3.Text = BillBAL.TimMaDatPhong(textBox1.Text);
+                if (BillBAL.CheckMaPhong(textBox1.Text).ToString() == "1")
+                {
+                    dateTimePicker1.Visible = true;
+                    textBox3.Visible = true;
+                    textBox4.Visible = true;
+                    textBox4.Text = BillBAL.TinhTienHoaDon(textBox1.Text);
+                    textBox3.Text = BillBAL.TimMaDatPhong(textBox1.Text);
+                }
+                else
+                {
+                    MessageBox.Show("Mã phòng này không tồn tại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
         }
 
@@ -40,31 +47,37 @@ namespace QLKS.GUI
             String manhanvien = textBox2.Text.ToString();
 
 
-            if (userRoom == "" || manhanvien == "")
+            if (userRoom == "" || manhanvien == "" )
             {
                 MessageBox.Show("Nhập thiếu thông tin", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Hide();
             }
             else
-            {
-                DateTime tglaphd = Convert.ToDateTime(dateTimePicker1.Value);
-                int tongtien = Int32.Parse(textBox4.Text);
-                string madatphong= textBox3.Text.ToString();
-
-                DialogResult result = MessageBox.Show(MESSAGE_CONFIRM, MESSAGE_CAPTION, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (result == DialogResult.Yes)
+            {  
+                if (BillBAL.CheckMaNhanVien(manhanvien).ToString()=="0")
                 {
-                    if (BillBAL.SendRequestAddBill(manhanvien, madatphong, tglaphd, tongtien))
-                    {
-                        MessageBox.Show(MESSAGE_SEND_REQUEST_SUCCESS, MESSAGE_CAPTION, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        this.Close();
-                    }
-                    else
-                    {
-                        MessageBox.Show(MESSAGE_SEND_REQUEST_FAILED, MESSAGE_CAPTION, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
+                    MessageBox.Show("Mã nhân viên này không tồn tại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                this.Hide();
+                else
+                {
+                    DateTime tglaphd = Convert.ToDateTime(dateTimePicker1.Value);
+                    int tongtien = Int32.Parse(textBox4.Text);
+                    string madatphong = textBox3.Text.ToString();
+
+                    DialogResult result = MessageBox.Show(MESSAGE_CONFIRM, MESSAGE_CAPTION, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (result == DialogResult.Yes)
+                    {
+                        if (BillBAL.SendRequestAddBill(manhanvien, madatphong, tglaphd, tongtien))
+                        {
+                            MessageBox.Show(MESSAGE_SEND_REQUEST_SUCCESS, MESSAGE_CAPTION, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            this.Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show(MESSAGE_SEND_REQUEST_FAILED, MESSAGE_CAPTION, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                    this.Hide();
+                }      
 
             }
         }

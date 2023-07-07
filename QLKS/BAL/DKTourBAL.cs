@@ -37,5 +37,9 @@ namespace QLKS.BAL
         {
             return DKTourDAL.Update(madktour,matour,tenkh, sdt, songuoi, hinhthuc, tg, yeucau);
         }
+        public static string CheckMaTour(string matour)
+        {
+            return DKTourDAL.Execute_pr_CheckMaTour(matour);
+        }
     }
 }

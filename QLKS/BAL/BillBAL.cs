@@ -24,6 +24,14 @@ namespace QLKS.BAL
         {
             return BillDAL.Execute_pr_TinhTienHoaDon(maphong);
         }
+        public static string CheckMaNhanVien(string manhanvien)
+        {
+            return BillDAL.Execute_pr_CheckNhanVien(manhanvien);
+        }
+        public static string CheckMaPhong(string maphong)
+        {
+            return BillDAL.Execute_pr_CheckMaPhong(maphong);
+        }
         public static string TimMaDatPhong(string maphong)
         {
             return BillDAL.SelectMaDatPhong(maphong);
