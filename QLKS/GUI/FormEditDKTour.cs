@@ -53,17 +53,24 @@ namespace QLKS.GUI
             string hinhthuc = textBox6.Text;
             string yeucau = textBox8.Text;
             DateTime tg = Convert.ToDateTime(dateTimePicker1.Value);
-
-            if (DKTourBAL.Update(DKTourID, matour,tenkh,sdt,songuoi,hinhthuc,tg,yeucau))
+            if (DKTourBAL.CheckMaTour(matour).ToString() == "0")
             {
-                MessageBox.Show("Cập nhật thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Hide();
+                MessageBox.Show("Mã tour này không tồn tại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                MessageBox.Show("Cập nhật thất bại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                this.Hide();
+                if (DKTourBAL.Update(DKTourID, matour, tenkh, sdt, songuoi, hinhthuc, tg, yeucau))
+                {
+                    MessageBox.Show("Cập nhật thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Cập nhật thất bại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    this.Hide();
+                }
             }
+            
         }
     }
 }
