@@ -102,7 +102,7 @@ namespace QLKS.DAL
                     command.ExecuteNonQuery();
                     return true;
                 }
-                catch (OracleException ex)
+                catch (OracleException)
                 {
                     return false;
                 }
@@ -118,7 +118,7 @@ namespace QLKS.DAL
                     command.ExecuteNonQuery();
                     return true;
                 }
-                catch (OracleException ex)
+                catch (OracleException)
                 {
                     return false;
                 }

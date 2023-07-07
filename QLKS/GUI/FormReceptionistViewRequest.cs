@@ -36,6 +36,12 @@ namespace QLKS.GUI
             }
         }
 
+        private void button1_Click(object sender, System.EventArgs e)
+        {
+            Form form = new FormReceptionistOrderPersionalRoom(this);
+            form.Show();
+        }
+
         /*private void button1_Click(object sender, System.EventArgs e)
         {
             Form RecepSelectOrder = new FormRecepSelectedOrder(this);
