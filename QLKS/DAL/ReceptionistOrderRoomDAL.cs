@@ -25,7 +25,7 @@ namespace QLKS.DAL
 
             public static List<ThongTinPhongDAL> Loadthongtinphong()
             {
-                string query = string.Format("SELECT * FROM QLKS.PHONG WHERE TINHTRANG = '0'");
+                string query = "SELECT * FROM QLKS.PHONG WHERE TINHTRANG = '0'";
 
                 List<ThongTinPhongDAL> rooms = new List<ThongTinPhongDAL>();
 

@@ -1,6 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using QLKS.BAL;
+
+using System;
+using System.Collections.Generic;
 
 using Oracle.ManagedDataAccess.Client;
+
 
 
 namespace QLKS.DAL
@@ -27,6 +31,22 @@ namespace QLKS.DAL
                 }
             }
             return maphong;
+        }
+        public static bool update(string maPhong, string TTDonDep)
+        {
+            string query = string.Format("UPDATE QLKS.PHONG SET TTDONDEP = '" + TTDonDep + "' WHERE MAPHONG = '" + maPhong + "' AND TINHTRANG = 0");
+            using (var command = new OracleCommand(query, SessionBAL.sConnection))
+            {
+                try
+                {
+                    command.ExecuteNonQuery();
+                    return true;
+                }
+                catch (Exception)
+                {
+                    return false;
+                }
+            }
         }
     }
 }

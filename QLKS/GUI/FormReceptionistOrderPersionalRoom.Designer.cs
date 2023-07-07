@@ -69,7 +69,7 @@ namespace QLKS.GUI
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(57, 113);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(384, 123);
+            this.groupBox1.Size = new System.Drawing.Size(399, 123);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Chọn loại phòng";
@@ -77,7 +77,7 @@ namespace QLKS.GUI
             // cbLoaiPhong
             // 
             this.cbLoaiPhong.FormattingEnabled = true;
-            this.cbLoaiPhong.Location = new System.Drawing.Point(142, 50);
+            this.cbLoaiPhong.Location = new System.Drawing.Point(151, 47);
             this.cbLoaiPhong.Name = "cbLoaiPhong";
             this.cbLoaiPhong.Size = new System.Drawing.Size(224, 28);
             this.cbLoaiPhong.TabIndex = 1;
@@ -107,7 +107,7 @@ namespace QLKS.GUI
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(57, 263);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(384, 247);
+            this.groupBox2.Size = new System.Drawing.Size(399, 247);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin khách hàng";
@@ -115,35 +115,35 @@ namespace QLKS.GUI
             // 
             // tbSoFax
             // 
-            this.tbSoFax.Location = new System.Drawing.Point(105, 190);
+            this.tbSoFax.Location = new System.Drawing.Point(114, 190);
             this.tbSoFax.Name = "tbSoFax";
             this.tbSoFax.Size = new System.Drawing.Size(261, 27);
             this.tbSoFax.TabIndex = 9;
             // 
             // tbEmail
             // 
-            this.tbEmail.Location = new System.Drawing.Point(105, 153);
+            this.tbEmail.Location = new System.Drawing.Point(114, 153);
             this.tbEmail.Name = "tbEmail";
             this.tbEmail.Size = new System.Drawing.Size(261, 27);
             this.tbEmail.TabIndex = 8;
             // 
             // tbDiaChi
             // 
-            this.tbDiaChi.Location = new System.Drawing.Point(105, 118);
+            this.tbDiaChi.Location = new System.Drawing.Point(114, 118);
             this.tbDiaChi.Name = "tbDiaChi";
             this.tbDiaChi.Size = new System.Drawing.Size(261, 27);
             this.tbDiaChi.TabIndex = 7;
             // 
             // tbSDT
             // 
-            this.tbSDT.Location = new System.Drawing.Point(105, 85);
+            this.tbSDT.Location = new System.Drawing.Point(114, 85);
             this.tbSDT.Name = "tbSDT";
             this.tbSDT.Size = new System.Drawing.Size(261, 27);
             this.tbSDT.TabIndex = 7;
             // 
             // tbTenKH
             // 
-            this.tbTenKH.Location = new System.Drawing.Point(105, 46);
+            this.tbTenKH.Location = new System.Drawing.Point(114, 46);
             this.tbTenKH.Name = "tbTenKH";
             this.tbTenKH.Size = new System.Drawing.Size(261, 27);
             this.tbTenKH.TabIndex = 6;
@@ -195,9 +195,9 @@ namespace QLKS.GUI
             // 
             // dgvPhong
             // 
+            this.dgvPhong.AllowDrop = true;
             this.dgvPhong.BackgroundColor = System.Drawing.Color.White;
             this.dgvPhong.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPhong.ColumnHeadersVisible = false;
             this.dgvPhong.Location = new System.Drawing.Point(484, 181);
             this.dgvPhong.Name = "dgvPhong";
             this.dgvPhong.ReadOnly = true;

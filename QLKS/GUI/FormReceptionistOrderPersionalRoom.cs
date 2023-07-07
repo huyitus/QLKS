@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using QLKS.BAL;
+
+using System;
 using System.Windows.Forms;
 
 namespace QLKS.GUI
@@ -32,17 +27,18 @@ namespace QLKS.GUI
 
         private void FormReceptionistOrderPersionalRoom_Load(object sender, EventArgs e)
         {
-            
+            ReceptionistOrderRoomBAL.LoadInfo(dgvPhong, cbLoaiPhong);
         }
 
         private void FormReceptionistOrderPersionalRoom_FormClosed(object sender, FormClosedEventArgs e)
         {
-            parent.Show();
+            parent.Close();
         }
 
         private void cbLoaiPhong_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            string loaiphong = cbLoaiPhong.SelectedItem.ToString();
+            ReceptionistOrderRoomBAL.UpdateInfo(dgvPhong, loaiphong);
         }
     }
 }

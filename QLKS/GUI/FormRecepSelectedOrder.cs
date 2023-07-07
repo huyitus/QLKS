@@ -31,7 +31,9 @@ namespace QLKS.GUI
 
         private void btnCaNhan_Click(object sender, EventArgs e)
         {
-
+            Form RecepOrderPersional = new FormReceptionistOrderPersionalRoom(this);
+            this.Hide();
+            RecepOrderPersional.ShowDialog();
         }
 
         private void btnDoanKhach_Click(object sender, EventArgs e)

@@ -24,5 +24,6 @@ namespace QLKS.BAL
             List<ReceptionistOrderRoomDAL.ThongTinPhongDAL> thongtinphong = ReceptionistOrderRoomDAL.ThongTinPhongDAL.LoadthongtinphongTheoLoai(loaiPhong);
             dgvDSPhong.DataSource = thongtinphong;
         }
+      
     }
 }

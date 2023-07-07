@@ -87,6 +87,7 @@
     <Compile Include="BAL\NvBAL.cs" />
     <Compile Include="BAL\PnBAL.cs" />
     <Compile Include="BAL\Receptionist.cs" />
+    <Compile Include="BAL\ReceptionistDividedRoomBAL.cs" />
     <Compile Include="BAL\ReceptionistOrderRoomBAL.cs" />
     <Compile Include="BAL\ReceptionistRoomBAL.cs" />
     <Compile Include="BAL\RecepUpdateRoomBAL.cs" />
@@ -97,6 +98,7 @@
     <Compile Include="BAL\SessionBAL.cs" />
     <Compile Include="BAL\TourBAL.cs" />
     <Compile Include="DAL\BillDAL.cs" />
+    <Compile Include="DAL\ReceptionistDividedRoomDAL.cs" />
     <Compile Include="DAL\ReceptionistOrderRoomDAL.cs" />
     <Compile Include="DAL\RecepUpdateRoomDAL.cs" />
     <Compile Include="DAL\CusDAL.cs" />
@@ -111,6 +113,12 @@
     <Compile Include="DAL\TourDAL.cs" />
     <Compile Include="DAL\Utility.cs" />
     <Compile Include="DAL\RoomDAL.cs" />
+    <Compile Include="GUI\FormAddBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormAddBill.Designer.cs">
+      <DependentUpon>FormAddBill.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\FormAddDKTour.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -315,8 +323,17 @@
     <Compile Include="GUI\FormRecepUpdateRoom.Designer.cs">
       <DependentUpon>FormRecepUpdateRoom.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\FormXuatHD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormXuatHD.Designer.cs">
+      <DependentUpon>FormXuatHD.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\FormAddBill.resx">
+      <DependentUpon>FormAddBill.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\FormAddDKTour.resx" />
     <EmbeddedResource Include="GUI\FormAdmin.resx">
       <DependentUpon>FormAdmin.cs</DependentUpon>
@@ -415,6 +432,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FormRecepUpdateRoom.resx">
       <DependentUpon>FormRecepUpdateRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormXuatHD.resx">
+      <DependentUpon>FormXuatHD.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
