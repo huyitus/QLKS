@@ -47,5 +47,65 @@ namespace QLKS.DAL
 
             return bills;
         }
+        public static BillDAL GetBillInf(string id)
+        {
+            string query = "SELECT * FROM QLKS.HOADON WHERE MAHD='" + id + "'";
+
+            using (OracleDataReader reader = Utility.GetDataReader(query))
+            {
+                if (reader != null && reader.Read())
+                {
+                    var mahd = reader.GetString(0);
+                    var manv = reader.GetString(1);
+                    var mdp = reader.GetString(2);
+                    var ngaylap = reader.GetDateTime(3);
+                    var sum = reader.GetInt32(4);
+
+                    var bill = new BillDAL(mahd, manv, mdp, ngaylap, sum);
+                    return bill;
+                }
+            }
+
+            return null;
+        }
+        public static string Execute_pr_TinhTienHoaDon(string maphong)
+        {
+            string query = "begin QLKS.pr_TinhTienHoaDon('" + maphong + "'); end;";
+            string kq = Utility.ExecuteScalar(query).ToString();
+            return kq;
+        }
+        public static string SelectMaDatPhong (string maphong)
+        {
+            string query = "SELECT * FROM QLKS.CHITIETPHONGDAT WHERE MAPHG='" + maphong + "'";
+            using (OracleDataReader reader = Utility.GetDataReader(query))
+            {
+                if (reader != null && reader.Read())
+                {
+                    var userRoom = reader.GetString(0);
+                    return userRoom;
+                }
+            }
+            return null;
+        }
+        public static bool Insert(string manhanvien, string madatphong, DateTime tglaphd, int tongtien)
+        {
+            string total = tongtien.ToString();
+            DateTime date = Convert.ToDateTime(tglaphd);
+            String ngaybd = date.ToString("yyyy-MM-dd");
+
+            string query = "INSERT INTO QLKS.HOADON VALUES ('','" + manhanvien + "','" + madatphong + "',TO_DATE('" + ngaybd + "','YYYY-MM-DD')," + tongtien + ")";
+            using (var command = new OracleCommand(query, SessionBAL.sConnection))
+            {
+                try
+                {
+                    command.ExecuteNonQuery();
+                    return true;
+                }
+                catch (Exception)
+                {
+                    return false;
+                }
+            }
+        }
     }
 }
