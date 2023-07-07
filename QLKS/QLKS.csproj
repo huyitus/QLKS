@@ -125,6 +125,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\FormAddDKTour.Designer.cs" />
+    <Compile Include="GUI\FormAddServiceToRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormAddServiceToRoom.Designer.cs">
+      <DependentUpon>FormAddServiceToRoom.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\FormAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -337,6 +343,9 @@
       <DependentUpon>FormAddBill.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FormAddDKTour.resx" />
+    <EmbeddedResource Include="GUI\FormAddServiceToRoom.resx">
+      <DependentUpon>FormAddServiceToRoom.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\FormAdmin.resx">
       <DependentUpon>FormAdmin.cs</DependentUpon>
     </EmbeddedResource>
