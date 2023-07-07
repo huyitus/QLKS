@@ -16,8 +16,9 @@ namespace QLKS.GUI
 
         private void FormRecepOrderGroupRoom_Load(object sender, EventArgs e)
         {
+            //parent.Hide();
             ReceptionistOrderRoomBAL.LoadInfo(dgvPhong,cbLoaiPhong);
-                    }
+        }
 
         private void FormRecepOrderGroupRoom_FormClosed(object sender, FormClosedEventArgs e)
         {

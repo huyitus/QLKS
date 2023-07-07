@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using QLKS.BAL;
+
 using System.Windows.Forms;
 
 namespace QLKS.GUI
@@ -19,9 +13,19 @@ namespace QLKS.GUI
             this.parent = parent;
         }
 
-        private void FormDevideRoom_Load(object sender, EventArgs e)
+        private void btnPhanPhong_Click(object sender, System.EventArgs e)
         {
-
+            string maDP = tbMaDP.Text;
+            string maPhong = tbMaPhong.Text;
+            //ReceptionistDividedRoomBAL.Insert(maDP, maPhong);
+            if (ReceptionistDividedRoomBAL.Insert(maDP, maPhong))
+            {
+                MessageBox.Show("Cập nhật thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Cập nhật thất bại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

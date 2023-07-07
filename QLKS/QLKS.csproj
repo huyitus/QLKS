@@ -87,6 +87,7 @@
     <Compile Include="BAL\NvBAL.cs" />
     <Compile Include="BAL\PnBAL.cs" />
     <Compile Include="BAL\Receptionist.cs" />
+    <Compile Include="BAL\ReceptionistDividedRoomBAL.cs" />
     <Compile Include="BAL\ReceptionistOrderRoomBAL.cs" />
     <Compile Include="BAL\ReceptionistRoomBAL.cs" />
     <Compile Include="BAL\RecepUpdateRoomBAL.cs" />
@@ -97,6 +98,7 @@
     <Compile Include="BAL\SessionBAL.cs" />
     <Compile Include="BAL\TourBAL.cs" />
     <Compile Include="DAL\BillDAL.cs" />
+    <Compile Include="DAL\ReceptionistDividedRoomDAL.cs" />
     <Compile Include="DAL\ReceptionistOrderRoomDAL.cs" />
     <Compile Include="DAL\RecepUpdateRoomDAL.cs" />
     <Compile Include="DAL\CusDAL.cs" />

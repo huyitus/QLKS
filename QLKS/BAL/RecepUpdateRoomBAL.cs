@@ -15,5 +15,9 @@ namespace QLKS.BAL
                 cbMaPhong.Items.Add(maphong[i].MaPhong);
             }    
         }
+        public static bool Update(string maPhong, string TTDonDep)
+        {
+            return RecepUpdateRoomDAL.update(maPhong,TTDonDep);
+        }
     }
 }

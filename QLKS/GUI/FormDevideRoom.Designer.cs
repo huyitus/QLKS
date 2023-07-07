@@ -31,8 +31,8 @@ namespace QLKS.GUI
         {
             this.label_MADP = new System.Windows.Forms.Label();
             this.labelMaPhong = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tbMaDP = new System.Windows.Forms.TextBox();
+            this.tbMaPhong = new System.Windows.Forms.TextBox();
             this.btnPhanPhong = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -56,21 +56,21 @@ namespace QLKS.GUI
             this.labelMaPhong.TabIndex = 1;
             this.labelMaPhong.Text = "Mã phòng";
             // 
-            // textBox1
+            // tbMaDP
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(195, 47);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(165, 27);
-            this.textBox1.TabIndex = 2;
+            this.tbMaDP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbMaDP.Location = new System.Drawing.Point(195, 47);
+            this.tbMaDP.Name = "tbMaDP";
+            this.tbMaDP.Size = new System.Drawing.Size(165, 27);
+            this.tbMaDP.TabIndex = 2;
             // 
-            // textBox2
+            // tbMaPhong
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(195, 100);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(165, 27);
-            this.textBox2.TabIndex = 3;
+            this.tbMaPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbMaPhong.Location = new System.Drawing.Point(195, 100);
+            this.tbMaPhong.Name = "tbMaPhong";
+            this.tbMaPhong.Size = new System.Drawing.Size(165, 27);
+            this.tbMaPhong.TabIndex = 3;
             // 
             // btnPhanPhong
             // 
@@ -81,6 +81,7 @@ namespace QLKS.GUI
             this.btnPhanPhong.TabIndex = 4;
             this.btnPhanPhong.Text = "Phân phòng";
             this.btnPhanPhong.UseVisualStyleBackColor = true;
+            this.btnPhanPhong.Click += new System.EventHandler(this.btnPhanPhong_Click);
             // 
             // FormDevideRoom
             // 
@@ -88,14 +89,13 @@ namespace QLKS.GUI
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(456, 200);
             this.Controls.Add(this.btnPhanPhong);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbMaPhong);
+            this.Controls.Add(this.tbMaDP);
             this.Controls.Add(this.labelMaPhong);
             this.Controls.Add(this.label_MADP);
             this.Name = "FormDevideRoom";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormDevideRoom";
-            this.Load += new System.EventHandler(this.FormDevideRoom_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -105,8 +105,8 @@ namespace QLKS.GUI
 
         private System.Windows.Forms.Label label_MADP;
         private System.Windows.Forms.Label labelMaPhong;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tbMaDP;
+        private System.Windows.Forms.TextBox tbMaPhong;
         private System.Windows.Forms.Button btnPhanPhong;
     }
 }

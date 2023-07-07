@@ -35,5 +35,12 @@ namespace QLKS.GUI
                 lblTitle.Text = "Vui lòng chọn yêu cầu để xem";
             }
         }
+
+        private void button1_Click(object sender, System.EventArgs e)
+        {
+            Form RecepSelectOrder = new FormRecepSelectedOrder(this);
+            this.Hide();
+            RecepSelectOrder.ShowDialog();
+        }
     }
 }
