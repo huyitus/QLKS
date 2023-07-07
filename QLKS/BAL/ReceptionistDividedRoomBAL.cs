@@ -7,9 +7,9 @@ namespace QLKS.BAL
 {
     class ReceptionistDividedRoomBAL
     {
-        public static bool Insert(string maDP, string maPhong)
+        public static bool Thuchienphanphong(string maDP, string maPhong)
         {
-            return ReceptionistDividedRoomDAL.Insert(maDP, maPhong);
+            return ReceptionistDividedRoomDAL.Thuchienphanphong(maDP, maPhong);
         }
     }
 }
