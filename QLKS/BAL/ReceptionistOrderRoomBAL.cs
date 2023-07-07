@@ -24,6 +24,14 @@ namespace QLKS.BAL
             List<ReceptionistOrderRoomDAL.ThongTinPhongDAL> thongtinphong = ReceptionistOrderRoomDAL.ThongTinPhongDAL.LoadthongtinphongTheoLoai(loaiPhong);
             dgvDSPhong.DataSource = thongtinphong;
         }
-      
+
+        public static bool DatPhongNhom(string ten, string sdt, string diachi, string email, string sofax, string tendoan, string soluongnguoi, string loaiphong, string maphong, string ngayden, string sodemluutru)
+        {
+            return ReceptionistOrderRoomDAL.DatPhongTheoNhom(ten, sdt, diachi, email, sofax, tendoan, soluongnguoi, loaiphong, maphong, ngayden, sodemluutru);
+        }
+        public static bool DatPhongCaNhan(string ten, string sdt, string diachi, string email, string sofax, string loaiphong, string maphong, string ngayden, string sodemluutru)
+        {
+            return ReceptionistOrderRoomDAL.DatPhong(ten, sdt, diachi, email, sofax, loaiphong, maphong, ngayden, sodemluutru);
+        }
     }
 }

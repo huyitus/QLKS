@@ -10,6 +10,7 @@ namespace QLKS.GUI
         private readonly Form parent;
 
         public static string khachhang;
+
         public FormReceptionistViewRoom(Form parent)
         {
             InitializeComponent();
@@ -48,7 +49,6 @@ namespace QLKS.GUI
         {
             Form DividedRoom = new FormDevideRoom(this);
             DividedRoom.Show();
-
         }
 
         private void btnDatPhong_Click(object sender, EventArgs e)

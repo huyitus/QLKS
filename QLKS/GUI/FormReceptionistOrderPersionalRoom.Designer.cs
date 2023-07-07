@@ -34,6 +34,10 @@ namespace QLKS.GUI
             this.cbLoaiPhong = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.tbSoDemLuuTru = new System.Windows.Forms.TextBox();
+            this.tbNgayDen = new System.Windows.Forms.TextBox();
             this.tbSoFax = new System.Windows.Forms.TextBox();
             this.tbEmail = new System.Windows.Forms.TextBox();
             this.tbDiaChi = new System.Windows.Forms.TextBox();
@@ -45,7 +49,7 @@ namespace QLKS.GUI
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.dgvPhong = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnDatPhong = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhong)).BeginInit();
@@ -69,7 +73,7 @@ namespace QLKS.GUI
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(57, 113);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(399, 123);
+            this.groupBox1.Size = new System.Drawing.Size(449, 123);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Chọn loại phòng";
@@ -77,9 +81,9 @@ namespace QLKS.GUI
             // cbLoaiPhong
             // 
             this.cbLoaiPhong.FormattingEnabled = true;
-            this.cbLoaiPhong.Location = new System.Drawing.Point(151, 47);
+            this.cbLoaiPhong.Location = new System.Drawing.Point(177, 47);
             this.cbLoaiPhong.Name = "cbLoaiPhong";
-            this.cbLoaiPhong.Size = new System.Drawing.Size(224, 28);
+            this.cbLoaiPhong.Size = new System.Drawing.Size(237, 28);
             this.cbLoaiPhong.TabIndex = 1;
             this.cbLoaiPhong.SelectedIndexChanged += new System.EventHandler(this.cbLoaiPhong_SelectedIndexChanged);
             // 
@@ -94,6 +98,10 @@ namespace QLKS.GUI
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.label9);
+            this.groupBox2.Controls.Add(this.label8);
+            this.groupBox2.Controls.Add(this.tbSoDemLuuTru);
+            this.groupBox2.Controls.Add(this.tbNgayDen);
             this.groupBox2.Controls.Add(this.tbSoFax);
             this.groupBox2.Controls.Add(this.tbEmail);
             this.groupBox2.Controls.Add(this.tbDiaChi);
@@ -107,51 +115,83 @@ namespace QLKS.GUI
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(57, 263);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(399, 247);
+            this.groupBox2.Size = new System.Drawing.Size(449, 322);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin khách hàng";
             this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(12, 275);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(123, 20);
+            this.label9.TabIndex = 13;
+            this.label9.Text = "Số đêm lưu trú:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(51, 233);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(84, 20);
+            this.label8.TabIndex = 12;
+            this.label8.Text = "Ngày đến:";
+            // 
+            // tbSoDemLuuTru
+            // 
+            this.tbSoDemLuuTru.Location = new System.Drawing.Point(154, 272);
+            this.tbSoDemLuuTru.Name = "tbSoDemLuuTru";
+            this.tbSoDemLuuTru.Size = new System.Drawing.Size(260, 27);
+            this.tbSoDemLuuTru.TabIndex = 11;
+            // 
+            // tbNgayDen
+            // 
+            this.tbNgayDen.Location = new System.Drawing.Point(154, 230);
+            this.tbNgayDen.Name = "tbNgayDen";
+            this.tbNgayDen.Size = new System.Drawing.Size(260, 27);
+            this.tbNgayDen.TabIndex = 10;
+            // 
             // tbSoFax
             // 
-            this.tbSoFax.Location = new System.Drawing.Point(114, 190);
+            this.tbSoFax.Location = new System.Drawing.Point(154, 190);
             this.tbSoFax.Name = "tbSoFax";
-            this.tbSoFax.Size = new System.Drawing.Size(261, 27);
+            this.tbSoFax.Size = new System.Drawing.Size(260, 27);
             this.tbSoFax.TabIndex = 9;
             // 
             // tbEmail
             // 
-            this.tbEmail.Location = new System.Drawing.Point(114, 153);
+            this.tbEmail.Location = new System.Drawing.Point(154, 153);
             this.tbEmail.Name = "tbEmail";
-            this.tbEmail.Size = new System.Drawing.Size(261, 27);
+            this.tbEmail.Size = new System.Drawing.Size(260, 27);
             this.tbEmail.TabIndex = 8;
             // 
             // tbDiaChi
             // 
-            this.tbDiaChi.Location = new System.Drawing.Point(114, 118);
+            this.tbDiaChi.Location = new System.Drawing.Point(154, 118);
             this.tbDiaChi.Name = "tbDiaChi";
-            this.tbDiaChi.Size = new System.Drawing.Size(261, 27);
+            this.tbDiaChi.Size = new System.Drawing.Size(260, 27);
             this.tbDiaChi.TabIndex = 7;
             // 
             // tbSDT
             // 
-            this.tbSDT.Location = new System.Drawing.Point(114, 85);
+            this.tbSDT.Location = new System.Drawing.Point(154, 85);
             this.tbSDT.Name = "tbSDT";
-            this.tbSDT.Size = new System.Drawing.Size(261, 27);
+            this.tbSDT.Size = new System.Drawing.Size(260, 27);
             this.tbSDT.TabIndex = 7;
             // 
             // tbTenKH
             // 
-            this.tbTenKH.Location = new System.Drawing.Point(114, 46);
+            this.tbTenKH.Location = new System.Drawing.Point(154, 46);
             this.tbTenKH.Name = "tbTenKH";
-            this.tbTenKH.Size = new System.Drawing.Size(261, 27);
+            this.tbTenKH.Size = new System.Drawing.Size(260, 27);
             this.tbTenKH.TabIndex = 6;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(26, 193);
+            this.label7.Location = new System.Drawing.Point(63, 193);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(66, 20);
             this.label7.TabIndex = 5;
@@ -160,7 +200,7 @@ namespace QLKS.GUI
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(36, 156);
+            this.label6.Location = new System.Drawing.Point(73, 156);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(56, 20);
             this.label6.TabIndex = 4;
@@ -169,7 +209,7 @@ namespace QLKS.GUI
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(26, 121);
+            this.label5.Location = new System.Drawing.Point(63, 121);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(66, 20);
             this.label5.TabIndex = 3;
@@ -178,7 +218,7 @@ namespace QLKS.GUI
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(45, 88);
+            this.label4.Location = new System.Drawing.Point(82, 88);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(47, 20);
             this.label4.TabIndex = 2;
@@ -187,7 +227,7 @@ namespace QLKS.GUI
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(50, 49);
+            this.label3.Location = new System.Drawing.Point(87, 49);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(42, 20);
             this.label3.TabIndex = 1;
@@ -198,7 +238,7 @@ namespace QLKS.GUI
             this.dgvPhong.AllowDrop = true;
             this.dgvPhong.BackgroundColor = System.Drawing.Color.White;
             this.dgvPhong.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPhong.Location = new System.Drawing.Point(484, 181);
+            this.dgvPhong.Location = new System.Drawing.Point(546, 174);
             this.dgvPhong.Name = "dgvPhong";
             this.dgvPhong.ReadOnly = true;
             this.dgvPhong.RowHeadersVisible = false;
@@ -208,22 +248,23 @@ namespace QLKS.GUI
             this.dgvPhong.Size = new System.Drawing.Size(611, 282);
             this.dgvPhong.TabIndex = 3;
             // 
-            // button1
+            // btnDatPhong
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(732, 485);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(152, 38);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Đặt phòng";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnDatPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDatPhong.Location = new System.Drawing.Point(797, 496);
+            this.btnDatPhong.Name = "btnDatPhong";
+            this.btnDatPhong.Size = new System.Drawing.Size(152, 38);
+            this.btnDatPhong.TabIndex = 4;
+            this.btnDatPhong.Text = "Đặt phòng";
+            this.btnDatPhong.UseVisualStyleBackColor = true;
+            this.btnDatPhong.Click += new System.EventHandler(this.btnDatPhong_Click);
             // 
             // FormReceptionistOrderPersionalRoom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1123, 560);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(1179, 630);
+            this.Controls.Add(this.btnDatPhong);
             this.Controls.Add(this.dgvPhong);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -261,6 +302,10 @@ namespace QLKS.GUI
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dgvPhong;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnDatPhong;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox tbSoDemLuuTru;
+        private System.Windows.Forms.TextBox tbNgayDen;
     }
 }

@@ -16,10 +16,10 @@ namespace QLKS.DAL
         {
             MaPhong = maPhong;
         }
-        public static List<RecepUpdateRoomDAL> loadMaPhong()
+        public static List<RecepUpdateRoomDAL> loadMaPhongConTrong()
         {
             List<RecepUpdateRoomDAL> maphong = new List<RecepUpdateRoomDAL>();
-            string query = "SELECT MAPHONG FROM QLKS.PHONG";
+            string query = "SELECT MAPHONG FROM QLKS.PHONG WHERE TINHTRANG = 0";
             using (OracleDataReader reader = Utility.GetDataReader(query))
             {
                 while (reader != null && reader.Read())

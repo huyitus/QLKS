@@ -1,5 +1,5 @@
-﻿using System.Collections.Generic;
-
+﻿using QLKS.BAL;
+using System.Collections.Generic;
 using Oracle.ManagedDataAccess.Client;
 
 namespace QLKS.DAL
@@ -89,6 +89,39 @@ namespace QLKS.DAL
                     }
                 }
                 return loaiphong;
+            }
+        }
+
+        public static bool DatPhongTheoNhom(string ten, string sdt, string diachi, string email, string sofax, string tendoan, string soluongnguoi, string loaiphong, string maphong, string ngayden, string sodemluutru)
+        {
+            string query = "begin QLKS.DatPhongDoanKH('" + ten + "','" + sdt + "','" + diachi + "','" + email + "','" + sofax + "','" + tendoan + "'," + soluongnguoi + ",'" + loaiphong + "','" + maphong + "',TO_DATE('" + ngayden + "','YYYY-MM-DD')," + sodemluutru + "); end;";
+            using (var command = new OracleCommand(query, SessionBAL.sConnection))
+            {
+                try
+                {
+                    command.ExecuteNonQuery();
+                    return true;
+                }
+                catch (OracleException ex)
+                {
+                    return false;
+                }
+            }
+        }
+        public static bool DatPhong(string ten, string sdt, string diachi, string email, string sofax, string loaiphong, string maphong, string ngayden, string sodemluutru)
+        {
+            string query = "begin QLKS.DatPhongKH('" + ten + "','" + sdt + "','" + diachi + "','" + email + "','" + sofax + "','" + loaiphong + "','" + maphong + "',TO_DATE('" + ngayden + "','YYYY-MM-DD')," + sodemluutru + "); end;";
+            using (var command = new OracleCommand(query, SessionBAL.sConnection))
+            {
+                try
+                {
+                    command.ExecuteNonQuery();
+                    return true;
+                }
+                catch (OracleException ex)
+                {
+                    return false;
+                }
             }
         }
     }

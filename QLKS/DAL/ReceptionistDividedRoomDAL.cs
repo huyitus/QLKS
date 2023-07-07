@@ -1,8 +1,5 @@
 ﻿using QLKS.BAL;
 
-using System;
-using System.Collections.Generic;
-
 using Oracle.ManagedDataAccess.Client;
 
 
@@ -19,18 +16,16 @@ namespace QLKS.DAL
         }
         public static bool Thuchienphanphong(string maDP, string maPhong)
         {
-            using (var command = new OracleCommand("QLKS.PhanPhong", SessionBAL.sConnection))
+            string query = "begin QLKS.PhanPhong('" + maDP + "','" + maPhong + "'); end;";
+            using (var command = new OracleCommand(query, SessionBAL.sConnection))
             {
                 try
                 {
-                    command.CommandType = System.Data.CommandType.StoredProcedure;
-                    command.Parameters.Add("maDatPhong", OracleDbType.Varchar2).Value = maDP;
-                    command.Parameters.Add("maPhng", OracleDbType.Varchar2).Value = maPhong;
                     command.ExecuteNonQuery();
                     return true;
                 }
-                catch (Exception)
-                {                  
+                catch (OracleException ex)
+                {
                     return false;
                 }
             }

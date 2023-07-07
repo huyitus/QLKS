@@ -1,19 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using QLKS.BAL;
 
+using System;
+using System.Windows.Forms;
 namespace QLKS.GUI
 {
     public partial class FormRecepSelectedOrder : Form
     {
-        private readonly Form parent;
-        public FormRecepSelectedOrder(Form parent)
+        private FormReceptionistViewRoom parent;
+        public FormRecepSelectedOrder(FormReceptionistViewRoom parent)
         {
             InitializeComponent();
             this.parent = parent;
@@ -27,6 +21,7 @@ namespace QLKS.GUI
         private void FormRecepSelectedOrder_FormClosed(object sender, FormClosedEventArgs e)
         {
             parent.Show();
+            parent.UpdateTinhTrangPhong();
         }
 
         private void btnCaNhan_Click(object sender, EventArgs e)

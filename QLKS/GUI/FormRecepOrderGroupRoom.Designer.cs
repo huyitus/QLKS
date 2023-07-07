@@ -34,7 +34,7 @@ namespace QLKS.GUI
             this.cbLoaiPhong = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbSoLuongNguoi = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.tbTenDoan = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -49,7 +49,11 @@ namespace QLKS.GUI
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.dgvPhong = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnDatPhong = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
+            this.tbNgayDen = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.tbSoDemLuuTru = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhong)).BeginInit();
@@ -98,7 +102,11 @@ namespace QLKS.GUI
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.textBox1);
+            this.groupBox2.Controls.Add(this.tbSoDemLuuTru);
+            this.groupBox2.Controls.Add(this.label11);
+            this.groupBox2.Controls.Add(this.tbNgayDen);
+            this.groupBox2.Controls.Add(this.label10);
+            this.groupBox2.Controls.Add(this.tbSoLuongNguoi);
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.tbTenDoan);
             this.groupBox2.Controls.Add(this.label8);
@@ -115,17 +123,17 @@ namespace QLKS.GUI
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(49, 236);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(451, 312);
+            this.groupBox2.Size = new System.Drawing.Size(451, 371);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin khách hàng";
             // 
-            // textBox1
+            // tbSoLuongNguoi
             // 
-            this.textBox1.Location = new System.Drawing.Point(142, 262);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(281, 27);
-            this.textBox1.TabIndex = 13;
+            this.tbSoLuongNguoi.Location = new System.Drawing.Point(142, 262);
+            this.tbSoLuongNguoi.Name = "tbSoLuongNguoi";
+            this.tbSoLuongNguoi.Size = new System.Drawing.Size(281, 27);
+            this.tbSoLuongNguoi.TabIndex = 13;
             // 
             // label9
             // 
@@ -243,26 +251,62 @@ namespace QLKS.GUI
             this.dgvPhong.RowHeadersWidth = 51;
             this.dgvPhong.RowTemplate.Height = 24;
             this.dgvPhong.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPhong.Size = new System.Drawing.Size(574, 328);
+            this.dgvPhong.Size = new System.Drawing.Size(574, 346);
             this.dgvPhong.TabIndex = 4;
             // 
-            // button1
+            // btnDatPhong
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(782, 510);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(152, 38);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Đặt phòng";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnDatPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDatPhong.Location = new System.Drawing.Point(747, 527);
+            this.btnDatPhong.Name = "btnDatPhong";
+            this.btnDatPhong.Size = new System.Drawing.Size(165, 60);
+            this.btnDatPhong.TabIndex = 5;
+            this.btnDatPhong.Text = "Đặt phòng";
+            this.btnDatPhong.UseVisualStyleBackColor = true;
+            this.btnDatPhong.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(49, 298);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(84, 20);
+            this.label10.TabIndex = 14;
+            this.label10.Text = "Ngày đến:";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
+            // 
+            // tbNgayDen
+            // 
+            this.tbNgayDen.Location = new System.Drawing.Point(142, 295);
+            this.tbNgayDen.Name = "tbNgayDen";
+            this.tbNgayDen.Size = new System.Drawing.Size(281, 27);
+            this.tbNgayDen.TabIndex = 15;
+            this.tbNgayDen.TextChanged += new System.EventHandler(this.tbNgayDen_TextChanged);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(10, 331);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(123, 20);
+            this.label11.TabIndex = 16;
+            this.label11.Text = "Số đêm lưu trú:";
+            this.label11.Click += new System.EventHandler(this.label11_Click);
+            // 
+            // tbSoDemLuuTru
+            // 
+            this.tbSoDemLuuTru.Location = new System.Drawing.Point(142, 328);
+            this.tbSoDemLuuTru.Name = "tbSoDemLuuTru";
+            this.tbSoDemLuuTru.Size = new System.Drawing.Size(281, 27);
+            this.tbSoDemLuuTru.TabIndex = 17;
+            this.tbSoDemLuuTru.TextChanged += new System.EventHandler(this.tbSoDemLuuTru_TextChanged);
             // 
             // FormRecepOrderGroupRoom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1151, 576);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(1151, 680);
+            this.Controls.Add(this.btnDatPhong);
             this.Controls.Add(this.dgvPhong);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -300,10 +344,14 @@ namespace QLKS.GUI
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dgvPhong;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbSoLuongNguoi;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox tbTenDoan;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnDatPhong;
+        private System.Windows.Forms.TextBox tbNgayDen;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox tbSoDemLuuTru;
+        private System.Windows.Forms.Label label11;
     }
 }

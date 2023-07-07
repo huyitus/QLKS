@@ -1,6 +1,7 @@
 ALTER SESSION SET "_ORACLE_SCRIPT" = TRUE;
 
-exec QLKS.DatPhongKH('Nguyen Thi A','0245689741','Quan 7','Nguyenthia@gmail.com','145','Phong 4 nguoi','P010',TO_DATE('2023-08-15','YYYY-MM-DD'),2);
+---------------------DAT PHONG KHACH HANG CA NHA--------------------------
+--exec QLKS.DatPhongKH('Nguyen Thi A','0245689741','Quan 7','Nguyenthia@gmail.com','145','Phong 4 nguoi','P010',TO_DATE('2023-08-15','YYYY-MM-DD'),2);
 drop procedure QLKS.DatPhongKH;
 CREATE OR REPLACE PROCEDURE QLKS.DatPhongKH(
     TENKH IN NVARCHAR2,
@@ -30,6 +31,9 @@ BEGIN
     UPDATE QLKS.PHONG P SET TINHTRANG = 1, TTDONDEP = 'Da don' WHERE  P.MAPHONG=MAPHG;
 END;
 /
+
+---------------------DAT PHONG KHACH HANG THEO DOAN--------------------------
+--exec QLKS.DatPhongDoanKH('Nguyen Thi A','0245689741','Quan 7','Nguyenthia@gmail.com','145','ad',3,'Phong 4 nguoi','P004',TO_DATE('2023-08-15','YYYY-MM-DD'),2);
 
 CREATE OR REPLACE PROCEDURE QLKS.DatPhongDoanKH(
     TENKH IN NVARCHAR2,
@@ -61,10 +65,9 @@ BEGIN
 END;
 /
 
-CREATE OR REPLACE PROCEDURE QLKS.PhanPhong(
-    maDatPhong IN VARCHAR,
-    maPhng IN VARCHAR
-)
+
+-----------------PHAN PHONG CHO KHACH HANG----------------------
+CREATE OR REPLACE PROCEDURE QLKS.PhanPhong(maDatPhong IN VARCHAR, maPhng IN VARCHAR)
 AS 
     maDP VARCHAR(10);
     maphg VARCHAR(10);
@@ -80,19 +83,6 @@ BEGIN
         RAISE_APPLICATION_ERROR(-20001,'Phan phong that bai');
     END IF;
 END;
-
-exec QLKS.PhanPhong('DP004','P003');
-exec QLKS.PhanPhong('DP005','P004');
-
-DELETE FROM QLKS.CHITIETPHONGDAT WHERE MADATPHG = 'DP005';
-UPDATE QLKS.PHONG P SET TINHTRANG=0, TTDONDEP='Chua don' WHERE P.MAPHONG='P004';
-
-SELECT * FROM QLKS.PHONG WHERE TINHTRANG = '0';
-SELECT * FROM QLKS.PHONG;
-SELECT * FROM QLKS.KHACHHANG;
-SELECT * FROM QLKS.CHITIETPHONGDAT;
-SELECT * FROM QLKS.DATPHONG;
-/
 
 ------------- LE TAN TINH TIEN HOA DON ---------------------
 ----Function le tan tinh tien dich vu
@@ -177,3 +167,8 @@ begin
 end;
 /
 GRANT EXECUTE ON QLKS.pr_CheckMaTour TO letan;
+
+delete from QLKS.CHITIETPHONGDAT WHERE MADATPHG='DP004' AND MAPHG='P024';
+SELECT*FROM QLKS.CHITIETPHONGDAT;
+update QLKS.PHONG SET TINHTRANG = 0 WHERE MAPHONG = 'P024';
+select*from QLKS.PHONG;

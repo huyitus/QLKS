@@ -75,9 +75,9 @@ namespace QLKS.GUI
             // btnPhanPhong
             // 
             this.btnPhanPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPhanPhong.Location = new System.Drawing.Point(195, 157);
+            this.btnPhanPhong.Location = new System.Drawing.Point(130, 157);
             this.btnPhanPhong.Name = "btnPhanPhong";
-            this.btnPhanPhong.Size = new System.Drawing.Size(107, 31);
+            this.btnPhanPhong.Size = new System.Drawing.Size(184, 31);
             this.btnPhanPhong.TabIndex = 4;
             this.btnPhanPhong.Text = "Phân phòng";
             this.btnPhanPhong.UseVisualStyleBackColor = true;
